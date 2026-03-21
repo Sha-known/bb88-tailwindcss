@@ -20,13 +20,13 @@
           <img src="logo/logo-bb88.png" alt="BB88 Logo" class="w-full h-auto object-contain">
         </div>
       </div>
-
+      <!--BURGER MENU FOR SMALL SCREEN-->
       <div class="lg:hidden flex flex-col gap-1 cursor-pointer p-2" onclick="toggleMenu()">
         <span class="w-[clamp(16px,4vw,22px)] h-0.5 bg-text-dark rounded transition-all duration-300"></span>
         <span class="w-[clamp(16px,4vw,22px)] h-0.5 bg-text-dark rounded transition-all duration-300"></span>
         <span class="w-[clamp(16px,4vw,22px)] h-0.5 bg-text-dark rounded transition-all duration-300"></span>
       </div>
-
+      <!--NAVIGATION MENU-->
       <div class="hidden lg:flex items-center gap-3 ml-auto flex-wrap">
         <a href="#home" class="relative text-[clamp(14px,1vw,18px)] font-semibold text-white bg-green-dark px-4 py-2 rounded-full transition-colors duration-200">Home</a>
         <a href="#about" class="relative text-[clamp(14px,1vw,18px)] font-semibold text-text-dark px-4 py-2 rounded-full hover:bg-green-dark hover:text-white transition-colors duration-200">About</a>
@@ -38,9 +38,11 @@
     </div>
   </nav>
 
-  <section id="home" class="hero-line relative min-h-[200vh] bg-[url('bg/background1.png')] bg-top bg-no-repeat bg-white -mt-30 pt-27.5 pb-20 overflow-x-hidden">
-    <img src="bg/vector1.png" class="absolute pointer-events-none z-0 w-[55vw] min-w-175 top-0 right-0 xl:left-[70%] xl:right-auto" alt="">
-    
+<!--HERO SECTION-->
+<!--DITO NAKALAGAY UNG WHITE BG-->
+<section id="home" class="hero-line relative min-h-[200vh] bg-[url('bg/background1.png')] bg-top bg-no-repeat bg-white -mt-30 pt-27.5 pb-20 overflow-x-hidden">
+  <!--DITO NAKALAGAY YUNG VECTOR, THE GIRL IMAGE ON THE RIGHT SIDE-->
+  <img src="bg/vector1.png" class="absolute pointer-events-none z-0 w-[55vw] min-w-175 top-0 right-0 xl:left-[70%] xl:right-auto" alt="">
     <div class="px-5 md:px-15 py-10 md:pr-20 md:pb-15 mb-27.5 flex flex-col justify-center relative z-10 text-center md:text-left items-center md:items-start">
       <h1 class="font-anton font-medium text-[clamp(40px,11vw,110px)] md:text-[clamp(60px,5.7vw,110px)] text-green-dark leading-none tracking-wide whitespace-normal md:whitespace-nowrap animate-slide-up delay-200">WELCOME TO BB88</h1>
       <p class="text-[clamp(18px,4vw,50px)] md:text-[clamp(24px,2.5vw,50px)] font-semibold text-text-dark mt-2 max-w-200 animate-slide-up delay-350">Quickly start your project now</p>
@@ -59,13 +61,14 @@
       </div>
     </div>
 
+<!--ABOUT US SECTION (DESIGN), IDINIKIT SA HERO SECTION PARA DUN SA VECTOR LAYOUT-->
     <div id="about" class="sticky z-20 text-center mb-12 mt-[18vw] w-full scroll-mt-30">
       <h2 class="font-poppins text-[clamp(35px,5vw,65px)] font-extrabold text-green-dark leading-none tracking-[-2px] [-webkit-text-stroke:1px_white] mb-2">Design and Marketing Solutions</h2>
       <div class="w-25 h-1 bg-green-light mx-auto mt-4 rounded"></div>
     </div>
 
+    <!--4 CARDS-->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 justify-items-center mb-12 px-5">
-      
       <div class="about-card-hover group relative w-[clamp(180px,100%,280px)] h-50 bg-green-dark rounded-tl-[40px] rounded-br-[40px] flex flex-col items-center justify-center p-5 text-center border-2 border-[#d4e8c2] z-10 transition-colors duration-300 shadow-[0_6px_22px_rgba(0,0,0,0.12)] hover:bg-white cursor-pointer about-card-shape">
         <img src="icon/icondesignideas.png" alt="Design Ideas" class="w-[clamp(60px,5vw,80px)] h-[clamp(60px,5vw,80px)] object-contain mb-3.5 relative z-20">
         <h5 class="font-anton text-[15px] text-green-dark relative z-20 transition-colors duration-300 group-hover:text-white">Design Ideas</h5>
@@ -76,18 +79,16 @@
         <h5 class="font-anton text-[15px] text-green-dark relative z-20 transition-colors duration-300 group-hover:text-white">Digital & Mainstream</h5>
       </div>
 
-      </div>
-
+    </div>
+    <!--ABOUT US BOX SECTION-->
     <div class="bg-white p-[clamp(20px,3vw,40px)] md:px-[clamp(40px,5vw,100px)] max-w-400 w-[90%] mx-auto rounded-3xl shadow-[0_12px_40px_rgba(0,0,0,0.15)] text-center relative z-20">
       <h3 class="font-poppins text-[clamp(25px,3vw,50px)] text-green-dark font-bold leading-none tracking-[-2px] [-webkit-text-stroke:1px_white] mb-1">About Us</h3>
       <div class="w-25 h-1 bg-green-light mx-auto mt-4 rounded"></div>
-      
       <h4 class="font-poppins text-[clamp(20px,2vw,30px)] text-green-dark leading-none [-webkit-text-stroke:1px_white] mt-7 mb-2">Creative Solutions for Impactful Brand Communication</h4>
-      
       <p class="mt-5 text-[clamp(16px,1.2vw,22px)] leading-[1.8] text-text-dark max-w-250 mx-auto mb-5">
         BB 88 Advertising and Digital Solutions Inc. is a "One-Stop" shop for design and communication strategy, specializing in graphic design, architectural design, realistic visual production, web app and mobile application.
       </p>
       </div>
-  </section>
+</section>
 </body>
 </html>
