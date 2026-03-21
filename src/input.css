@@ -64,3 +64,21 @@ html { scroll-behavior: smooth; }
 .delay-200 { animation-delay: 0.2s; }
 .delay-350 { animation-delay: 0.35s; }
 .delay-500 { animation-delay: 0.5s; }
+
+/* Tooltip Arrow for the Team section */
+.team-bubble.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.team-bubble::before {
+  content: '';
+  position: absolute;
+  top: -24px;
+  left: var(--arrow-left, 50%); 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #d1d5db; /* Matches the gray-300 border */
+  transition: left 0.3s ease;
+}
