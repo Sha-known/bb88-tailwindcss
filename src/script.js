@@ -138,3 +138,25 @@ document.querySelectorAll('.portfolio-card').forEach(card => {
     popup.style.visibility = 'hidden';
   });
 });
+
+//filter portfolio
+function filterPortfolio(category) {
+  const cards = document.querySelectorAll('.portfolio-card');
+  const buttons = document.querySelectorAll('.filter-btn');
+
+  cards.forEach(card => {
+    if (category === 'all' || card.dataset.category === category) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+
+  buttons.forEach(btn => {
+    btn.classList.remove('bg-green-dark', 'text-white');
+    btn.classList.add('bg-white', 'text-green-dark');
+  });
+
+  event.target.classList.add('bg-green-dark', 'text-white');
+  event.target.classList.remove('bg-white', 'text-green-dark');
+}
