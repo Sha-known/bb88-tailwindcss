@@ -1,1 +1,55 @@
 @import "tailwindcss";
+@source "./index.html";
+
+@theme {
+  /* Brand Colors */
+  --color-green-dark: #48887b;
+  --color-green-mid: #537e5f;
+  --color-green-light: #A8CF45;
+  --color-green-pale: #D7EDE8;
+  --color-cream: #f5f0e8;
+  --color-cream-dark: #ede5d5;
+  --color-text-dark: #48887b;
+  
+  /* Brand Fonts */
+  --font-poppins: 'Poppins', sans-serif;
+  --font-anton: 'Anton', sans-serif;
+  --font-pacifico: 'Pacifico', cursive;
+}
+
+/* Base resets & smooth scrolling */
+html { scroll-behavior: smooth; }
+
+/* Custom pseudo-elements that are too complex for inline classes */
+.hero-line::after {
+  content: '';
+  @apply block w-full h-1.5 bg-green-dark absolute left-0 z-10;
+  top: 50.5vw;
+}
+@media (max-width: 1260px) {
+  .hero-line::after { top: 636px; }
+}
+
+.about-card-shape::before {
+  content: '';
+  @apply absolute w-full h-full bg-white rounded-tl-[40px] rounded-br-[40px] -top-2.5 -right-2.5 z-0 transition-colors duration-300;
+}
+.about-card-hover:hover::before {
+  @apply bg-green-dark border-2 border-[#d4e8c2];
+}
+
+/* dashed lines for portfolio hover */
+.portfolio-dashed::before, .portfolio-dashed::after {
+  content: '';
+  @apply block w-full my-2.5 border-t-2 border-dashed border-[#9fbdb4];
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up { animation: slideUp 0.7s ease both; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-350 { animation-delay: 0.35s; }
+.delay-500 { animation-delay: 0.5s; }
