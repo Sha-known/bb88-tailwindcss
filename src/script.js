@@ -45,3 +45,12 @@ cards.forEach(card => {
     bubble.classList.remove('show');
   });
 });
+
+//burger
+// Burger Menu Toggle Script
+function toggleMenu() {
+  const nav = document.getElementById('nav-menu');
+  // This flips the menu between hidden and visible on mobile
+  nav.classList.toggle('hidden');
+  nav.classList.toggle('flex');
+}
