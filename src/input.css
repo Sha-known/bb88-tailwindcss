@@ -82,3 +82,50 @@ html { scroll-behavior: smooth; }
   border-bottom: 20px solid #d1d5db; /* Matches the gray-300 border */
   transition: left 0.3s ease;
 }
+
+/* Your perfectly working background CSS */
+.team-section {
+  position: relative;
+  background: #fff;
+  padding: 100px 20px 450px 20px; 
+  min-height: 150vh;
+  overflow: visible; 
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+.team-cloud-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: url('vector/vector3.png') no-repeat top center;
+  background-size: cover; 
+  z-index: 0;
+}
+.team-vector-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: url('vector/vector4.png') no-repeat top center;
+  background-size: cover; 
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .team-section {
+    min-height: auto; 
+    padding: 60px 15px 180px 15px; 
+  }
+  .team-cloud-bg {
+    height: 15%; 
+    background-size: 100% auto; 
+  }
+  .team-vector-bg {
+    height: 20%; 
+    background-size: 100% auto; 
+    background-position: bottom center;
+  }
+}
