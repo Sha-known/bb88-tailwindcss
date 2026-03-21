@@ -195,9 +195,6 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
-  .-right-\[45vw\] {
-    right: calc(45vw * -1);
-  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
@@ -234,11 +231,14 @@
   .mt-7 {
     margin-top: calc(var(--spacing) * 7);
   }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
   .mt-11 {
     margin-top: calc(var(--spacing) * 11);
   }
-  .mt-\[18vw\] {
-    margin-top: 18vw;
+  .mt-40 {
+    margin-top: calc(var(--spacing) * 40);
   }
   .-mr-10 {
     margin-right: calc(var(--spacing) * -10);
@@ -261,8 +261,8 @@
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
   }
-  .mb-27\.5 {
-    margin-bottom: calc(var(--spacing) * 27.5);
+  .mb-32 {
+    margin-bottom: calc(var(--spacing) * 32);
   }
   .ml-1 {
     margin-left: calc(var(--spacing) * 1);
@@ -318,14 +318,8 @@
   .w-\[65vw\] {
     width: 65vw;
   }
-  .w-\[85vw\] {
-    width: 85vw;
-  }
   .w-\[90\%\] {
     width: 90%;
-  }
-  .w-\[110vw\] {
-    width: 110vw;
   }
   .w-\[clamp\(16px\,4vw\,22px\)\] {
     width: clamp(16px, 4vw, 22px);
@@ -774,9 +768,9 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
-  .md\:right-0 {
+  .md\:mt-\[18vw\] {
     @media (width >= 48rem) {
-      right: calc(var(--spacing) * 0);
+      margin-top: 18vw;
     }
   }
   .md\:mr-0 {
@@ -883,10 +877,17 @@ html {
   width: 100%;
   background-color: var(--color-green-dark);
   top: 50.5vw;
+  transition: opacity 0.5s ease-in-out;
 }
 @media (max-width: 1260px) {
   .hero-line::after {
     top: 636px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-line::after {
+    opacity: 0;
+    pointer-events: none;
   }
 }
 .about-card-shape::before {

@@ -21,13 +21,24 @@
 html { scroll-behavior: smooth; }
 
 /* Custom pseudo-elements that are too complex for inline classes */
+/* Custom pseudo-elements that are too complex for inline classes */
 .hero-line::after {
   content: '';
   @apply block w-full h-1.5 bg-green-dark absolute left-0 z-10;
   top: 50.5vw;
+  transition: opacity 0.5s ease-in-out; /* Adds the slow disappearing effect */
 }
+
 @media (max-width: 1260px) {
   .hero-line::after { top: 636px; }
+}
+
+/* Hides the line smoothly on mobile/small screens */
+@media (max-width: 768px) {
+  .hero-line::after { 
+    opacity: 0; 
+    pointer-events: none;
+  }
 }
 
 .about-card-shape::before {
