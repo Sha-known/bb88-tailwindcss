@@ -117,3 +117,24 @@ updateCarousel();
 
 // Auto slide every 3 seconds
 setInterval(nextSlide, 5000);
+
+//hover effect sa Portfolio Flexcards
+document.querySelectorAll('.portfolio-card').forEach(card => {
+  const popup = card.querySelector('.floating-popup');
+
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    popup.style.left = (x + 15) + 'px';
+    popup.style.top = (y + 15) + 'px';
+    popup.style.opacity = '1';
+    popup.style.visibility = 'visible';
+  });
+
+  card.addEventListener('mouseleave', () => {
+    popup.style.opacity = '0';
+    popup.style.visibility = 'hidden';
+  });
+});

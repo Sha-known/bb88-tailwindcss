@@ -270,7 +270,223 @@
 </section>
 
 <!--PORTFOLIO SECTION-->
-<section>
+<section id="portfolio" class="relative py-16 px-5 md:px-10 overflow-hidden font-poppins text-center bg-portfolio">
+
+  <div class="relative z-10 max-w-[1100px] mx-auto">
+
+    <!-- TITLE -->
+    <h2 class="font-poppins text-[clamp(28px,4vw,52px)] font-extrabold text-green-dark mb-1 [-webkit-text-stroke:1px_white]">Portfolio</h2>
+    <div class="w-24 h-1 bg-green-light mx-auto mt-3 rounded-full mb-8"></div>
+
+    <!-- FILTER BUTTONS -->
+    <div class="flex flex-wrap justify-center gap-3 mb-10">
+      <button class="filter-btn px-5 py-2 rounded-full text-[13px] font-semibold bg-green-dark text-white transition-all duration-300 hover:bg-green-dark hover:text-white" onclick="filterPortfolio('all')">All</button>
+      <button class="filter-btn px-5 py-2 rounded-full text-[13px] font-semibold bg-white text-green-dark border-2 border-green-dark transition-all duration-300 hover:bg-green-dark hover:text-white" onclick="filterPortfolio('brand')">Brand Design</button>
+      <button class="filter-btn px-5 py-2 rounded-full text-[13px] font-semibold bg-white text-green-dark border-2 border-green-dark transition-all duration-300 hover:bg-green-dark hover:text-white" onclick="filterPortfolio('mobile')">Mobile App</button>
+      <button class="filter-btn px-5 py-2 rounded-full text-[13px] font-semibold bg-white text-green-dark border-2 border-green-dark transition-all duration-300 hover:bg-green-dark hover:text-white" onclick="filterPortfolio('socmed')">Soc Med</button>
+      <button class="filter-btn px-5 py-2 rounded-full text-[13px] font-semibold bg-white text-green-dark border-2 border-green-dark transition-all duration-300 hover:bg-green-dark hover:text-white" onclick="filterPortfolio('multimedia')">Multimedia</button>
+      <button class="filter-btn px-5 py-2 rounded-full text-[13px] font-semibold bg-white text-green-dark border-2 border-green-dark transition-all duration-300 hover:bg-green-dark hover:text-white" onclick="filterPortfolio('print')">Print Media</button>
+      <button class="filter-btn px-5 py-2 rounded-full text-[13px] font-semibold bg-white text-green-dark border-2 border-green-dark transition-all duration-300 hover:bg-green-dark hover:text-white" onclick="filterPortfolio('webapp')">Web App</button>
+    </div>
+
+    <!-- 3x3 GRID -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+
+      <!-- CARD 1 -->
+      <div class="portfolio-card group relative rounded-[20px] overflow-visible cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="brand">
+        <div class="w-full h-[220px] overflow-hidden rounded-t-[20px]">
+          <img src="picture/pic1.png" alt="BC Bagsakan Pickup" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="bg-white px-4 py-4 rounded-b-[20px]">
+          <h3 class="text-green-dark font-bold text-[15px]">BC Bagsakan Pickup</h3>
+        </div>
+        <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
+          <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
+            <img src="picture/pic1.png" alt="logo" class="w-full h-full object-cover">
+          </div>
+          <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
+            <h3 class="text-white font-bold text-[14px] m-0">BC Bagsakan Pickup</h3>
+          </div>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+          <p class="text-gray-600 text-[12px] leading-[1.7] text-center">Description here...</p>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="portfolio-card group relative rounded-[20px] overflow-visible cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="mobile">
+        <div class="w-full h-[220px] overflow-hidden rounded-t-[20px]">
+          <img src="portfolio/portfolio2.png" alt="Bio-MOBAPP" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="bg-white px-4 py-4 rounded-b-[20px]">
+          <h3 class="text-green-dark font-bold text-[15px]">Bio-MOBAPP</h3>
+        </div>
+        <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
+          <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
+            <img src="portfolio/portfolio2.png" alt="logo" class="w-full h-full object-cover">
+          </div>
+          <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
+            <h3 class="text-white font-bold text-[14px] m-0">Bio-MOBAPP</h3>
+          </div>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+          <p class="text-gray-600 text-[12px] leading-[1.7] text-center">Description here...</p>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="portfolio-card group relative rounded-[20px] overflow-visible cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="brand">
+        <div class="w-full h-[220px] overflow-hidden rounded-t-[20px]">
+          <img src="portfolio/portfolio3.png" alt="BC Bagsakan Delivery" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="bg-white px-4 py-4 rounded-b-[20px]">
+          <h3 class="text-green-dark font-bold text-[15px]">BC Bagsakan Delivery</h3>
+        </div>
+        <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
+          <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
+            <img src="portfolio/portfolio3.png" alt="logo" class="w-full h-full object-cover">
+          </div>
+          <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
+            <h3 class="text-white font-bold text-[14px] m-0">BC Bagsakan Delivery</h3>
+          </div>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+          <p class="text-gray-600 text-[12px] leading-[1.7] text-center">Description here...</p>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="portfolio-card group relative rounded-[20px] overflow-visible cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="brand">
+        <div class="w-full h-[220px] overflow-hidden rounded-t-[20px]">
+          <img src="portfolio/portfolio4.png" alt="Biorganism" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="bg-white px-4 py-4 rounded-b-[20px]">
+          <h3 class="text-green-dark font-bold text-[15px]">Biorganism</h3>
+        </div>
+        <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
+          <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
+            <img src="portfolio/portfolio4.png" alt="logo" class="w-full h-full object-cover">
+          </div>
+          <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
+            <h3 class="text-white font-bold text-[14px] m-0">Biorganism</h3>
+          </div>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+          <p class="text-gray-600 text-[12px] leading-[1.7] text-center">Katulong sa pagsasaka</p>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="portfolio-card group relative rounded-[20px] overflow-visible cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="print">
+        <div class="w-full h-[220px] overflow-hidden rounded-t-[20px]">
+          <img src="portfolio/portfolio5.png" alt="EM & A Architectural" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="bg-white px-4 py-4 rounded-b-[20px]">
+          <h3 class="text-green-dark font-bold text-[15px]">EM & A Architectural</h3>
+        </div>
+        <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
+          <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
+            <img src="portfolio/portfolio5.png" alt="logo" class="w-full h-full object-cover">
+          </div>
+          <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
+            <h3 class="text-white font-bold text-[14px] m-0">EM & A Architectural</h3>
+          </div>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+          <p class="text-gray-600 text-[12px] leading-[1.7] text-center">Description here...</p>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="portfolio-card group relative rounded-[20px] overflow-visible cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="print">
+        <div class="w-full h-[220px] overflow-hidden rounded-t-[20px]">
+          <img src="portfolio/portfolio6.png" alt="Greenhouse Paradise" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="bg-white px-4 py-4 rounded-b-[20px]">
+          <h3 class="text-green-dark font-bold text-[15px]">Greenhouse Paradise</h3>
+        </div>
+        <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
+          <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
+            <img src="portfolio/portfolio6.png" alt="logo" class="w-full h-full object-cover">
+          </div>
+          <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
+            <h3 class="text-white font-bold text-[14px] m-0">Greenhouse Paradise</h3>
+          </div>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+          <p class="text-gray-600 text-[12px] leading-[1.7] text-center">Description here...</p>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="portfolio-card group relative rounded-[20px] overflow-visible cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="print">
+        <div class="w-full h-[220px] overflow-hidden rounded-t-[20px]">
+          <img src="portfolio/portfolio7.png" alt="MHR" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="bg-white px-4 py-4 rounded-b-[20px]">
+          <h3 class="text-green-dark font-bold text-[15px]">MHR</h3>
+        </div>
+        <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
+          <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
+            <img src="portfolio/portfolio7.png" alt="logo" class="w-full h-full object-cover">
+          </div>
+          <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
+            <h3 class="text-white font-bold text-[14px] m-0">MHR</h3>
+          </div>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+          <p class="text-gray-600 text-[12px] leading-[1.7] text-center">Description here...</p>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+        </div>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="portfolio-card group relative rounded-[20px] overflow-visible cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="print">
+        <div class="w-full h-[220px] overflow-hidden rounded-t-[20px]">
+          <img src="portfolio/portfolio8.png" alt="Migs" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="bg-white px-4 py-4 rounded-b-[20px]">
+          <h3 class="text-green-dark font-bold text-[15px]">Migs</h3>
+        </div>
+        <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
+          <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
+            <img src="portfolio/portfolio8.png" alt="logo" class="w-full h-full object-cover">
+          </div>
+          <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
+            <h3 class="text-white font-bold text-[14px] m-0">Migs</h3>
+          </div>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+          <p class="text-gray-600 text-[12px] leading-[1.7] text-center">Description here...</p>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+        </div>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="portfolio-card group relative rounded-[20px] overflow-visible cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="brand">
+        <div class="w-full h-[220px] overflow-hidden rounded-t-[20px]">
+          <img src="portfolio/portfolio9.png" alt="Filipino Land" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="bg-white px-4 py-4 rounded-b-[20px]">
+          <h3 class="text-green-dark font-bold text-[15px]">Filipino Land</h3>
+        </div>
+        <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
+          <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
+            <img src="portfolio/portfolio9.png" alt="logo" class="w-full h-full object-cover">
+          </div>
+          <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
+            <h3 class="text-white font-bold text-[14px] m-0">Filipino Land</h3>
+          </div>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+          <p class="text-gray-600 text-[12px] leading-[1.7] text-center">Description here...</p>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SEE MORE BUTTON -->
+    <a href="#" class="inline-flex items-center justify-center px-10 py-3 bg-white text-green-dark font-semibold text-[15px] border-2 border-green-dark rounded-full transition-all duration-300 hover:bg-green-dark hover:text-white hover:shadow-lg">See More</a>
+
+  </div>
 </section>
 
 <!--OUR TEAM SECTION-->

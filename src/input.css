@@ -130,3 +130,10 @@ html { scroll-behavior: smooth; }
   }
 }
 
+.bg-portfolio {
+  background-image: url('bg/background3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
