@@ -195,6 +195,9 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .-right-\[45vw\] {
+    right: calc(45vw * -1);
+  }
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
@@ -236,6 +239,9 @@
   }
   .mt-\[18vw\] {
     margin-top: 18vw;
+  }
+  .-mr-10 {
+    margin-right: calc(var(--spacing) * -10);
   }
   .mr-5 {
     margin-right: calc(var(--spacing) * 5);
@@ -309,11 +315,17 @@
   .w-25 {
     width: calc(var(--spacing) * 25);
   }
+  .w-\[65vw\] {
+    width: 65vw;
+  }
   .w-\[85vw\] {
     width: 85vw;
   }
   .w-\[90\%\] {
     width: 90%;
+  }
+  .w-\[110vw\] {
+    width: 110vw;
   }
   .w-\[clamp\(16px\,4vw\,22px\)\] {
     width: clamp(16px, 4vw, 22px);
@@ -760,6 +772,16 @@
   .sm\:grid-cols-2 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:right-0 {
+    @media (width >= 48rem) {
+      right: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:mr-0 {
+    @media (width >= 48rem) {
+      margin-right: calc(var(--spacing) * 0);
     }
   }
   .md\:w-\[70vw\] {
