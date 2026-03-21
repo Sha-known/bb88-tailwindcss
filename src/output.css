@@ -396,6 +396,9 @@
   .h-57\.5 {
     height: calc(var(--spacing) * 57.5);
   }
+  .h-\[100px\] {
+    height: 100px;
+  }
   .h-\[120px\] {
     height: 120px;
   }
@@ -455,6 +458,9 @@
   }
   .w-\[90\%\] {
     width: 90%;
+  }
+  .w-\[100px\] {
+    width: 100px;
   }
   .w-\[120px\] {
     width: 120px;
@@ -740,6 +746,12 @@
   }
   .bg-\[\#C8E6E0\] {
     background-color: #C8E6E0;
+  }
+  .bg-\[\#D7EDE8\] {
+    background-color: #D7EDE8;
+  }
+  .bg-\[\#ffffff\] {
+    background-color: #ffffff;
   }
   .bg-gray-400 {
     background-color: var(--color-gray-400);
@@ -1326,6 +1338,56 @@
       }
     }
   }
+  .hover\:scale-115 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 115%;
+        --tw-scale-y: 115%;
+        --tw-scale-z: 115%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .hover\:scale-120 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 120%;
+        --tw-scale-y: 120%;
+        --tw-scale-z: 120%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .hover\:scale-125 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 125%;
+        --tw-scale-y: 125%;
+        --tw-scale-z: 125%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .hover\:scale-150 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 150%;
+        --tw-scale-y: 150%;
+        --tw-scale-z: 150%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .hover\:scale-200 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 200%;
+        --tw-scale-y: 200%;
+        --tw-scale-z: 200%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
   .hover\:scale-\[1\.03\] {
     &:hover {
       @media (hover: hover) {
@@ -1352,6 +1414,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: #a1a1a1c9;
+      }
+    }
+  }
+  .hover\:bg-\[\#f0f0f0\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #f0f0f0;
       }
     }
   }

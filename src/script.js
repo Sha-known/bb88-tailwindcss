@@ -73,3 +73,18 @@ function toggleMenu() {
     hover.style.display = 'none';
   });
 });
+
+//hover effect for partnered company
+
+function goToSlide(index) {
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot, i) => {
+    if (i === index) {
+      dot.classList.add('bg-green-dark', 'w-3', 'h-3');
+      dot.classList.remove('bg-gray-400', 'w-2', 'h-2');
+    } else {
+      dot.classList.remove('bg-green-dark', 'w-3', 'h-3');
+      dot.classList.add('bg-gray-400', 'w-2', 'h-2');
+    }
+  });
+}
