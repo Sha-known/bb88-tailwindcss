@@ -76,10 +76,26 @@ function toggleMenu() {
 
 //hover effect for partnered company
 
-function goToSlide(index) {
+const items = Array.from(document.querySelectorAll('.carousel-item'));
+const track = document.getElementById('carousel-track');
+let currentCenter = 3; // index ng nasa gitna (0-based)
+
+function updateCarousel() {
+  items.forEach((item, i) => {
+    const div = item.querySelector('div') || item;
+    if (i === currentCenter) {
+      item.classList.add('w-[150px]', 'h-[150px]', 'bg-[#f0f0f0]', 'shadow-xl');
+      item.classList.remove('w-[100px]', 'h-[100px]');
+    } else {
+      item.classList.remove('w-[150px]', 'h-[150px]', 'bg-[#f0f0f0]', 'shadow-xl');
+      item.classList.add('w-[100px]', 'h-[100px]');
+    }
+  });
+
+  // Update dots
   const dots = document.querySelectorAll('.dot');
   dots.forEach((dot, i) => {
-    if (i === index) {
+    if (i === currentCenter) {
       dot.classList.add('bg-green-dark', 'w-3', 'h-3');
       dot.classList.remove('bg-gray-400', 'w-2', 'h-2');
     } else {
@@ -88,3 +104,16 @@ function goToSlide(index) {
     }
   });
 }
+
+function nextSlide() {
+  // Move first item to end (infinite loop)
+  track.appendChild(items[0]);
+  items.push(items.shift());
+  updateCarousel();
+}
+
+// Initialize
+updateCarousel();
+
+// Auto slide every 3 seconds
+setInterval(nextSlide, 5000);

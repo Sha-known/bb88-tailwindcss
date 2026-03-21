@@ -210,6 +210,9 @@
   .start {
     inset-inline-start: var(--spacing);
   }
+  .end {
+    inset-inline-end: var(--spacing);
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -749,6 +752,9 @@
   }
   .bg-\[\#D7EDE8\] {
     background-color: #D7EDE8;
+  }
+  .bg-\[\#f0f0f0\] {
+    background-color: #f0f0f0;
   }
   .bg-\[\#ffffff\] {
     background-color: #ffffff;
