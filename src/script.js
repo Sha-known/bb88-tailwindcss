@@ -1,9 +1,11 @@
 //team cards tooltip script
-const cards = document.querySelectorAll('.group[data-title]'); // Updated selector to find the group cards
+const cards = document.querySelectorAll('.group[data-title]'); 
 const bubble = document.getElementById('dynamic-desc-box');
 const bTitle = document.getElementById('bubble-title');
 const bText = document.getElementById('bubble-text');
-const container = document.querySelector('.max-w-\\[1500px\\]'); // Selects the container wrapper
+
+// FIXED: Now looking for the correct container class (.max-w-375)
+const container = document.querySelector('.max-w-375'); 
 
 cards.forEach(card => {
   card.addEventListener('mouseenter', () => {
