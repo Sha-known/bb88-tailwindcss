@@ -246,6 +246,9 @@
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
   .mb-3\.5 {
     margin-bottom: calc(var(--spacing) * 3.5);
   }
@@ -254,6 +257,9 @@
   }
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
+  }
+  .mb-27 {
+    margin-bottom: calc(var(--spacing) * 27);
   }
   .mb-27\.5 {
     margin-bottom: calc(var(--spacing) * 27.5);
@@ -275,6 +281,9 @@
   }
   .inline-flex {
     display: inline-flex;
+  }
+  .table {
+    display: table;
   }
   .h-0 {
     height: calc(var(--spacing) * 0);
@@ -312,6 +321,9 @@
   .w-\[55vw\] {
     width: 55vw;
   }
+  .w-\[85vw\] {
+    width: 85vw;
+  }
   .w-\[90\%\] {
     width: 90%;
   }
@@ -348,11 +360,23 @@
   .min-w-175 {
     min-width: calc(var(--spacing) * 175);
   }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
   .shrink-0 {
     flex-shrink: 0;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .scroll-mt-30 {
     scroll-margin-top: calc(var(--spacing) * 30);
@@ -410,6 +434,10 @@
   }
   .rounded-br-\[40px\] {
     border-bottom-right-radius: 40px;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .border-2 {
     border-style: var(--tw-border-style);
@@ -502,6 +530,9 @@
   .py-\[0\.4em\] {
     padding-block: 0.4em;
   }
+  .pt-27 {
+    padding-top: calc(var(--spacing) * 27);
+  }
   .pt-27\.5 {
     padding-top: calc(var(--spacing) * 27.5);
   }
@@ -591,6 +622,9 @@
   .text-white {
     color: var(--color-white);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .shadow-\[0_2px_16px_rgba\(0\,0\,0\,0\.08\)\] {
     --tw-shadow: 0 2px 16px var(--tw-shadow-color, rgba(0,0,0,0.08));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -606,6 +640,10 @@
   .shadow-\[0_12px_40px_rgba\(0\,0\,0\,0\.15\)\] {
     --tw-shadow: 0 12px 40px var(--tw-shadow-color, rgba(0,0,0,0.15));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .transition-all {
     transition-property: all;
@@ -765,6 +803,11 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
+  .md\:w-\[70vw\] {
+    @media (width >= 48rem) {
+      width: 70vw;
+    }
+  }
   .md\:w-auto {
     @media (width >= 48rem) {
       width: auto;
@@ -828,6 +871,16 @@
   .lg\:hidden {
     @media (width >= 64rem) {
       display: none;
+    }
+  }
+  .lg\:w-\[55vw\] {
+    @media (width >= 64rem) {
+      width: 55vw;
+    }
+  }
+  .lg\:min-w-175 {
+    @media (width >= 64rem) {
+      min-width: calc(var(--spacing) * 175);
     }
   }
   .lg\:grid-cols-4 {
@@ -921,6 +974,26 @@ html {
 .delay-500 {
   animation-delay: 0.5s;
 }
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -1003,6 +1076,11 @@ html {
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -1040,6 +1118,11 @@ html {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
@@ -1058,6 +1141,7 @@ html {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-translate-x: 0;
       --tw-translate-y: 0;
