@@ -414,6 +414,9 @@
   .h-full {
     height: 100%;
   }
+  .h-screen {
+    height: 100vh;
+  }
   .min-h-82 {
     min-height: calc(var(--spacing) * 82);
   }
@@ -678,6 +681,10 @@
   .border-\[3px\] {
     border-style: var(--tw-border-style);
     border-width: 3px;
+  }
+  .border-y-\[6px\] {
+    border-block-style: var(--tw-border-style);
+    border-block-width: 6px;
   }
   .border-t-4 {
     border-top-style: var(--tw-border-style);
