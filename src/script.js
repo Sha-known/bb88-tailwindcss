@@ -160,3 +160,9 @@ function filterPortfolio(category) {
   event.target.classList.add('bg-green-dark', 'text-white');
   event.target.classList.remove('bg-white', 'text-green-dark');
 }
+
+function seeMore() {
+  const hiddenCards = document.querySelectorAll('.portfolio-card.hidden');
+  hiddenCards.forEach(card => card.classList.remove('hidden'));
+  document.getElementById('see-more-btn').style.display = 'none';
+}

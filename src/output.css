@@ -253,6 +253,9 @@
   .z-999 {
     z-index: 999;
   }
+  .col-span-full {
+    grid-column: 1 / -1;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -435,6 +438,9 @@
   }
   .h-\[220px\] {
     height: 220px;
+  }
+  .h-\[260px\] {
+    height: 260px;
   }
   .h-\[clamp\(45px\,4vw\,65px\)\] {
     height: clamp(45px, 4vw, 65px);
