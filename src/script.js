@@ -54,3 +54,22 @@ function toggleMenu() {
   nav.classList.toggle('hidden');
   nav.classList.toggle('flex');
 }
+
+//hover for cards (Our services)
+['left', 'center', 'right'].forEach(id => {
+  const card = document.getElementById(`card-${id}`);
+  const img = document.getElementById(`card-${id}-img`);
+  const hover = document.getElementById(`card-${id}-hover`);
+
+  card.addEventListener('mouseenter', () => {
+    card.classList.add('scale-y-[1.4]', 'z-50');
+    img.style.display = 'none';
+    hover.style.display = 'flex';
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.classList.remove('scale-y-[1.4]', 'z-50');
+    img.style.display = 'flex';
+    hover.style.display = 'none';
+  });
+});

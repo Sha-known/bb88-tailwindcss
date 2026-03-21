@@ -148,8 +148,9 @@
     </div>
 </section>
 
-<section id="services" class="relative py-10 px-5 md:px-10 overflow-hidden font-poppins text-center min-h-screen"
-  style="background-image: url('bg/background2.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+<!--OUR SERVICES SECTION-->
+<section id="services" class="relative py-10 px-5 md:px-10 overflow-hidden font-poppins text-center"
+  style="background-image: url('bg/background2.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height:100vh;">
 
   <img src="vector/vector2.png"   class="absolute top-0 left-0 pointer-events-none z-0" style="width: 500px;">
   <img src="vector/vector2.0.png" class="absolute top-0 right-0 pointer-events-none z-0" style="width: 500px;">
@@ -164,24 +165,48 @@
     <div class="w-24 h-1 bg-green-light mx-auto mt-3 rounded-full mb-10"></div>
 
 
-    <div class="flex flex-col lg:flex-row items-stretch gap-5 mb-10" style="justify-content: center; padding-left: 100px; padding-right: 100px; margin-top: 100px;">
+    <div class="flex flex-col lg:flex-row items-stretch gap-5 mb-10" style="justify-content: center; padding-left: 100px; padding-right: 100px; margin-top: 100px;align-items:center; position:relative;">
 
-    <!-- LEFT -->
-    <div class="flex-1 max-w-[280px] mx-auto lg:mx-0 bg-white flex items-center justify-center p-4" style="border: 10px solid #48887B; border-radius: 16px; min-height: 350px;">
-      <img src="vector/DigitalMarketingManagementvector.png" alt="Digital Marketing" style="max-width: 100%; max-height: 250px; object-fit: contain;">
+<!-- LEFT -->
+<div id="card-left" class="flex-1 max-w-[280px] mx-auto lg:mx-0 relative cursor-pointer overflow-hidden transition-transform duration-300 origin-center"
+  style="border: 10px solid #48887B; border-radius: 16px; height: 350px; transition: height 0.3s ease;">
+  <div id="card-left-img" class="bg-white flex items-center justify-center p-4 w-full h-full">
+    <img src="vector/DigitalMarketingManagementvector.png" style="max-width: 100%; max-height: 250px; object-fit: contain;">
+  </div>
+  <div id="card-left-hover" class="flex-col items-start p-6 w-full h-full" style="background: #48887B; display: none;">
+    <div style="background: white; border-radius: 10px; padding: 10px 16px; margin-bottom: 16px; width: 100%; text-align: center;">
+      <h3 style="color: #48887B; font-weight: 700; font-size: 15px; margin: 0;">Digital Marketing Management</h3>
     </div>
+    <p class="font-poppins text-white text-[13px] leading-[1.7] text-center">We specialize in creating data-driven digital marketing campaigns that elevate your brand's online presence. From social media management to SEO strategies, we help you connect with your target audience and drive measurable results.</p>
+  </div>
+</div>
 
-    <!-- CENTER -->
-    <div class="flex-1 max-w-[280px] mx-auto lg:mx-0 bg-white flex items-center justify-center p-4" style="border: 10px solid #48887B; border-radius: 16px; min-height: 350px;">
-      <img src="vector/MediaProductionvector1.png" alt="Media Production" style="max-width: 100%; max-height: 250px; object-fit: contain;">
+<!-- CENTER -->
+<div id="card-center" class="flex-1 max-w-[280px] mx-auto lg:mx-0 relative cursor-pointer overflow-hidden transition-transform duration-300 origin-center"
+  style="border: 10px solid #48887B; border-radius: 16px; height: 350px; transition: height 0.3s ease;">
+  <div id="card-center-img" class="bg-white flex items-center justify-center p-4 w-full h-full">
+    <img src="vector/MediaProductionvector1.png" style="max-width: 100%; max-height: 250px; object-fit: contain;">
+  </div>
+  <div id="card-center-hover" class="flex-col items-start p-6 w-full h-full" style="background: #48887B; display: none;">
+    <div style="background: white; border-radius: 10px; padding: 10px 16px; margin-bottom: 16px; width: 100%; text-align: center;">
+      <h3 style="color: #48887B; font-weight: 700; font-size: 15px; margin: 0;">Media Production Management</h3>
     </div>
+   <p class="font-poppins text-white text-[11px] leading-[1.7] text-center">We have a team of in-house graphic designers, animators, architectural designers, engineers and copywriters. We also work with trusted contractors and outside firms. We provide creatice input such as concept visualization up to final output. We define an engaging visual aspects of websites, books, magazines, product packaging, exhibitions, visual production designs and more.</p>
+  </div>
+</div>
 
-    <!-- RIGHT -->
-    <div class="flex-1 max-w-[280px] mx-auto lg:mx-0 bg-white flex items-center justify-center p-4" style="border: 10px solid #48887B; border-radius: 16px; min-height: 350px;">
-      <img src="vector/SystemSolutions&Managementvector.png" alt="System Solutions" style="max-width: 100%; max-height: 250px; object-fit: contain;">
+<!-- RIGHT -->
+<div id="card-right" class="flex-1 max-w-[280px] mx-auto lg:mx-0 relative cursor-pointer overflow-hidden "
+  style="border: 10px solid #48887B; border-radius: 16px; height: 350px; transition: height 0.3s ease;">
+  <div id="card-right-img" class="bg-white flex items-center justify-center p-4 w-full h-full">
+    <img src="vector/SystemSolutions&Managementvector.png" style="max-width: 100%; max-height: 250px; object-fit: contain;">
+  </div>
+  <div id="card-right-hover" class="flex-col items-start p-6 w-full h-full" style="background: #48887B; display: none;">
+    <div style="background: white; border-radius: 10px; padding: 10px 16px; margin-bottom: 16px; width: 100%; text-align: center;">
+      <h3 style="color: #48887B; font-weight: 700; font-size: 15px; margin: 0;">System Solutions & Management</h3>
     </div>
-
-
+    <p class="font-poppins text-white text-[13px] leading-[1.7] text-center">We deliver cutting-edge system solutions tailored to your business needs. From software development to IT infrastructure management, our team ensures your systems run efficiently, securely, and seamlessly to support your business growth.</p>
+  </div>
 </div>
 
 </section>
