@@ -1224,6 +1224,13 @@
       }
     }
   }
+  .hover\:bg-white\! {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-white) !important;
+      }
+    }
+  }
   .hover\:pb-3 {
     &:hover {
       @media (hover: hover) {
@@ -1242,6 +1249,13 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-green-dark);
+      }
+    }
+  }
+  .hover\:text-green-dark\! {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-green-dark) !important;
       }
     }
   }
