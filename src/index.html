@@ -14,7 +14,7 @@
   @media (max-width: 767px) {
     .mobile-fade { opacity: 0.2 !important; }
   }
-</style>
+  </style>
 </head>
 <body class="font-poppins m-0 min-h-screen overflow-x-hidden bg-transparent text-gray-800">
 <!--NAVPILL PLUS BB88 LOGO ON THE LEFT SIDE-->
@@ -285,41 +285,43 @@
     <div class="w-24 h-1 bg-green-light mx-auto mt-3 rounded-full mb-8"></div>
 
     <!-- FILTER BUTTONS -->
-    <div class="flex flex-wrap justify-center gap-3 mb-10">
-      <button class="filter-btn px-5 py-2 rounded-full text-[13px] font-semibold bg-green-dark text-white transition-all duration-300 hover:bg-green-dark hover:text-white" onclick="filterPortfolio('all')">All</button>
-      <button class="filter-btn px-5 py-2 rounded-full text-[13px] font-semibold bg-white text-green-dark border-2 border-green-dark transition-all duration-300 hover:bg-green-dark hover:text-white" onclick="filterPortfolio('brand')">Brand Design</button>
-      <button class="filter-btn px-5 py-2 rounded-full text-[13px] font-semibold bg-white text-green-dark border-2 border-green-dark transition-all duration-300 hover:bg-green-dark hover:text-white" onclick="filterPortfolio('mobile')">Mobile App</button>
-      <button class="filter-btn px-5 py-2 rounded-full text-[13px] font-semibold bg-white text-green-dark border-2 border-green-dark transition-all duration-300 hover:bg-green-dark hover:text-white" onclick="filterPortfolio('socmed')">Soc Med</button>
-      <button class="filter-btn px-5 py-2 rounded-full text-[13px] font-semibold bg-white text-green-dark border-2 border-green-dark transition-all duration-300 hover:bg-green-dark hover:text-white" onclick="filterPortfolio('multimedia')">Multimedia</button>
-      <button class="filter-btn px-5 py-2 rounded-full text-[13px] font-semibold bg-white text-green-dark border-2 border-green-dark transition-all duration-300 hover:bg-green-dark hover:text-white" onclick="filterPortfolio('print')">Print Media</button>
-      <button class="filter-btn px-5 py-2 rounded-full text-[13px] font-semibold bg-white text-green-dark border-2 border-green-dark transition-all duration-300 hover:bg-green-dark hover:text-white" onclick="filterPortfolio('webapp')">Web App</button>
+    <div class="flex justify-center mb-10 w-full px-2 font-sans">
+      <div class="inline-flex flex-wrap justify-center items-center bg-white text-[#458B7B] rounded-full p-2 shadow-[2px_8px_15px_-3px_rgba(0,0,0,0.25)] gap-1 md:gap-[18px]">
+        <button class="filter-btn px-4 py-1 rounded-[8px] text-[15px] text-[#458B7B] transition-all duration-200 [&.active]:bg-[#458B7B] [&.active]:text-white" onclick="filterPortfolio('all')">All</button>
+        <button class="filter-btn px-2 py-1 rounded-[8px] text-[15px] text-[#458B7B] transition-all duration-200 hover:bg-gray-50 [&.active]:bg-[#458B7B] [&.active]:text-white" onclick="filterPortfolio('brand')">Brand Design</button>
+        <button class="filter-btn px-2 py-1 rounded-[8px] text-[15px] text-[#458B7B] transition-all duration-200 hover:bg-gray-50 [&.active]:bg-[#458B7B] [&.active]:text-white" onclick="filterPortfolio('mobile')">Mobile App</button>
+        <button class="filter-btn px-2 py-1 rounded-[8px] text-[15px] text-[#458B7B] transition-all duration-200 hover:bg-gray-50 [&.active]:bg-[#458B7B] [&.active]:text-white" onclick="filterPortfolio('socmed')">Soc Med</button>
+        <button class="filter-btn px-2 py-1 rounded-[8px] text-[15px] text-[#458B7B] transition-all duration-200 hover:bg-gray-50 [&.active]:bg-[#458B7B] [&.active]:text-white" onclick="filterPortfolio('multimedia')">Multimedia</button>
+        <button class="filter-btn px-2 py-1 rounded-[8px] text-[15px] text-[#458B7B] transition-all duration-200 hover:bg-gray-50 [&.active]:bg-[#458B7B] [&.active]:text-white" onclick="filterPortfolio('print')">Print Media</button>
+        <button class="filter-btn pr-4 pl-2 py-1 rounded-[8px] text-[15px] text-[#458B7B] transition-all duration-200 hover:bg-gray-50 [&.active]:bg-[#458B7B] [&.active]:text-white" onclick="filterPortfolio('webapp')">Web App</button>
+      </div>
     </div>
 
     <!-- 3x3 GRID -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
 
       <!-- Card 1 -->
-<div class="portfolio-card group relative rounded-[20px] cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="mobile" style="border: 5px solid #48887B;">
-  <div class="w-full h-[260px] overflow-hidden rounded-t-[20px]">
-    <img src="picture/pic1.png" alt="BC Bagsakan Pickup" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
-  </div>
-  <div class="px-4 py-4 rounded-b-[20px]" style="background: #48887B;">
-    <div class="bg-white rounded-full px-4 py-2 text-center">
-      <h3 class="text-green-dark font-bold text-[15px] m-0">BC Bagsakan Pickup</h3>
-    </div>
-  </div>
-  <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
-    <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
-      <img src="picture/pic1.png" alt="logo" class="w-full h-full object-cover">
-    </div>
-    <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
-      <h3 class="text-white font-bold text-[14px] m-0">BC Bagsakan Pickup</h3>
-    </div>
-    <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
-    <p class="text-gray-600 text-[12px] leading-[1.7] text-center">Description here...</p>
-    <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
-  </div>
-</div>
+      <div class="portfolio-card group relative rounded-[20px] cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="mobile" style="border: 5px solid #48887B;">
+        <div class="w-full h-[260px] overflow-hidden rounded-t-[20px]">
+          <img src="picture/pic1.png" alt="BC Bagsakan Pickup" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="px-4 py-4 rounded-b-[20px]" style="background: #48887B;">
+          <div class="bg-white rounded-full px-4 py-2 text-center">
+            <h3 class="text-green-dark font-bold text-[15px] m-0">BC Bagsakan Pickup</h3>
+          </div>
+        </div>
+        <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
+          <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
+            <img src="picture/pic1.png" alt="logo" class="w-full h-full object-cover">
+          </div>
+          <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
+            <h3 class="text-white font-bold text-[14px] m-0">BC Bagsakan Pickup</h3>
+          </div>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+          <p class="text-gray-600 text-[12px] leading-[1.7] text-center">Description here...</p>
+          <div class="w-full border-t-2 border-dashed border-[#9fbdb4] my-3"></div>
+        </div>
+      </div>
 
 <!-- Card 2 -->
 <div class="portfolio-card group relative rounded-[20px] cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="mobile" style="border: 5px solid #48887B;">
@@ -512,6 +514,7 @@
 
   </div>
 </section>
+
 <!--OUR TEAM SECTION-->
 <section id="partners" class="relative py-16 px-5 overflow-hidden font-poppins text-center bg-[#C8E6E0] border-y-[6px] border-green-dark">
   <div class="team-cloud-bg"></div>

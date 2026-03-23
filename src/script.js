@@ -163,3 +163,24 @@ function seeMore() {
   hiddenCards.forEach(card => card.classList.remove('hidden'));
   document.getElementById('see-more-btn').style.display = 'none';
 }
+
+//filter
+
+
+// portfolio filters
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+      if (filter === 'all' || item.dataset.category === filter) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
+
