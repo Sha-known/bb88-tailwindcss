@@ -136,9 +136,14 @@ html { scroll-behavior: smooth; }
   background-position: center;
   background-repeat: no-repeat;
 }
-
+/* Sa hero section */
 @media (max-width: 768px) {
   .hero-vector {
     opacity: 0.3;
   }
+}
+
+/* Dots under carousel */
+.dot {
+  cursor: pointer;
 }

@@ -78,11 +78,10 @@ function toggleMenu() {
 
 const items = Array.from(document.querySelectorAll('.carousel-item'));
 const track = document.getElementById('carousel-track');
-let currentCenter = 3; // index ng nasa gitna (0-based)
+let currentCenter = 0; // index ng nasa gitna (0-based)
 
 function updateCarousel() {
   items.forEach((item, i) => {
-    const div = item.querySelector('div') || item;
     if (i === currentCenter) {
       item.classList.add('w-[150px]', 'h-[150px]', 'bg-[#f0f0f0]', 'shadow-xl');
       item.classList.remove('w-[100px]', 'h-[100px]');
@@ -92,23 +91,21 @@ function updateCarousel() {
     }
   });
 
-  // Update dots
+  // Update dots — gumagalaw kasabay ng carousel
   const dots = document.querySelectorAll('.dot');
   dots.forEach((dot, i) => {
     if (i === currentCenter) {
-      dot.classList.add('bg-green-dark', 'w-3', 'h-3');
+      dot.classList.add('bg-green-dark', 'w-4', 'h-4');
       dot.classList.remove('bg-gray-400', 'w-2', 'h-2');
     } else {
-      dot.classList.remove('bg-green-dark', 'w-3', 'h-3');
+      dot.classList.remove('bg-green-dark', 'w-4', 'h-4');
       dot.classList.add('bg-gray-400', 'w-2', 'h-2');
     }
   });
 }
 
 function nextSlide() {
-  // Move first item to end (infinite loop)
-  track.appendChild(items[0]);
-  items.push(items.shift());
+  currentCenter = (currentCenter + 1) % items.length;
   updateCarousel();
 }
 
