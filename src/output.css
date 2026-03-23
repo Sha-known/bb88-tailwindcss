@@ -492,6 +492,9 @@
   .h-\[505px\] {
     height: 505px;
   }
+  .h-\[clamp\(40px\,4vw\,65px\)\] {
+    height: clamp(40px, 4vw, 65px);
+  }
   .h-\[clamp\(45px\,4vw\,65px\)\] {
     height: clamp(45px, 4vw, 65px);
   }
@@ -609,6 +612,9 @@
   .w-\[100px\] {
     width: 100px;
   }
+  .w-\[120px\] {
+    width: 120px;
+  }
   .w-\[150px\] {
     width: 150px;
   }
@@ -626,6 +632,9 @@
   }
   .w-\[clamp\(16px\,4vw\,22px\)\] {
     width: clamp(16px, 4vw, 22px);
+  }
+  .w-\[clamp\(40px\,4vw\,65px\)\] {
+    width: clamp(40px, 4vw, 65px);
   }
   .w-\[clamp\(45px\,4vw\,65px\)\] {
     width: clamp(45px, 4vw, 65px);
@@ -1017,6 +1026,9 @@
   .p-\[clamp\(20px\,3vw\,40px\)\] {
     padding: clamp(20px, 3vw, 40px);
   }
+  .px-0 {
+    padding-inline: calc(var(--spacing) * 0);
+  }
   .px-1 {
     padding-inline: calc(var(--spacing) * 1);
   }
@@ -1188,6 +1200,9 @@
   .text-\[clamp\(1\.6rem\,2\.5vw\,3rem\)\] {
     font-size: clamp(1.6rem, 2.5vw, 3rem);
   }
+  .text-\[clamp\(12px\,1\.5vw\,22px\)\] {
+    font-size: clamp(12px, 1.5vw, 22px);
+  }
   .text-\[clamp\(14px\,0\.5rem\+1vw\,22px\)\] {
     font-size: clamp(14px, 0.5rem + 1vw, 22px);
   }
@@ -1197,8 +1212,14 @@
   .text-\[clamp\(14px\,1\.2vw\,20px\)\] {
     font-size: clamp(14px, 1.2vw, 20px);
   }
+  .text-\[clamp\(14px\,1\.5vw\,26px\)\] {
+    font-size: clamp(14px, 1.5vw, 26px);
+  }
   .text-\[clamp\(14px\,1vw\,18px\)\] {
     font-size: clamp(14px, 1vw, 18px);
+  }
+  .text-\[clamp\(14px\,3\.5vw\,50px\)\] {
+    font-size: clamp(14px, 3.5vw, 50px);
   }
   .text-\[clamp\(15px\,1\.2vw\,20px\)\] {
     font-size: clamp(15px, 1.2vw, 20px);
@@ -1208,6 +1229,9 @@
   }
   .text-\[clamp\(16px\,1\.5vw\,26px\)\] {
     font-size: clamp(16px, 1.5vw, 26px);
+  }
+  .text-\[clamp\(16px\,2vw\,31px\)\] {
+    font-size: clamp(16px, 2vw, 31px);
   }
   .text-\[clamp\(18px\,4vw\,50px\)\] {
     font-size: clamp(18px, 4vw, 50px);
@@ -1226,6 +1250,9 @@
   }
   .text-\[clamp\(35px\,5vw\,65px\)\] {
     font-size: clamp(35px, 5vw, 65px);
+  }
+  .text-\[clamp\(36px\,9vw\,110px\)\] {
+    font-size: clamp(36px, 9vw, 110px);
   }
   .text-\[clamp\(40px\,11vw\,110px\)\] {
     font-size: clamp(40px, 11vw, 110px);
@@ -1317,6 +1344,9 @@
   }
   .opacity-0 {
     opacity: 0%;
+  }
+  .opacity-30 {
+    opacity: 30%;
   }
   .shadow-\[0_-8px_30px_rgba\(0\,0\,0\,0\.15\)\] {
     --tw-shadow: 0 -8px 30px var(--tw-shadow-color, rgba(0,0,0,0.15));
@@ -1793,6 +1823,11 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
+  .sm\:flex-row {
+    @media (width >= 40rem) {
+      flex-direction: row;
+    }
+  }
   .md\:mt-\[18vw\] {
     @media (width >= 48rem) {
       margin-top: 18vw;
@@ -1806,6 +1841,16 @@
   .md\:w-\[70vw\] {
     @media (width >= 48rem) {
       width: 70vw;
+    }
+  }
+  .md\:w-\[240px\] {
+    @media (width >= 48rem) {
+      width: 240px;
+    }
+  }
+  .md\:w-\[300px\] {
+    @media (width >= 48rem) {
+      width: 300px;
     }
   }
   .md\:w-auto {
@@ -1831,6 +1876,11 @@
   .md\:px-15 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 15);
+    }
+  }
+  .md\:px-16 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 16);
     }
   }
   .md\:px-\[clamp\(40px\,5vw\,100px\)\] {
@@ -1868,6 +1918,11 @@
       white-space: nowrap;
     }
   }
+  .md\:opacity-100 {
+    @media (width >= 48rem) {
+      opacity: 100%;
+    }
+  }
   .lg\:static {
     @media (width >= 64rem) {
       position: static;
@@ -1896,6 +1951,11 @@
   .lg\:w-\[75\%\] {
     @media (width >= 64rem) {
       width: 75%;
+    }
+  }
+  .lg\:w-\[500px\] {
+    @media (width >= 64rem) {
+      width: 500px;
     }
   }
   .lg\:w-auto {

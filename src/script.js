@@ -161,13 +161,8 @@ function filterPortfolio(category) {
   event.target.classList.remove('bg-white', 'text-green-dark');
 }
 
-function toggleCards() {
-  const btn = document.getElementById('see-more-btn');
-  const hiddenCards = document.querySelectorAll('.portfolio-card.extra-card');
-
-  if (btn.textContent === 'See More') {
-    hiddenCards.forEach(card => card.classList.remove('hidden'));
-  
-  } else {
-    hiddenCards.forEach(card => card.classList.add('hidden'));
-  }
+function seeMore() {
+  const hiddenCards = document.querySelectorAll('.portfolio-card.hidden');
+  hiddenCards.forEach(card => card.classList.remove('hidden'));
+  document.getElementById('see-more-btn').style.display = 'none';
+}

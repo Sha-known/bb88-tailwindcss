@@ -137,3 +137,8 @@ html { scroll-behavior: smooth; }
   background-repeat: no-repeat;
 }
 
+@media (max-width: 768px) {
+  .hero-vector {
+    opacity: 0.3;
+  }
+}
