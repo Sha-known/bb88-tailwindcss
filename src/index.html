@@ -9,6 +9,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link href="./output.css" rel="stylesheet">
+  <style>
+  /* Forces 20% opacity on screens smaller than 768px */
+  @media (max-width: 767px) {
+    .mobile-fade { opacity: 0.2 !important; }
+  }
+</style>
 </head>
 <body class="font-poppins m-0 min-h-screen overflow-x-hidden bg-transparent text-gray-800">
 <!--NAVPILL PLUS BB88 LOGO ON THE LEFT SIDE-->
@@ -42,7 +48,7 @@
 <!--DITO NAKALAGAY UNG WHITE BG-->
 <section id="home" class="hero-line relative min-h-[200vh] bg-[url('bg/background1.png')] bg-top bg-no-repeat bg-white -mt-30 pt-27.5 pb-20 overflow-x-hidden">
   <!--DITO NAKALAGAY YUNG VECTOR, THE GIRL IMAGE ON THE RIGHT SIDE-->
-  <img src="bg/vector1.png" class="absolute pointer-events-none z-0 top-0 right-0 w-[65vw] -mr-10 md:mr-0 md:w-[70vw] lg:w-[55vw] lg:min-w-175" alt="">
+  <img src="bg/vector1.png" class="mobile-fade absolute pointer-events-none z-0 top-0 right-0 w-[65vw] -mr-10 md:mr-0 md:w-[70vw] lg:w-[55vw] lg:min-w-175 transition-opacity duration-500" alt="">
     <div class="px-5 md:px-15 py-10 md:pr-20 md:pb-15 mb-32 flex flex-col justify-center relative z-10 text-center md:text-left items-center md:items-start">
       <h1 class="font-anton font-medium text-[clamp(40px,11vw,110px)] md:text-[clamp(60px,5.7vw,110px)] text-green-dark leading-none tracking-wide whitespace-normal md:whitespace-nowrap animate-slide-up delay-200">WELCOME TO BB88</h1>
       <p class="text-[clamp(18px,4vw,50px)] md:text-[clamp(24px,2.5vw,50px)] font-semibold text-text-dark mt-2 max-w-200 animate-slide-up delay-350">Quickly start your project now</p>
