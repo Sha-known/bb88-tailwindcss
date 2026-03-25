@@ -96,47 +96,118 @@ function toggleMenu() {
     }
   });
 });
+const logos = [
+  { src: 'logo/logo2.png', href: 'https://www.facebook.com/biorganismcorpofficial' },
+  { src: 'logo/logo4.png', href: 'https://www.facebook.com/profile.php?id=61565883182782' },
+  { src: 'logo/logo3.png', href: 'https://www.facebook.com/profile.php?id=61566142224229' },
+  { src: 'logo/logo1.png', href: 'https://www.facebook.com/profile.php?id=100086332025785' },
+  { src: 'logo/logo5.png', href: 'https://www.facebook.com/profile.php?id=61565639982108' },
+  { src: 'logo/logo6.png', href: 'https://www.facebook.com/profile.php?id=100093099265112' },
+  { src: 'logo/logo7.png', href: 'https://facebook.com/your-link-here' },
+];
 
-//hover effect for partnered company
+const SMALL = 90;
+const LARGE = 130;
+const GAP = 16;
 
-const items = Array.from(document.querySelectorAll('.carousel-item'));
 const track = document.getElementById('carousel-track');
-let currentCenter = 0; // index ng nasa gitna (0-based)
+const wrapper = document.getElementById('carousel-wrapper');
 
-function updateCarousel() {
-  items.forEach((item, i) => {
-    if (i === currentCenter) {
-      item.classList.add('w-[150px]', 'h-[150px]', 'bg-[#f0f0f0]', 'shadow-xl');
-      item.classList.remove('w-[100px]', 'h-[100px]');
-    } else {
-      item.classList.remove('w-[150px]', 'h-[150px]', 'bg-[#f0f0f0]', 'shadow-xl');
-      item.classList.add('w-[100px]', 'h-[100px]');
-    }
-  });
+// Triple the array for infinite loop
+const items = [...logos, ...logos, ...logos];
+let centerIndex = logos.length; // start at middle copy
 
-  // Update dots — gumagalaw kasabay ng carousel
-  const dots = document.querySelectorAll('.dot');
-  dots.forEach((dot, i) => {
-    if (i === currentCenter) {
-      dot.classList.add('bg-green-dark', 'w-4', 'h-4');
-      dot.classList.remove('bg-gray-400', 'w-2', 'h-2');
-    } else {
-      dot.classList.remove('bg-green-dark', 'w-4', 'h-4');
-      dot.classList.add('bg-gray-400', 'w-2', 'h-2');
-    }
-  });
+// Build all items
+items.forEach((logo) => {
+  const a = document.createElement('a');
+  a.href = logo.href;
+  a.target = '_blank';
+  a.style.cssText = `
+    flex-shrink: 0;
+    width: ${SMALL}px;
+    height: ${SMALL}px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    transition: width 0.5s ease, height 0.5s ease, background 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+  `;
+  const img = document.createElement('img');
+  img.src = logo.src;
+  img.alt = 'Partner Logo';
+  img.style.cssText = `width: 75%; height: 75%; object-fit: contain; pointer-events: none; display: block;`;
+  a.appendChild(img);
+  track.appendChild(a);
+});
+
+function getItemLeft(index) {
+  // Each item is SMALL wide + GAP, except center which is LARGE
+  // We calculate cumulative left position of each item
+  let x = 0;
+  for (let i = 0; i < index; i++) {
+    x += (i === centerIndex ? LARGE : SMALL) + GAP;
+  }
+  return x;
 }
 
-function nextSlide() {
-  currentCenter = (currentCenter + 1) % items.length;
-  updateCarousel();
+function reposition(animate) {
+  const nodes = track.children;
+  const wrapperWidth = wrapper.offsetWidth;
+
+  // Update sizes and opacity first
+  for (let i = 0; i < nodes.length; i++) {
+    const dist = Math.abs(i - centerIndex);
+    if (dist === 0) {
+      nodes[i].style.width = LARGE + 'px';
+      nodes[i].style.height = LARGE + 'px';
+      nodes[i].style.background = 'white';
+      nodes[i].style.boxShadow = '0 10px 30px rgba(0,0,0,0.15)';
+      nodes[i].style.opacity = '1';
+    } else {
+      nodes[i].style.width = SMALL + 'px';
+      nodes[i].style.height = SMALL + 'px';
+      nodes[i].style.background = 'transparent';
+      nodes[i].style.boxShadow = 'none';
+      nodes[i].style.opacity = dist === 1 ? '0.8' : dist === 2 ? '0.5' : '0';
+    }
+  }
+
+  // Calculate where center item starts
+  let centerLeft = 0;
+  for (let i = 0; i < centerIndex; i++) {
+    centerLeft += SMALL + GAP;
+  }
+  // Center of the center item
+  const centerItemMid = centerLeft + LARGE / 2;
+  // Offset so it aligns to wrapper center
+  const translateX = wrapperWidth / 2 - centerItemMid;
+
+  track.style.transition = animate ? 'transform 0.5s ease-in-out' : 'none';
+  track.style.transform = `translateX(${translateX}px)`;
 }
 
-// Initialize
-updateCarousel();
+let isAnimating = false;
 
-// Auto slide every 3 seconds
-setInterval(nextSlide, 5000);
+function next() {
+  if (isAnimating) return;
+  isAnimating = true;
+  centerIndex++;
+  reposition(true);
+
+  setTimeout(() => {
+    // Silently jump back to middle copy if drifted too far
+    if (centerIndex >= logos.length * 2) {
+      centerIndex -= logos.length;
+      reposition(false);
+    }
+    isAnimating = false;
+  }, 520);
+}
+
+// Init
+reposition(false);
+setInterval(next, 3000);
 
 //hover effect sa Portfolio Flexcards
 document.querySelectorAll('.portfolio-card').forEach(card => {
