@@ -1861,6 +1861,11 @@
       padding: calc(var(--spacing) * 0);
     }
   }
+  .lg\:px-16 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 16);
+    }
+  }
   .lg\:shadow-none {
     @media (width >= 64rem) {
       --tw-shadow: 0 0 #0000;
