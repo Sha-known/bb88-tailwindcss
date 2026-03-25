@@ -147,6 +147,7 @@ html { scroll-behavior: smooth; }
 .dot {
   cursor: pointer;
 }
+<<<<<<< HEAD
 /* Scroll bar sa Portfolio (mobile) */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;

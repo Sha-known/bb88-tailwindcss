@@ -1935,7 +1935,7 @@ html {
 .dot {
   cursor: pointer;
 }
-.scrollbar-hide::-webkit-scrollbar {
+<<<<<<< HEAD .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 .scrollbar-hide {
