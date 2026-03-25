@@ -147,3 +147,22 @@ html { scroll-behavior: smooth; }
 .dot {
   cursor: pointer;
 }
+/* Scroll bar sa Portfolio (mobile) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.filter-scroll::-webkit-scrollbar {
+  height: 5px;
+}
+.filter-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.filter-scroll::-webkit-scrollbar-thumb {
+  background: #48887B;
+  border-radius: 999px;
+}
