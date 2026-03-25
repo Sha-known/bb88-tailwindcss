@@ -55,22 +55,45 @@ function toggleMenu() {
   nav.classList.toggle('flex');
 }
 
-//hover for cards (Our services)
+// Services cards - hover for desktop, click for mobile
 ['left', 'center', 'right'].forEach(id => {
   const card = document.getElementById(`card-${id}`);
   const img = document.getElementById(`card-${id}-img`);
   const hover = document.getElementById(`card-${id}-hover`);
 
+  // Desktop hover
   card.addEventListener('mouseenter', () => {
-    card.classList.add('scale-y-[1.4]', 'z-50');
+    card.style.height = '480px';
     img.style.display = 'none';
     hover.style.display = 'flex';
   });
 
   card.addEventListener('mouseleave', () => {
-    card.classList.remove('scale-y-[1.4]', 'z-50');
+    card.style.height = '340px';
     img.style.display = 'flex';
     hover.style.display = 'none';
+  });
+
+  // Mobile tap/click
+  card.addEventListener('click', () => {
+    const isOpen = card.style.height === '550px';
+
+    // Close all cards first
+    ['left', 'center', 'right'].forEach(otherId => {
+      const otherCard = document.getElementById(`card-${otherId}`);
+      const otherImg = document.getElementById(`card-${otherId}-img`);
+      const otherHover = document.getElementById(`card-${otherId}-hover`);
+      otherCard.style.height = '340px';
+      otherImg.style.display = 'flex';
+      otherHover.style.display = 'none';
+    });
+
+    // If it was closed, open it
+    if (!isOpen) {
+      card.style.height = '550px';
+      img.style.display = 'none';
+      hover.style.display = 'flex';
+    }
   });
 });
 
