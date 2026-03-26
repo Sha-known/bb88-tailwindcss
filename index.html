@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-  <link href="./output.css" rel="stylesheet">
+  <link href="src/css/output.css" rel="stylesheet">
   <style>
   /* Forces 20% opacity on screens smaller than 768px */
   @media (max-width: 767px) {
@@ -23,7 +23,7 @@
       <!--BB88 LOGO-->
       <div class="flex items-center mr-5">
         <div class="w-[clamp(120px,40vw,200px)] h-auto">
-          <img src="logo/logo-bb88.png" alt="BB88 Logo" class="w-full h-auto object-contain">
+          <img src="src/images/logo/logo-bb88.png" alt="BB88 Logo" class="w-full h-auto object-contain">
         </div>
       </div>
       <!--BURGER MENU FOR SMALL SCREEN-->
@@ -46,9 +46,9 @@
 
 <!--HERO SECTION-->
 <!--DITO NAKALAGAY UNG WHITE BG-->
-<section id="home" class="hero-line relative min-h-[200vh] bg-[url('bg/background1.png')] bg-top bg-no-repeat bg-white -mt-30 pt-27.5 pb-20 overflow-x-hidden">
+<section id="home" class="hero-line relative min-h-[200vh] bg-[url('/src/images/bg/background1.png')] bg-top bg-no-repeat bg-white -mt-30 pt-27.5 pb-20 overflow-x-hidden">
   <!--DITO NAKALAGAY YUNG VECTOR, THE GIRL IMAGE ON THE RIGHT SIDE-->
-  <img src="bg/vector1.png" class="mobile-fade absolute pointer-events-none z-0 top-0 right-0 w-[65vw] -mr-10 md:mr-0 md:w-[70vw] lg:w-[55vw] lg:min-w-175 transition-opacity duration-500" alt="">
+  <img src="src/images/bg/vector1.png" class="mobile-fade absolute pointer-events-none z-0 top-0 right-0 w-[65vw] -mr-10 md:mr-0 md:w-[70vw] lg:w-[55vw] lg:min-w-175 transition-opacity duration-500" alt="">
     <div class="px-5 md:px-15 py-10 md:pr-20 md:pb-15 mb-32 flex flex-col justify-center relative z-10 text-center md:text-left items-center md:items-start">
       <h1 class="font-anton font-medium text-[clamp(40px,11vw,110px)] md:text-[clamp(60px,5.7vw,110px)] text-green-dark leading-none tracking-wide whitespace-normal md:whitespace-nowrap animate-slide-up delay-200">WELCOME TO BB88</h1>
       <p class="text-[clamp(18px,4vw,50px)] md:text-[clamp(24px,2.5vw,50px)] font-semibold text-text-dark mt-2 max-w-200 animate-slide-up delay-350">Quickly start your project now</p>
@@ -79,9 +79,9 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 justify-items-center mb-12 px-5">
       <!--DESIGN IDEAS CARD-->
       <div class="about-card-hover group relative w-[clamp(180px,100%,280px)] h-50 bg-green-dark rounded-tl-[40px] rounded-br-[40px] flex flex-col items-center justify-center p-5 text-center border-2 border-[#d4e8c2] z-10 transition-colors duration-300 shadow-[0_6px_22px_rgba(0,0,0,0.12)] hover:bg-white cursor-pointer about-card-shape"
-      onmouseenter="this.querySelector('.card-icon').src='icon/iconeffect/icon2designideas.png'" 
-      onmouseleave="this.querySelector('.card-icon').src='icon/icondesignideas.png'">
-        <img src="icon/icondesignideas.png" alt="Design Ideas" class="card-icon w-[clamp(60px,5vw,80px)] h-[clamp(60px,5vw,80px)] object-contain mb-3.5 relative z-20 transition-all duration-200">
+      onmouseenter="this.querySelector('.card-icon').src='src/images/icon/iconeffect/icon2designideas.png'" 
+      onmouseleave="this.querySelector('.card-icon').src='src/images/icon/icondesignideas.png'">
+        <img src="src/images/icon/icondesignideas.png" alt="Design Ideas" class="card-icon w-[clamp(60px,5vw,80px)] h-[clamp(60px,5vw,80px)] object-contain mb-3.5 relative z-20 transition-all duration-200">
         <h5 class="font-anton text-[15px] text-green-dark group-hover:text-white relative z-20 transition-colors duration-300">Design Ideas</h5>
       </div> 
       <!--<div class="about-card-hover group relative w-[clamp(180px,100%,280px)] h-50 bg-green-dark rounded-tl-[40px] rounded-br-[40px] flex flex-col items-center justify-center p-5 text-center border-2 border-[#d4e8c2] z-10 transition-colors duration-300 shadow-[0_6px_22px_rgba(0,0,0,0.12)] hover:bg-white cursor-pointer about-card-shape">
@@ -91,9 +91,9 @@
 
       <!--DIGITAL & MAINSTREAM MARKETING CARD-->
       <div class="about-card-hover group relative w-[clamp(180px,100%,280px)] h-50 bg-green-dark rounded-tl-[40px] rounded-br-[40px] flex flex-col items-center justify-center p-5 text-center border-2 border-[#d4e8c2] z-10 transition-colors duration-300 shadow-[0_6px_22px_rgba(0,0,0,0.12)] hover:bg-white cursor-pointer about-card-shape"
-      onmouseenter="this.querySelector('.card-icon').src='icon/iconeffect/icon1Digital&Mainstream.png'" 
-      onmouseleave="this.querySelector('.card-icon').src='icon/iconDigital&Mainstream.png'">
-        <img src="icon/iconDigital&Mainstream.png" alt="Digital & Mainstream" class="card-icon w-[clamp(60px,5vw,80px)] h-[clamp(60px,5vw,80px)] object-contain mb-3.5 relative z-20 transition-all duration-200">
+      onmouseenter="this.querySelector('.card-icon').src='src/images/icon/iconeffect/icon1Digital&Mainstream.png'" 
+      onmouseleave="this.querySelector('.card-icon').src='src/images/icon/iconDigital&Mainstream.png'">
+        <img src="src/images/icon/iconDigital&Mainstream.png" alt="Digital & Mainstream" class="card-icon w-[clamp(60px,5vw,80px)] h-[clamp(60px,5vw,80px)] object-contain mb-3.5 relative z-20 transition-all duration-200">
         <h5 class="font-anton text-[15px] text-green-dark group-hover:text-white relative z-20 transition-colors duration-300">Digital & Mainstream Marketing</h5>
       </div> 
       <!--<div class="about-card-hover group relative w-[clamp(180px,100%,280px)] h-50 bg-green-dark rounded-tl-[40px] rounded-br-[40px] flex flex-col items-center justify-center p-5 text-center border-2 border-[#d4e8c2] z-10 transition-colors duration-300 shadow-[0_6px_22px_rgba(0,0,0,0.12)] hover:bg-white cursor-pointer about-card-shape">
@@ -103,9 +103,9 @@
 
       <!--BRAND AND IDENTITY CARD-->
       <div class="about-card-hover group relative w-[clamp(180px,100%,280px)] h-50 bg-green-dark rounded-tl-[40px] rounded-br-[40px] flex flex-col items-center justify-center p-5 text-center border-2 border-[#d4e8c2] z-10 transition-colors duration-300 shadow-[0_6px_22px_rgba(0,0,0,0.12)] hover:bg-white cursor-pointer about-card-shape"
-      onmouseenter="this.querySelector('.card-icon').src='icon/iconeffect/icon3Brand&Identity.png'" 
-      onmouseleave="this.querySelector('.card-icon').src='icon/iconBrand&Identity.png'">
-        <img src="icon/iconBrand&Identity.png" alt="Brand and Identity" class="card-icon w-[clamp(60px,5vw,80px)] h-[clamp(60px,5vw,80px)] object-contain mb-3.5 relative z-20 transition-all duration-200">
+      onmouseenter="this.querySelector('.card-icon').src='src/images/icon/iconeffect/icon3Brand&Identity.png'" 
+      onmouseleave="this.querySelector('.card-icon').src='src/images/icon/iconBrand&Identity.png'">
+        <img src="src/images/icon/iconBrand&Identity.png" alt="Brand and Identity" class="card-icon w-[clamp(60px,5vw,80px)] h-[clamp(60px,5vw,80px)] object-contain mb-3.5 relative z-20 transition-all duration-200">
         <h5 class="font-anton text-[15px] text-green-dark group-hover:text-white relative z-20 transition-colors duration-300">Brand and Identity</h5>
       </div> 
       <!--<div class="about-card-hover group relative w-[clamp(180px,100%,280px)] h-50 bg-green-dark rounded-tl-[40px] rounded-br-[40px] flex flex-col items-center justify-center p-5 text-center border-2 border-[#d4e8c2] z-10 transition-colors duration-300 shadow-[0_6px_22px_rgba(0,0,0,0.12)] hover:bg-white cursor-pointer about-card-shape">
@@ -115,9 +115,9 @@
 
       <!--DIGITAL SOLUTIONS CARD-->
       <div class="about-card-hover group relative w-[clamp(180px,100%,280px)] h-50 bg-green-dark rounded-tl-[40px] rounded-br-[40px] flex flex-col items-center justify-center p-5 text-center border-2 border-[#d4e8c2] z-10 transition-colors duration-300 shadow-[0_6px_22px_rgba(0,0,0,0.12)] hover:bg-white cursor-pointer about-card-shape"
-      onmouseenter="this.querySelector('.card-icon').src='icon/iconeffect/icon4DigitalSolutions.png'" 
-      onmouseleave="this.querySelector('.card-icon').src='icon/iconDigitalSolutions.png'">
-        <img src="icon/iconDigitalSolutions.png" alt="Digital Solutions" class="card-icon w-[clamp(60px,5vw,80px)] h-[clamp(60px,5vw,80px)] object-contain mb-3.5 relative z-20 transition-all duration-200">
+      onmouseenter="this.querySelector('.card-icon').src='src/images/icon/iconeffect/icon4DigitalSolutions.png'" 
+      onmouseleave="this.querySelector('.card-icon').src='src/images/icon/iconDigitalSolutions.png'">
+        <img src="src/images/icon/iconDigitalSolutions.png" alt="Digital Solutions" class="card-icon w-[clamp(60px,5vw,80px)] h-[clamp(60px,5vw,80px)] object-contain mb-3.5 relative z-20 transition-all duration-200">
         <h5 class="font-anton text-[15px] text-green-dark group-hover:text-white relative z-20 transition-colors duration-300">Digital Solutions</h5>
       </div> 
       <!--<div class="about-card-hover group relative w-[clamp(180px,100%,280px)] h-50 bg-green-dark rounded-tl-[40px] rounded-br-[40px] flex flex-col items-center justify-center p-5 text-center border-2 border-[#d4e8c2] z-10 transition-colors duration-300 shadow-[0_6px_22px_rgba(0,0,0,0.12)] hover:bg-white cursor-pointer about-card-shape">
@@ -158,10 +158,10 @@
 <section id="services" class="relative py-10 px-5 md:px-10 overflow-hidden font-poppins text-center min-h-screen"
   style="background-image: url('bg/background2.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 
-  <img src="vector/vector2.png"   class="absolute top-0 left-0 pointer-events-none z-0 w-[150px] md:w-[300px] lg:w-[500px]">
-  <img src="vector/vector2.0.png" class="absolute top-0 right-0 pointer-events-none z-0 w-[150px] md:w-[300px] lg:w-[500px]">
-  <img src="vector/vector2.1.png" class="absolute bottom-0 left-0 pointer-events-none z-0 w-[150px] md:w-[300px] lg:w-[500px]">
-  <img src="vector/vector2.2.png" class="absolute bottom-0 right-0 pointer-events-none z-0 w-[150px] md:w-[300px] lg:w-[500px]">
+  <img src="src/images/vector/vector2.png"   class="absolute top-0 left-0 pointer-events-none z-0 w-[150px] md:w-[300px] lg:w-[500px]">
+  <img src="src/images/vector/vector2.0.png" class="absolute top-0 right-0 pointer-events-none z-0 w-[150px] md:w-[300px] lg:w-[500px]">
+  <img src="src/images/vector/vector2.1.png" class="absolute bottom-0 left-0 pointer-events-none z-0 w-[150px] md:w-[300px] lg:w-[500px]">
+  <img src="src/images/vector/vector2.2.png" class="absolute bottom-0 right-0 pointer-events-none z-0 w-[150px] md:w-[300px] lg:w-[500px]">
 
   <div class="relative z-10 max-w-[1100px] mx-auto">
 
@@ -175,7 +175,7 @@
       <!-- LEFT -->
       <div id="card-left" class="flex-1 max-w-[280px] mx-auto relative cursor-pointer overflow-hidden transition-all duration-300 origin-center" style="border: 10px solid #48887B; border-radius: 16px; height: 340px;">
         <div id="card-left-img" class="bg-white flex items-center justify-center p-4 w-full h-full">
-          <img src="vector/DigitalMarketingManagementvector.png" class="w-full object-contain" style="max-height: 250px;">
+          <img src="src/images/vector/DigitalMarketingManagementvector.png" class="w-full object-contain" style="max-height: 250px;">
         </div>
         <div id="card-left-hover" class="hidden flex-col items-start p-6 w-full h-full" style="background: #48887B;">
           <div class="bg-white rounded-[10px] px-4 py-2 mb-4 w-full text-center">
@@ -188,7 +188,7 @@
       <!-- CENTER -->
       <div id="card-center" class="flex-1 max-w-[280px] mx-auto relative cursor-pointer overflow-hidden transition-all duration-300 origin-center" style="border: 10px solid #48887B; border-radius: 16px; height: 340px;">
         <div id="card-center-img" class="bg-white flex items-center justify-center p-4 w-full h-full">
-          <img src="vector/MediaProductionvector1.png" class="w-full object-contain" style="max-height: 250px;">
+          <img src="src/images/vector/MediaProductionvector1.png" class="w-full object-contain" style="max-height: 250px;">
         </div>
         <div id="card-center-hover" class="hidden flex-col items-start p-6 w-full h-full" style="background: #48887B;">
           <div class="bg-white rounded-[10px] px-4 py-2 mb-4 w-full text-center">
@@ -201,7 +201,7 @@
       <!-- RIGHT -->
       <div id="card-right" class="flex-1 max-w-[280px] mx-auto relative cursor-pointer overflow-hidden transition-all duration-300 origin-center" style="border: 10px solid #48887B; border-radius: 16px; height: 340px;">
         <div id="card-right-img" class="bg-white flex items-center justify-center p-4 w-full h-full">
-          <img src="vector/SystemSolutions&Managementvector.png" class="w-full object-contain" style="max-height: 250px;">
+          <img src="src/images/vector/SystemSolutions&Managementvector.png" class="w-full object-contain" style="max-height: 250px;">
         </div>
         <div id="card-right-hover" class="hidden flex-col items-start p-6 w-full h-full" style="background: #48887B;">
           <div class="bg-white rounded-[10px] px-4 py-2 mb-4 w-full text-center">
@@ -271,7 +271,7 @@
       <!-- Card 1 -->
       <div class="portfolio-card group relative rounded-[20px] cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="mobile" style="border: 5px solid #48887B;">
         <div class="w-full h-[260px] overflow-hidden rounded-t-[20px]">
-          <img src="picture/pic1.png" alt="BC Bagsakan Pickup" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+          <img src="src/images/picture/pic1.png" alt="BC Bagsakan Pickup" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
         </div>
         <div class="px-4 py-4 rounded-b-[20px]" style="background: #48887B;">
           <div class="bg-white rounded-full px-4 py-2 text-center">
@@ -280,7 +280,7 @@
         </div>
         <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
           <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
-            <img src="picture/pic1.png" alt="logo" class="w-full h-full object-cover">
+            <img src="src/images/picture/pic1.png" alt="logo" class="w-full h-full object-cover">
           </div>
           <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
             <h3 class="text-white font-bold text-[14px] m-0">BC Bagsakan Pickup</h3>
@@ -294,7 +294,7 @@
 <!-- Card 2 -->
 <div class="portfolio-card group relative rounded-[20px] cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="mobile" style="border: 5px solid #48887B;">
   <div class="w-full h-[260px] overflow-hidden rounded-t-[20px]">
-    <img src="picture/pic2.png" alt="Bio-MOBAPP" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="src/images/picture/pic2.png" alt="Bio-MOBAPP" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
   </div>
   <div class="px-4 py-4 rounded-b-[20px]" style="background: #48887B;">
     <div class="bg-white rounded-full px-4 py-2 text-center">
@@ -303,7 +303,7 @@
   </div>
   <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
     <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
-      <img src="picture/pic2.png" alt="logo" class="w-full h-full object-cover">
+      <img src="src/images/picture/pic2.png" alt="logo" class="w-full h-full object-cover">
     </div>
     <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
       <h3 class="text-white font-bold text-[14px] m-0">Bio-MOBAPP</h3>
@@ -317,7 +317,7 @@
 <!-- Card 3 -->
 <div class="portfolio-card group relative rounded-[20px] cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="mobile" style="border: 5px solid #48887B;">
   <div class="w-full h-[260px] overflow-hidden rounded-t-[20px]">
-    <img src="picture/pic3.png" alt="BC Bagsakan Delivery" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="src/images/picture/pic3.png" alt="BC Bagsakan Delivery" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
   </div>
   <div class="px-4 py-4 rounded-b-[20px]" style="background: #48887B;">
     <div class="bg-white rounded-full px-4 py-2 text-center">
@@ -326,7 +326,7 @@
   </div>
   <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
     <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
-      <img src="picture/pic3.png" alt="logo" class="w-full h-full object-cover">
+      <img src="src/images/picture/pic3.png" alt="logo" class="w-full h-full object-cover">
     </div>
     <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
       <h3 class="text-white font-bold text-[14px] m-0">BC Bagsakan Delivery</h3>
@@ -340,7 +340,7 @@
 <!-- Card 4 -->
 <div class="portfolio-card extra-card hidden group relative rounded-[20px] cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="socmed" style="border: 5px solid #48887B;">
   <div class="w-full h-[260px] overflow-hidden rounded-t-[20px]">
-    <img src="picture/pic5.png" alt="Biorganism" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="src/images/picture/pic5.png" alt="Biorganism" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
   </div>
   <div class="px-4 py-4 rounded-b-[20px]" style="background: #48887B;">
     <div class="bg-white rounded-full px-4 py-2 text-center">
@@ -349,7 +349,7 @@
   </div>
   <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
     <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
-      <img src="picture/pic5.png" alt="logo" class="w-full h-full object-cover">
+      <img src="src/images/picture/pic5.png" alt="logo" class="w-full h-full object-cover">
     </div>
     <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
       <h3 class="text-white font-bold text-[14px] m-0">Biorganism</h3>
@@ -363,7 +363,7 @@
 <!-- Card 5 -->
 <div class="portfolio-card extra-card hidden group relative rounded-[20px] cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="brand" style="border: 5px solid #48887B;">
   <div class="w-full h-[260px] overflow-hidden rounded-t-[20px]">
-    <img src="picture/pic6.png" alt="EM & A Architectural" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="src/images/picture/pic6.png" alt="EM & A Architectural" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
   </div>
   <div class="px-4 py-4 rounded-b-[20px]" style="background: #48887B;">
     <div class="bg-white rounded-full px-4 py-2 text-center">
@@ -372,7 +372,7 @@
   </div>
   <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
     <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
-      <img src="picture/pic6.png" alt="logo" class="w-full h-full object-cover">
+      <img src="src/images/picture/pic6.png" alt="logo" class="w-full h-full object-cover">
     </div>
     <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
       <h3 class="text-white font-bold text-[14px] m-0">EM & A Architectural</h3>
@@ -386,7 +386,7 @@
 <!-- Card 6 -->
 <div class="portfolio-card extra-card hidden group relative rounded-[20px] cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="brand" style="border: 5px solid #48887B;">
   <div class="w-full h-[260px] overflow-hidden rounded-t-[20px]">
-    <img src="picture/pic7.png" alt="Greenhouse Paradise" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="src/images/picture/pic7.png" alt="Greenhouse Paradise" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
   </div>
   <div class="px-4 py-4 rounded-b-[20px]" style="background: #48887B;">
     <div class="bg-white rounded-full px-4 py-2 text-center">
@@ -395,7 +395,7 @@
   </div>
   <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
     <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
-      <img src="picture/pic7.png" alt="logo" class="w-full h-full object-cover">
+      <img src="src/images/picture/pic7.png" alt="logo" class="w-full h-full object-cover">
     </div>
     <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
       <h3 class="text-white font-bold text-[14px] m-0">Greenhouse Paradise</h3>
@@ -409,7 +409,7 @@
 <!-- Card 7 -->
 <div class="portfolio-card extra-card hidden group relative rounded-[20px] cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="brand" style="border: 5px solid #48887B;">
   <div class="w-full h-[260px] overflow-hidden rounded-t-[20px]">
-    <img src="picture/pic8.png" alt="MHR" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="src/images/picture/pic8.png" alt="MHR" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
   </div>
   <div class="px-4 py-4 rounded-b-[20px]" style="background: #48887B;">
     <div class="bg-white rounded-full px-4 py-2 text-center">
@@ -418,7 +418,7 @@
   </div>
   <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
     <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
-      <img src="picture/pic8.png" alt="logo" class="w-full h-full object-cover">
+      <img src="src/images/picture/pic8.png" alt="logo" class="w-full h-full object-cover">
     </div>
     <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
       <h3 class="text-white font-bold text-[14px] m-0">MHR</h3>
@@ -432,7 +432,7 @@
 <!-- Card 8 -->
 <div class="portfolio-card extra-card hidden group relative rounded-[20px] cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="brand" style="border: 5px solid #48887B;">
   <div class="w-full h-[260px] overflow-hidden rounded-t-[20px]">
-    <img src="picture/pic9.png" alt="Migs" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="src/images/picture/pic9.png" alt="Migs" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
   </div>
   <div class="px-4 py-4 rounded-b-[20px]" style="background: #48887B;">
     <div class="bg-white rounded-full px-4 py-2 text-center">
@@ -441,7 +441,7 @@
   </div>
   <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
     <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
-      <img src="picture/pic9.png" alt="logo" class="w-full h-full object-cover">
+      <img src="src/images/picture/pic9.png" alt="logo" class="w-full h-full object-cover">
     </div>
     <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
       <h3 class="text-white font-bold text-[14px] m-0">Migs</h3>
@@ -455,7 +455,7 @@
 <!-- Card 9 -->
 <div class="portfolio-card extra-card hidden group relative rounded-[20px] cursor-pointer shadow-[0_6px_22px_rgba(0,0,0,0.12)]" data-category="brand" style="border: 5px solid #48887B;">
   <div class="w-full h-[260px] overflow-hidden rounded-t-[20px]">
-    <img src="picture/pic4.png" alt="Filipino Land" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+    <img src="src/images/picture/pic4.png" alt="Filipino Land" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
   </div>
   <div class="px-4 py-4 rounded-b-[20px]" style="background: #48887B;">
     <div class="bg-white rounded-full px-4 py-2 text-center">
@@ -464,7 +464,7 @@
   </div>
   <div class="floating-popup absolute z-50 bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.15)] px-6 pt-2 pb-6 w-[220px] opacity-0 invisible transition-opacity duration-200 pointer-events-none" style="top: 0; left: 0;">
     <div class="w-[55px] h-[55px] rounded-full overflow-hidden mx-auto -mt-7 mb-3 shadow-md border-2 border-green-dark">
-      <img src="picture/pic4.png" alt="logo" class="w-full h-full object-cover">
+      <img src="src/images/picture/pic4.png" alt="logo" class="w-full h-full object-cover">
     </div>
     <div class="bg-green-dark rounded-[8px] px-4 py-2 mb-1 w-full text-center">
       <h3 class="text-white font-bold text-[14px] m-0">Filipino Land</h3>
@@ -505,11 +505,11 @@
            data-title="Software Engineers" 
            data-desc="Our Software Engineers build the robust architecture and logic that powers complex systems, ensuring stability and performance across all platforms.">
         <div class="bg-white rounded-[10px] h-57.5 w-full flex items-center justify-center overflow-hidden relative transition-all duration-400 group-hover:bg-transparent group-hover:h-32.5 group-hover:opacity-0 group-hover:m-0">
-          <img src="icon/our team (icon 1).png" alt="Software Engineers" class="absolute max-w-32.5 h-auto transition-all duration-400 block group-hover:opacity-0">
+          <img src="src/images/icon/our team (icon 1).png" alt="Software Engineers" class="absolute max-w-32.5 h-auto transition-all duration-400 block group-hover:opacity-0">
         </div>
         <!-- INVERTED ICON -->
         <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 invisible transition-opacity duration-300 z-10 group-hover:opacity-100 group-hover:visible">
-            <img src="icon/iconeffect/our team (icon 1)-inverted.png" alt="Software Engineers Inverted" class="max-w-62.5 h-auto block">
+            <img src="src/images/icon/iconeffect/our team (icon 1)-inverted.png" alt="Software Engineers Inverted" class="max-w-62.5 h-auto block">
         </div>
         <div class="text-white text-[clamp(14px,0.5rem+1vw,22px)] font-semibold mt-3 p-1.5 transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-2.5 group-hover:h-0 group-hover:m-0 group-hover:p-0">Software Engineers</div>
       </div>
@@ -519,10 +519,10 @@
            data-title="Web Developers" 
            data-desc="Web Developers focus on creating responsive, fast-loading, and SEO-friendly websites using the latest web technologies.">
         <div class="bg-white rounded-[10px] h-57.5 w-full flex items-center justify-center overflow-hidden relative transition-all duration-400 group-hover:bg-transparent group-hover:h-32.5 group-hover:opacity-0 group-hover:m-0">
-          <img src="icon/our team (icon 2).png" alt="Web Developers" class="absolute max-w-62.5 h-auto transition-all duration-400 block group-hover:opacity-0">
+          <img src="src/images/icon/our team (icon 2).png" alt="Web Developers" class="absolute max-w-62.5 h-auto transition-all duration-400 block group-hover:opacity-0">
         </div>
         <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 invisible transition-opacity duration-300 z-10 group-hover:opacity-100 group-hover:visible">
-            <img src="icon/iconeffect/our team (icon 2)-inverted.png" alt="Web Developers Inverted" class="max-w-62.5 h-auto block">
+            <img src="src/images/icon/iconeffect/our team (icon 2)-inverted.png" alt="Web Developers Inverted" class="max-w-62.5 h-auto block">
         </div>
         <div class="text-white text-[clamp(14px,0.5rem+1vw,22px)] font-semibold mt-3 p-1.5 transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-2.5 group-hover:h-0 group-hover:m-0 group-hover:p-0">Web Developers</div>
       </div>
@@ -532,10 +532,10 @@
            data-title="App Developers" 
            data-desc="Specializing in iOS and Android, our App Developers create seamless mobile experiences with intuitive interfaces.">
         <div class="bg-white rounded-[10px] h-57.5 w-full flex items-center justify-center overflow-hidden relative transition-all duration-400 group-hover:bg-transparent group-hover:h-32.5 group-hover:opacity-0 group-hover:m-0">
-          <img src="icon/our team (icon 3).png" alt="App Developers" class="absolute max-w-62.5 h-auto transition-all duration-400 block group-hover:opacity-0">
+          <img src="src/images/icon/our team (icon 3).png" alt="App Developers" class="absolute max-w-62.5 h-auto transition-all duration-400 block group-hover:opacity-0">
         </div>
         <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 invisible transition-opacity duration-300 z-10 group-hover:opacity-100 group-hover:visible">
-            <img src="icon/iconeffect/our team (icon 3)-inverted.png" alt="App Developers Inverted" class="max-w-62.5 h-auto block">
+            <img src="src/images/icon/iconeffect/our team (icon 3)-inverted.png" alt="App Developers Inverted" class="max-w-62.5 h-auto block">
         </div>
         <div class="text-white text-[clamp(14px,0.5rem+1vw,22px)] font-semibold mt-3 p-1.5 transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-2.5 group-hover:h-0 group-hover:m-0 group-hover:p-0">App Developers</div>
       </div>
@@ -546,10 +546,10 @@
            data-title="Graphic Artists" 
            data-desc="Graphic Artists craft the visual identity of your brand, from logos to marketing materials, with a keen eye for aesthetics.">
         <div class="bg-white rounded-[10px] h-57.5 w-full flex items-center justify-center overflow-hidden relative transition-all duration-400 group-hover:bg-transparent group-hover:h-32.5 group-hover:opacity-0 group-hover:m-0">
-          <img src="icon/our team (icon 4).png" alt="Graphic Artists" class="absolute max-w-62.5 h-auto transition-all duration-400 block group-hover:opacity-0">
+          <img src="src/images/icon/our team (icon 4).png" alt="Graphic Artists" class="absolute max-w-62.5 h-auto transition-all duration-400 block group-hover:opacity-0">
         </div>
         <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 invisible transition-opacity duration-300 z-10 group-hover:opacity-100 group-hover:visible">
-            <img src="icon/iconeffect/our team (icon 4)-inverted.png" alt="Graphic Artists Inverted" class="max-w-62.5 h-auto block">
+            <img src="src/images/icon/iconeffect/our team (icon 4)-inverted.png" alt="Graphic Artists Inverted" class="max-w-62.5 h-auto block">
         </div>
         <div class="text-white text-[clamp(14px,0.5rem+1vw,22px)] font-semibold mt-3 p-1.5 transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-2.5 group-hover:h-0 group-hover:m-0 group-hover:p-0">Graphic Artists</div>
       </div>
@@ -562,10 +562,10 @@
            data-title="Multimedia Artists" 
            data-desc="Multimedia Artists are similar to Graphic Artists, but they specialize in creating dynamic and interactive content like videos, 3D animations, and virtual reality experiences.">
         <div class="bg-white rounded-[10px] h-57.5 w-full flex items-center justify-center overflow-hidden relative transition-all duration-400 group-hover:bg-transparent group-hover:h-32.5 group-hover:opacity-0 group-hover:m-0">
-          <img src="icon/our team (icon 7).png" alt="Multimedia Artists" class="absolute max-w-62.5 h-auto transition-all duration-400 block group-hover:opacity-0">
+          <img src="src/images/icon/our team (icon 7).png" alt="Multimedia Artists" class="absolute max-w-62.5 h-auto transition-all duration-400 block group-hover:opacity-0">
         </div>
         <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 invisible transition-opacity duration-300 z-10 group-hover:opacity-100 group-hover:visible">
-            <img src="icon/iconeffect/our team (icon 7)-inverted.png" alt="Multimedia Artists Inverted" class="max-w-62.5 h-auto block">
+            <img src="src/images/icon/iconeffect/our team (icon 7)-inverted.png" alt="Multimedia Artists Inverted" class="max-w-62.5 h-auto block">
         </div>
         <div class="text-white text-[clamp(14px,0.5rem+1vw,22px)] font-semibold mt-3 p-1.5 transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-2.5 group-hover:h-0 group-hover:m-0 group-hover:p-0">Multimedia Artists</div>
       </div>
@@ -575,10 +575,10 @@
            data-title="Creative Writers" 
            data-desc="Our writers tell your story, crafting compelling copy that resonates with your audience and drives action.">
         <div class="bg-white rounded-[10px] h-57.5 w-full flex items-center justify-center overflow-hidden relative transition-all duration-400 group-hover:bg-transparent group-hover:h-32.5 group-hover:opacity-0 group-hover:m-0">
-          <img src="icon/our team (icon 5).png" alt="Creative Writers" class="absolute max-w-62.5 h-auto transition-all duration-400 block group-hover:opacity-0">
+          <img src="src/images/icon/our team (icon 5).png" alt="Creative Writers" class="absolute max-w-62.5 h-auto transition-all duration-400 block group-hover:opacity-0">
         </div>
         <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 invisible transition-opacity duration-300 z-10 group-hover:opacity-100 group-hover:visible">
-            <img src="icon/iconeffect/our team (icon 5)-inverted.png" alt="Creative Writers Inverted" class="max-w-62.5 h-auto block">
+            <img src="src/images/icon/iconeffect/our team (icon 5)-inverted.png" alt="Creative Writers Inverted" class="max-w-62.5 h-auto block">
         </div>
         <div class="text-white text-[clamp(14px,0.5rem+1vw,22px)] font-semibold mt-3 p-1.5 transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-2.5 group-hover:h-0 group-hover:m-0 group-hover:p-0">Creative Writers</div>
       </div>
@@ -588,10 +588,10 @@
            data-title="Creative Director" 
            data-desc="The Creative Director oversees the artistic vision, ensuring all projects align with the brand's core values and quality standards.">
         <div class="bg-white rounded-[10px] h-57.5 w-full flex items-center justify-center overflow-hidden relative transition-all duration-400 group-hover:bg-transparent group-hover:h-32.5 group-hover:opacity-0 group-hover:m-0">
-          <img src="icon/our team (icon 6).png" alt="Creative Director" class="absolute max-w-62.5 h-auto transition-all duration-400 block group-hover:opacity-0">
+          <img src="src/images/icon/our team (icon 6).png" alt="Creative Director" class="absolute max-w-62.5 h-auto transition-all duration-400 block group-hover:opacity-0">
         </div>
         <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 invisible transition-opacity duration-300 z-10 group-hover:opacity-100 group-hover:visible">
-            <img src="icon/iconeffect/our team (icon 6)-inverted.png" alt="Creative Director Inverted" class="max-w-62.5 h-auto block">
+            <img src="src/images/icon/iconeffect/our team (icon 6)-inverted.png" alt="Creative Director Inverted" class="max-w-62.5 h-auto block">
         </div>
         <div class="text-white text-[clamp(14px,0.5rem+1vw,22px)] font-semibold mt-3 p-1.5 transition-all duration-300 group-hover:opacity-0 group-hover:translate-y-2.5 group-hover:h-0 group-hover:m-0 group-hover:p-0">Creative Director</div>
       </div>
@@ -609,8 +609,8 @@
 <!--RECENT POSTS SECTION-->
 <section id="posts" class="relative px-5 md:px-10 py-25 min-h-screen bg-white text-center overflow-hidden font-poppins">
   
-  <img src="vector/vector2.png" class="absolute top-0 left-0 w-[clamp(150px,20vw,600px)] pointer-events-none z-0" alt="">
-  <img src="vector/vector2.0.png" class="absolute top-0 right-0 w-[clamp(150px,20vw,600px)] pointer-events-none z-0" alt="">
+  <img src="src/images/vector/vector2.png" class="absolute top-0 left-0 w-[clamp(150px,20vw,600px)] pointer-events-none z-0" alt="">
+  <img src="src/images/vector/vector2.0.png" class="absolute top-0 right-0 w-[clamp(150px,20vw,600px)] pointer-events-none z-0" alt="">
 
   <div class="relative z-10 mb-12">
     <h2 class="font-poppins text-[clamp(35px,5vw,65px)] font-extrabold text-green-dark leading-none tracking-[-2px] [-webkit-text-stroke:1px_white] mb-2 px-4">
@@ -626,7 +626,7 @@
       <div class="bg-green-dark rounded-[10px] p-3 h-full flex flex-col transition-colors duration-400 ease-in-out group-hover:bg-cream">
         
         <div class="w-full h-50 rounded-md overflow-hidden border-[3px] border-white">
-          <img src="picture/picture3.png" alt="E-Commerce Impact" class="w-full h-full object-cover">
+          <img src="src/images/picture/picture3.png" alt="E-Commerce Impact" class="w-full h-full object-cover">
         </div>
         
         <div class="pt-3.75 px-1.25 pb-1.25 flex flex-col grow text-center">
@@ -646,7 +646,7 @@
     <div class="group flex-1 bg-white border-[3px] border-green-dark rounded-2xl p-1.5 transition-all duration-400 ease-in-out cursor-pointer hover:scale-[1.03] hover:-translate-y-1.5 hover:border-white hover:shadow-[0_0_15px_rgba(230,223,184,0.8)] hover:bg-green-dark">
       <div class="bg-green-dark rounded-[10px] p-3 h-full flex flex-col transition-colors duration-400 ease-in-out group-hover:bg-cream">
         <div class="w-full h-50 rounded-md overflow-hidden border-[3px] border-white">
-          <img src="picture/picture2.png" alt="Mobile Marketing" class="w-full h-full object-cover">
+          <img src="src/images/picture/picture2.png" alt="Mobile Marketing" class="w-full h-full object-cover">
         </div>
         <div class="pt-3.75 px-1.25 pb-1.25 flex flex-col grow text-center">
           <span class="text-white text-[14px] mb-2 transition-colors duration-400 group-hover:text-green-dark">Sports</span>
@@ -662,7 +662,7 @@
     <div class="group flex-1 bg-white border-[3px] border-green-dark rounded-2xl p-1.5 transition-all duration-400 ease-in-out cursor-pointer hover:scale-[1.03] hover:-translate-y-1.5 hover:border-white hover:shadow-[0_0_15px_rgba(230,223,184,0.8)] hover:bg-green-dark">
       <div class="bg-green-dark rounded-[10px] p-3 h-full flex flex-col transition-colors duration-400 ease-in-out group-hover:bg-cream">
         <div class="w-full h-50 rounded-md overflow-hidden border-[3px] border-white">
-          <img src="picture/picture1.png" alt="Mobile Marketing" class="w-full h-full object-cover">
+          <img src="src/images/picture/picture1.png" alt="Mobile Marketing" class="w-full h-full object-cover">
         </div>
         <div class="pt-3.75 px-1.25 pb-1.25 flex flex-col grow text-center">
           <span class="text-white text-[14px] mb-2 transition-colors duration-400 group-hover:text-green-dark">Entertainment</span>
@@ -683,8 +683,8 @@
 <section id="contact" class="relative py-16 px-5 md:px-10 overflow-hidden font-poppins bg-white">
 
   <!-- Vector Image sa bottom-right corner -->
-  <img src="bg/vector5.0.png" class="absolute bottom-0 right-0 pointer-events-none z-0 w-[120px] md:w-[240px]">
-  <img src="bg/vector5.png" class="absolute top-0 left-0 pointer-events-none z-0 w-[120px] md:w-[240px]">
+  <img src="src/images/bg/vector5.0.png" class="absolute bottom-0 right-0 pointer-events-none z-0 w-[120px] md:w-[240px]">
+  <img src="src/images/bg/vector5.png" class="absolute top-0 left-0 pointer-events-none z-0 w-[120px] md:w-[240px]">
 
   <!-- TITLE -->
     <h2 class="text-center font-poppins text-[clamp(35px,5vw,65px)] font-extrabold text-green-dark leading-none tracking-[-2px] [-webkit-text-stroke:1px_white] mb-2 px-4">
@@ -709,7 +709,7 @@
         <!-- PHONE -->
         <div class="flex items-center rounded-[10px] overflow-visible" style="background: #48887B;">
           <div class="w-[65px] h-[65px] rounded-full flex-shrink-0 flex items-center justify-center border-4 border-white -ml-10 z-10 bg-white" >
-            <img src="icon/iconphone.png" alt="Phone" class="w-[50px] h-[50px] object-contain">
+            <img src="src/images/icon/iconphone.png" alt="Phone" class="w-[50px] h-[50px] object-contain">
           </div>
           <div class="flex-1 bg-white mx-2 my-2 rounded-[8px] px-4 py-3">
             <p class="text-green-dark font-bold text-[14px] m-0">Phone:</p>
@@ -720,7 +720,7 @@
         <!-- EMAIL -->
         <div class="flex items-center rounded-[10px] overflow-visible" style="background: #48887B;">
           <div class="w-[67px] h-[67px] rounded-full flex-shrink-0 flex items-center justify-center border-4 border-white -ml-10 z-10 bg-white">
-            <img src="icon/iconmess.png" alt="Email" class="w-[50px] h-[50px] object-contain">
+            <img src="src/images/icon/iconmess.png" alt="Email" class="w-[50px] h-[50px] object-contain">
           </div>
           <div class="flex-1 bg-white mx-2 my-2 rounded-[8px] px-4 py-3">
             <p class="text-green-dark font-bold text-[14px] m-0">Email:</p>
@@ -731,7 +731,7 @@
         <!-- OPEN HOURS -->
         <div class="flex items-center rounded-[10px] overflow-visible" style="background: #48887B;">
           <div class="w-[65px] h-[65px] rounded-full flex-shrink-0 flex items-center justify-center border-4 border-white -ml-10 z-10 bg-white">
-            <img src="icon/iconclock.png" alt="Open Hours" class="w-[50px] h-[50px] object-contain">
+            <img src="src/images/icon/iconclock.png" alt="Open Hours" class="w-[50px] h-[50px] object-contain">
           </div>
           <div class="flex-1 bg-white mx-2 my-2 rounded-[8px] px-4 py-3">
             <p class="text-green-dark font-bold text-[14px] m-0">Open Hours:</p>
@@ -742,7 +742,7 @@
         <!-- LOCATION -->
         <div class="flex items-center rounded-[10px] overflow-visible" style="background: #48887B;">
           <div class="w-[75px] h-[75px] rounded-full flex-shrink-0 flex items-center justify-center border-4 border-white -ml-10 z-10 bg-white">
-            <img src="icon/iconloc.png" alt="Location" class="w-[60px] h-[60px] object-contain">
+            <img src="src/images/icon/iconloc.png" alt="Location" class="w-[60px] h-[60px] object-contain">
           </div>
           <div class="flex-1 bg-white mx-2 my-2 rounded-[8px] px-4 py-3">
             <p class="text-green-dark font-bold text-[14px] m-0">Location:</p>
@@ -809,6 +809,6 @@
   </div>
 
 </footer>
-<script src="script.js"></script>
+<script src="src/js/script.js"></script>
 </body>
 </html>

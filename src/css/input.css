@@ -1,5 +1,7 @@
 @import "tailwindcss";
-@source "./index.html";
+@source "../../index.html";
+@source "../**/*.html";
+
 
 @theme {
   /* Brand Colors */
@@ -17,6 +19,7 @@
   --font-pacifico: 'Pacifico', cursive;
 }
 
+@layer utilities {
 /* Base resets & smooth scrolling */
 html { scroll-behavior: smooth; }
 
@@ -99,7 +102,7 @@ html { scroll-behavior: smooth; }
   left: 0;
   width: 100%;
   height: 40%;
-  background: url('vector/vector3.png') no-repeat top center;
+  background: url('/src/images/vector/vector3.png') no-repeat top center;
   background-size: cover; 
   z-index: 0;
 }
@@ -109,7 +112,7 @@ html { scroll-behavior: smooth; }
   left: 0;
   width: 100%;
   height: 50%;
-  background: url('vector/vector4.png') no-repeat top center;
+  background: url('/src/images/vector/vector4.png') no-repeat top center;
   background-size: cover; 
   z-index: 0;
 }
@@ -131,7 +134,7 @@ html { scroll-behavior: smooth; }
 }
 
 .bg-portfolio {
-  background-image: url('bg/background3.png');
+  background-image: url('/src/images/bg/background3.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -166,4 +169,5 @@ html { scroll-behavior: smooth; }
 .filter-scroll::-webkit-scrollbar-thumb {
   background: #48887B;
   border-radius: 999px;
+}
 }
