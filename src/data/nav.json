@@ -1,0 +1,11 @@
+{
+  "logo": "src/images/logo/logo-bb88.png",
+  "links": [
+    { "name": "Home", "href": "#home", "active": true },
+    { "name": "About", "href": "#about" },
+    { "name": "Services", "href": "#services" },
+    { "name": "Portfolio", "href": "#portfolio" },
+    { "name": "Team", "href": "#team" },
+    { "name": "Contact", "href": "#contact" }
+  ]
+}

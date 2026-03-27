@@ -18,32 +18,7 @@
 </head>
 <body class="font-poppins m-0 min-h-screen overflow-x-hidden bg-transparent text-gray-800">
 <!--NAVPILL PLUS BB88 LOGO ON THE LEFT SIDE-->
-  <nav class="w-full py-4 px-5 md:px-10 flex justify-center sticky top-0 z-999 bg-transparent">
-    <div class="flex justify-between items-center w-full max-w-300 py-2 px-4 bg-white rounded-full shadow-[0_2px_16px_rgba(0,0,0,0.08)] relative">
-      <!--BB88 LOGO-->
-      <div class="flex items-center mr-5">
-        <div class="w-[clamp(120px,40vw,200px)] h-auto">
-          <img src="src/images/logo/logo-bb88.png" alt="BB88 Logo" class="w-full h-auto object-contain">
-        </div>
-      </div>
-      <!--BURGER MENU FOR SMALL SCREEN-->
-      <div class="lg:hidden flex flex-col gap-1.5 cursor-pointer p-2 z-50" onclick="toggleMenu()">
-        <span class="w-[clamp(16px,4vw,22px)] h-0.5 bg-green-dark rounded transition-all duration-300"></span>
-        <span class="w-[clamp(16px,4vw,22px)] h-0.5 bg-green-dark rounded transition-all duration-300"></span>
-        <span class="w-[clamp(16px,4vw,22px)] h-0.5 bg-green-dark rounded transition-all duration-300"></span>
-      </div>
-      <!--NAVIGATION MENU-->
-      <div id="nav-menu" class="hidden lg:flex flex-col lg:flex-row absolute lg:static top-[120%] left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-xl lg:shadow-none p-5 lg:p-0 rounded-2xl lg:rounded-none items-center gap-3 ml-auto z-40 transition-all duration-300">
-        <a href="#home" class="relative text-[clamp(14px,1vw,18px)] font-semibold text-white bg-green-dark px-4 py-2 rounded-full transition-colors duration-200">Home</a>
-        <a href="#about" class="relative text-[clamp(14px,1vw,18px)] font-semibold text-text-dark px-4 py-2 rounded-full hover:bg-green-dark hover:text-white transition-colors duration-200">About</a>
-        <a href="#services" class="relative text-[clamp(14px,1vw,18px)] font-semibold text-text-dark px-4 py-2 rounded-full hover:bg-green-dark hover:text-white transition-colors duration-200">Services</a>
-        <a href="#portfolio" class="relative text-[clamp(14px,1vw,18px)] font-semibold text-text-dark px-4 py-2 rounded-full hover:bg-green-dark hover:text-white transition-colors duration-200">Portfolio</a>
-        <a href="#team" class="relative text-[clamp(14px,1vw,18px)] font-semibold text-text-dark px-4 py-2 rounded-full hover:bg-green-dark hover:text-white transition-colors duration-200">Team</a>
-        <a href="#contact" class="relative text-[clamp(14px,1vw,18px)] font-semibold text-text-dark px-4 py-2 rounded-full hover:bg-green-dark hover:text-white transition-colors duration-200">Contact</a>
-      </div>
-    </div>
-  </nav>
-
+  <nav id="nav-container"></nav>
 <!--HERO SECTION-->
 <!--DITO NAKALAGAY UNG WHITE BG-->
 <section id="home" class="hero-line relative min-h-[200vh] bg-[url('../images/bg/background1.png')] bg-top bg-no-repeat bg-white -mt-30 pt-27.5 pb-20 overflow-x-hidden">
@@ -156,7 +131,7 @@
 
 <!--OUR SERVICES SECTION-->
 <section id="services" class="relative py-10 px-5 md:px-10 overflow-hidden font-poppins text-center min-h-screen"
-  style="background-image: url('../images/bg/background2.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  style="background-image: url('./src/images/bg/background2.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 
   <img src="src/images/vector/vector2.png"   class="absolute top-0 left-0 pointer-events-none z-0 w-37.5 md:w-75 lg:w-125">
   <img src="src/images/vector/vector2.0.png" class="absolute top-0 right-0 pointer-events-none z-0 w-37.5 md:w-75 lg:w-125">
@@ -809,6 +784,7 @@
   </div>
 
 </footer>
-<script src="src/js/script.js"></script>
+<script type="module" src="src/js/script.js"></script>
+<script type="module" src="app.js"></script>
 </body>
 </html>

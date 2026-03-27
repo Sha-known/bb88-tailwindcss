@@ -46,13 +46,17 @@ cards.forEach(card => {
   });
 });
 
-//burger
-// Burger Menu Toggle Script
-function toggleMenu() {
+//burger nav function
+export function initNavInteractions() {
+  const burger = document.getElementById('burger-btn');
   const nav = document.getElementById('nav-menu');
-  // This flips the menu between hidden and visible on mobile
-  nav.classList.toggle('hidden');
-  nav.classList.toggle('flex');
+
+  if (burger && nav) {
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('hidden');
+      nav.classList.toggle('flex');
+    });
+  }
 }
 
 // Services cards - hover for desktop, click for mobile
