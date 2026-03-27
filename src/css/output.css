@@ -120,7 +120,6 @@
   }
   img, svg, video, canvas, audio, iframe, embed, object {
     display: block;
-    vertical-align: middle;
   }
   img, video {
     max-width: 100%;
@@ -405,11 +404,35 @@
   .h-9 {
     height: calc(var(--spacing) * 9);
   }
+  .h-12\.5 {
+    height: calc(var(--spacing) * 12.5);
+  }
+  .h-13\.75 {
+    height: calc(var(--spacing) * 13.75);
+  }
+  .h-15 {
+    height: calc(var(--spacing) * 15);
+  }
+  .h-16\.25 {
+    height: calc(var(--spacing) * 16.25);
+  }
+  .h-16\.75 {
+    height: calc(var(--spacing) * 16.75);
+  }
+  .h-18\.75 {
+    height: calc(var(--spacing) * 18.75);
+  }
   .h-50 {
     height: calc(var(--spacing) * 50);
   }
+  .h-55 {
+    height: calc(var(--spacing) * 55);
+  }
   .h-57\.5 {
     height: calc(var(--spacing) * 57.5);
+  }
+  .h-65 {
+    height: calc(var(--spacing) * 65);
   }
   .h-\[50px\] {
     height: 50px;
@@ -468,8 +491,35 @@
   .w-9 {
     width: calc(var(--spacing) * 9);
   }
+  .w-12\.5 {
+    width: calc(var(--spacing) * 12.5);
+  }
+  .w-13\.75 {
+    width: calc(var(--spacing) * 13.75);
+  }
+  .w-15 {
+    width: calc(var(--spacing) * 15);
+  }
+  .w-16\.25 {
+    width: calc(var(--spacing) * 16.25);
+  }
+  .w-16\.75 {
+    width: calc(var(--spacing) * 16.75);
+  }
+  .w-18\.75 {
+    width: calc(var(--spacing) * 18.75);
+  }
   .w-25 {
     width: calc(var(--spacing) * 25);
+  }
+  .w-30 {
+    width: calc(var(--spacing) * 30);
+  }
+  .w-37\.5 {
+    width: calc(var(--spacing) * 37.5);
+  }
+  .w-55 {
+    width: calc(var(--spacing) * 55);
   }
   .w-100 {
     width: calc(var(--spacing) * 100);
@@ -534,11 +584,17 @@
   .max-w-62\.5 {
     max-width: calc(var(--spacing) * 62.5);
   }
+  .max-w-70 {
+    max-width: calc(var(--spacing) * 70);
+  }
   .max-w-200 {
     max-width: calc(var(--spacing) * 200);
   }
   .max-w-250 {
     max-width: calc(var(--spacing) * 250);
+  }
+  .max-w-275 {
+    max-width: calc(var(--spacing) * 275);
   }
   .max-w-300 {
     max-width: calc(var(--spacing) * 300);
@@ -817,9 +873,6 @@
   }
   .bg-\[url\(\'\/src\/images\/bg\/background1\.png\'\)\] {
     background-image: url('/src/images/bg/background1.png');
-  }
-  .bg-\[url\(\'src\/images\/bg\/background1\.png\'\)\] {
-    background-image: url('src/images/bg/background1.png');
   }
   .bg-top {
     background-position: top;
@@ -1579,6 +1632,16 @@
       margin-right: calc(var(--spacing) * 0);
     }
   }
+  .md\:w-60 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 60);
+    }
+  }
+  .md\:w-75 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 75);
+    }
+  }
   .md\:w-\[70vw\] {
     @media (width >= 48rem) {
       width: 70vw;
@@ -1607,6 +1670,11 @@
   .md\:items-start {
     @media (width >= 48rem) {
       align-items: flex-start;
+    }
+  }
+  .md\:gap-4\.5 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 4.5);
     }
   }
   .md\:gap-\[18px\] {
@@ -1672,6 +1740,11 @@
   .lg\:hidden {
     @media (width >= 64rem) {
       display: none;
+    }
+  }
+  .lg\:w-125 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 125);
     }
   }
   .lg\:w-\[55vw\] {
