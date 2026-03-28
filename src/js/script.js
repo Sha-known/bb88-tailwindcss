@@ -59,47 +59,8 @@ export function initNavInteractions() {
   }
 }
 
-// Services cards - hover for desktop, click for mobile
-['left', 'center', 'right'].forEach(id => {
-  const card = document.getElementById(`card-${id}`);
-  const img = document.getElementById(`card-${id}-img`);
-  const hover = document.getElementById(`card-${id}-hover`);
 
-  // Desktop hover
-  card.addEventListener('mouseenter', () => {
-    card.style.height = '480px';
-    img.style.display = 'none';
-    hover.style.display = 'flex';
-  });
 
-  card.addEventListener('mouseleave', () => {
-    card.style.height = '340px';
-    img.style.display = 'flex';
-    hover.style.display = 'none';
-  });
-
-  // Mobile tap/click
-  card.addEventListener('click', () => {
-    const isOpen = card.style.height === '550px';
-
-    // Close all cards first
-    ['left', 'center', 'right'].forEach(otherId => {
-      const otherCard = document.getElementById(`card-${otherId}`);
-      const otherImg = document.getElementById(`card-${otherId}-img`);
-      const otherHover = document.getElementById(`card-${otherId}-hover`);
-      otherCard.style.height = '340px';
-      otherImg.style.display = 'flex';
-      otherHover.style.display = 'none';
-    });
-
-    // If it was closed, open it
-    if (!isOpen) {
-      card.style.height = '550px';
-      img.style.display = 'none';
-      hover.style.display = 'flex';
-    }
-  });
-});
 const logos = [
   { src: 'src/images/logo/logo2.png', href: 'https://www.facebook.com/biorganismcorpofficial' },
   { src: 'src/images/logo/logo4.png', href: 'https://www.facebook.com/profile.php?id=61565883182782' },

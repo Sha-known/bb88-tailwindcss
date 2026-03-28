@@ -1,0 +1,23 @@
+{
+  "sectionTitle": "Our Services", "bgImage": "src/images/bg/background2.png",
+  "cards": [
+    {
+      "id": "left",
+      "title": "Digital Marketing Management",
+      "image": "src/images/vector/DigitalMarketingManagementvector.png",
+      "description": "We specialize in creating data-driven digital marketing campaigns that elevate your brand's online presence. From social media management to SEO strategies, we help you connect with your target audience and drive measurable results."
+    },
+    {
+      "id": "center",
+      "title": "Media Production Management",
+      "image": "src/images/vector/MediaProductionvector1.png",
+      "description": "We have a team of in-house graphic designers, animators, architectural designers, engineers and copywriters. We also work with trusted contractors and outside firms. We provide creative input such as concept visualization up to final output. We define an engaging visual aspects of websites, books, magazines, product packaging, exhibitions, visual production designs and more."
+    },
+    {
+      "id": "right",
+      "title": "System Solutions & Management",
+      "image": "src/images/vector/SystemSolutions&Managementvector.png",
+      "description": "We deliver cutting-edge system solutions tailored to your business needs. From software development to IT infrastructure management, our team ensures your systems run efficiently, securely, and seamlessly to support your business growth."
+    }
+  ]
+}
