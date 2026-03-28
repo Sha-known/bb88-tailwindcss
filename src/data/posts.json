@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "category": "Politics",
+      "title": "E-Commerce's Impact on Marketing:",
+      "description": "Harnessing Online Channels to Boost Sales and Reach New Customers",
+      "image": "src/images/picture/picture3.png",
+      "link": "#"
+    },
+    {
+      "category": "Sports",
+      "title": "The Rise of Mobile Marketing:",
+      "description": "Creating Mobile-Optimized Campaigns to Reach Customers on-the-go",
+      "image": "src/images/picture/picture2.png",
+      "link": "#"
+    },
+    {
+      "category": "Entertainment",
+      "title": "The Rise of Mobile Marketing:",
+      "description": "Creating Mobile-Optimized Campaigns to Reach Customers on-the-go",
+      "image": "src/images/picture/picture1.png",
+      "link": "#"
+    }
+  ]
+}
