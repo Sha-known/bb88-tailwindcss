@@ -6,5 +6,4 @@ import { loadTeam } from './src/js/sections/team.js';
 loadNav();
 loadHome();
 loadServices();
-
 loadTeam();
