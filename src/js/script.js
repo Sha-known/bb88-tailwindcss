@@ -63,71 +63,72 @@ export function initNavInteractions() {
 
 
 
-//hover effect sa Portfolio Flexcards
-document.querySelectorAll('.portfolio-card').forEach(card => {
-  const popup = card.querySelector('.floating-popup');
+// --- PORTFOLIO SECTION SCRIPTS ---
 
-  card.addEventListener('mousemove', (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+export function initPortfolioInteractions() {
+  
+  // 1. Hover effect for Portfolio Flexcards
+  document.querySelectorAll('.portfolio-card').forEach(card => {
+    const popup = card.querySelector('.floating-popup');
+    if (popup) {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
-    popup.style.left = (x + 15) + 'px';
-    popup.style.top = (y + 15) + 'px';
-    popup.style.opacity = '1';
-    popup.style.visibility = 'visible';
-  });
+        popup.style.left = (x + 15) + 'px';
+        popup.style.top = (y + 15) + 'px';
+        popup.style.opacity = '1';
+        popup.style.visibility = 'visible';
+      });
 
-  card.addEventListener('mouseleave', () => {
-    popup.style.opacity = '0';
-    popup.style.visibility = 'hidden';
-  });
-});
-
-//filter portfolio
-function filterPortfolio(category) {
-  const cards = document.querySelectorAll('.portfolio-card');
-  const buttons = document.querySelectorAll('.filter-btn');
-
-  cards.forEach(card => {
-    if (category === 'all' || card.dataset.category === category) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
+      card.addEventListener('mouseleave', () => {
+        popup.style.opacity = '0';
+        popup.style.visibility = 'hidden';
+      });
     }
   });
 
-  buttons.forEach(btn => {
-    btn.classList.remove('bg-green-dark', 'text-white');
-    btn.classList.add('bg-white', 'text-green-dark');
-  });
+  // 2. See More Button Logic
+  const seeMoreBtn = document.getElementById('see-more-btn');
+  if (seeMoreBtn) {
+    seeMoreBtn.addEventListener('click', () => {
+      const hiddenCards = document.querySelectorAll('.portfolio-card.hidden');
+      hiddenCards.forEach(card => card.classList.remove('hidden', 'extra-card'));
+      seeMoreBtn.style.display = 'none';
+    });
+  }
 
-  event.target.classList.add('bg-green-dark', 'text-white');
-  event.target.classList.remove('bg-white', 'text-green-dark');
-}
+  // 3. Portfolio Filter Logic
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const portfolioCards = document.querySelectorAll('.portfolio-card');
 
-function seeMore() {
-  const hiddenCards = document.querySelectorAll('.portfolio-card.hidden');
-  hiddenCards.forEach(card => card.classList.remove('hidden'));
-  document.getElementById('see-more-btn').style.display = 'none';
-}
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      // A. Reset all buttons to the default (Green text, transparent bg, with hover effect)
+      filterButtons.forEach(b => {
+        b.classList.remove('bg-green-dark', 'text-white');
+        b.classList.add('text-green-dark', 'hover:bg-gray-50');
+      });
 
-// portfolio filters
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+      // B. Highlight the clicked button (Green bg, white text)
+      const clickedBtn = e.currentTarget;
+      clickedBtn.classList.add('bg-green-dark', 'text-white');
+      clickedBtn.classList.remove('text-green-dark', 'hover:bg-gray-50');
 
-    const filter = btn.dataset.filter;
-    document.querySelectorAll('.portfolio-item').forEach(item => {
-      if (filter === 'all' || item.dataset.category === filter) {
-        item.style.display = '';
-      } else {
-        item.style.display = 'none';
-      }
+      // C. Filter the cards
+      const targetCategory = clickedBtn.dataset.filter;
+      
+      portfolioCards.forEach(card => {
+        if (targetCategory === 'all' || card.dataset.category === targetCategory) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     });
   });
-});
+}
 
 //about cards hover function
 export function initCardHover() {
