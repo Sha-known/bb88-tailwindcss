@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "title": "WELCOME TO BB88",
+    "lines": [
+      "Quickly start your project now",
+      "and set the stage for",
+      "success"
+    ],
+    "bgImage": "src/images/bg/background1.png",
+    "vectorImage": "src/images/bg/vector1.png",
+    "cta": {
+      "text": "Get Started",
+      "link": "#about"
+    },
+    "video": {
+      "text": "Watch Video",
+      "link": "https://www.facebook.com/watch/?v=173888480735686"
+    }
+  },
+  "about": {
+    "title": "Design and Marketing Solutions",
+    "cards": [
+      {
+        "title": "Design Ideas",
+        "icon": "src/images/icon/icondesignideas.png",
+        "hoverIcon": "src/images/icon/iconeffect/icon2designideas.png"
+      },
+      {
+        "title": "Digital & Mainstream Marketing",
+        "icon": "src/images/icon/iconDigital&Mainstream.png",
+        "hoverIcon": "src/images/icon/iconeffect/icon1Digital&Mainstream.png"
+      },
+      {
+        "title": "Brand and Identity",
+        "icon": "src/images/icon/iconBrand&Identity.png",
+        "hoverIcon": "src/images/icon/iconeffect/icon3Brand&Identity.png"
+      },
+      {
+        "title": "Digital Solutions",
+        "icon": "src/images/icon/iconDigitalSolutions.png",
+        "hoverIcon": "src/images/icon/iconeffect/icon4DigitalSolutions.png"
+      }
+    ],
+    "box": {
+      "title": "About Us",
+      "subtitle": "Creative Solutions for Impactful Brand Communication",
+      "paragraphs": [
+        "BB 88 Advertising and Digital Solutions Inc. is a One-Stop shop for design and communication strategy, specializing in graphic design, architectural design, realistic visual production, web app and mobile application. Our focus is on creating the best design to effectively sell your products and services through high impact visual mediums. We can help turn your ideas and creative perspective into a successful communication strategy.",
+        "Our philosophy is based on our passion to deliver the RIGHT message at the RIGHT time with the RIGHT solution. With a combined team of dedicated professionals from varied creative industries & powered by State of the Art equipment, we do our work best with the clients to integrate branding and marketing strategy. BB 88 support team innovates unique identity of products and services that would enable our customers to establish presence in their target market.",
+        "At BB 88 Advertising & Digital Solutions Inc., we believe that our ability to focus on our customers needs and target audience sets us apart in the industry. Our distinctive design concepts and production approach, combined with expert technical support, allow us to cover all aspects of mass communication, including print video radio, and the internet. Our group of companies are ready to provide you with the support you need to succeed in today's rapidly-evolving landscape."
+      ]
+    }
+  }
+}

@@ -282,3 +282,17 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
+//about cards hover function
+export function initCardHover() {
+  document.querySelectorAll('.about-card-hover').forEach(card => {
+    const img = card.querySelector('.card-icon');
+
+    card.addEventListener('mouseenter', () => {
+      img.src = card.dataset.hover;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      img.src = card.dataset.icon;
+    });
+  });
+}
