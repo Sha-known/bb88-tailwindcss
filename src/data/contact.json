@@ -1,0 +1,39 @@
+{
+  "title": "Contact Us",
+  "subtitle": "For immediate assistance, contact us 9:00 AM - 6:00 PM <br> to address any emergency needs.",
+  "mapSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3851.5857410699755!2d120.59506977488358!3d15.12614328542485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396ed4741c8100d%3A0x6d496fd20153855a!2sBB%2088%20ADVERTISING%20AND%20DIGITAL%20SOLUTIONS!5e0!3m2!1sen!2sph!4v1774193219532!5m2!1sen!2sph",
+  "contactInfo": [
+    {
+      "icon": "src/images/icon/iconphone.png",
+      "label": "Phone:",
+      "value": "+63 45 963 2025",
+      "circleClass": "w-16.25 h-16.25",
+      "iconClass": "w-12.5 h-12.5"
+    },
+    {
+      "icon": "src/images/icon/iconmess.png",
+      "label": "Email:",
+      "value": "info@bb88advertising.com",
+      "circleClass": "w-16.25 h-16.25",
+      "iconClass": "w-12.5 h-12.5"
+    },
+    {
+      "icon": "src/images/icon/iconclock.png",
+      "label": "Open Hours:",
+      "value": "Mon-Sat: 9:00 AM - 6:00 PM",
+      "circleClass": "w-16.25 h-16.25",
+      "iconClass": "w-12.5 h-12.5"
+    },
+    {
+      "icon": "src/images/icon/iconloc.png",
+      "label": "Location:",
+      "value": "Unit D, 2nd Floor Plaza Victoria Bldg., Sto. Rosario St., Sto. Domingo, Angeles City 2009 Philippines",
+      "circleClass": "w-18.75 h-18.75",
+      "iconClass": "w-15 h-15"
+    }
+  ],
+  "company": {
+    "name": "BB 88 ADVERTISING",
+    "suffix": "AND DIGITAL SOLUTIONS INC."
+  }
+}

@@ -15,6 +15,8 @@ export async function loadFooter() {
     if (!footer) {
       throw new Error("Footer element not found");
     }
+      //footer class
+    footer.className = "bg-green-dark text-white flex flex-col font-poppins";
 
     footer.innerHTML = `
       <div class="pt-7.5-5 pb-5 text-center">
@@ -43,6 +45,8 @@ export async function loadFooter() {
 
     const footer = document.getElementById("footer");
     if (footer) {
+      // Dinagdag ko rin ang styling dito para kahit mag-error, presentable pa rin
+      footer.className = "bg-green-dark text-white flex flex-col font-poppins";
       footer.innerHTML = `
         <p class="text-red-300 text-center p-5">
           Failed to load footer.
