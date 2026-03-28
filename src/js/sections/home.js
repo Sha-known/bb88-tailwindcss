@@ -1,6 +1,6 @@
 import { initCardHover } from '../script.js';
 
-const DATA_HOME = 'src/data/home.json';
+const DATA_HOME = './src/data/home.json';
 
 export const loadHome = async () => {
   try {
