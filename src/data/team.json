@@ -1,0 +1,49 @@
+{
+  "title": "Our Team",
+  "cardsTop": [
+    {
+      "title": "Software Engineers",
+      "desc": "Our Software Engineers build the robust architecture and logic that powers complex systems, ensuring stability and performance across all platforms.",
+      "icon": "src/images/icon/our team (icon 1).png",
+      "hoverIcon": "src/images/icon/iconeffect/our team (icon 1)-inverted.png"
+    },
+    {
+      "title": "Web Developers",
+      "desc": "Web Developers focus on creating responsive, fast-loading, and SEO-friendly websites using the latest web technologies.",
+      "icon": "src/images/icon/our team (icon 2).png",
+      "hoverIcon": "src/images/icon/iconeffect/our team (icon 2)-inverted.png"
+    },
+    {
+      "title": "App Developers",
+      "desc": "Specializing in iOS and Android, our App Developers create seamless mobile experiences with intuitive interfaces.",
+      "icon": "src/images/icon/our team (icon 3).png",
+      "hoverIcon": "src/images/icon/iconeffect/our team (icon 3)-inverted.png"
+    },
+    {
+      "title": "Graphic Artists",
+      "desc": "Graphic Artists craft the visual identity of your brand, from logos to marketing materials, with a keen eye for aesthetics.",
+      "icon": "src/images/icon/our team (icon 4).png",
+      "hoverIcon": "src/images/icon/iconeffect/our team (icon 4)-inverted.png"
+    }
+  ],
+  "cardsBottom": [
+    {
+      "title": "Multimedia Artists",
+      "desc": "Multimedia Artists create dynamic and interactive content like videos, animations, and digital experiences.",
+      "icon": "src/images/icon/our team (icon 7).png",
+      "hoverIcon": "src/images/icon/iconeffect/our team (icon 7)-inverted.png"
+    },
+    {
+      "title": "Creative Writers",
+      "desc": "Our writers tell your story, crafting compelling copy that resonates with your audience and drives action.",
+      "icon": "src/images/icon/our team (icon 5).png",
+      "hoverIcon": "src/images/icon/iconeffect/our team (icon 5)-inverted.png"
+    },
+    {
+      "title": "Creative Director",
+      "desc": "The Creative Director oversees the artistic vision, ensuring all projects align with the brand's core values.",
+      "icon": "src/images/icon/our team (icon 6).png",
+      "hoverIcon": "src/images/icon/iconeffect/our team (icon 6)-inverted.png"
+    }
+  ]
+}

@@ -1,50 +1,50 @@
-//team cards tooltip script
-const cards = document.querySelectorAll('.group[data-title]'); 
-const bubble = document.getElementById('dynamic-desc-box');
-const bTitle = document.getElementById('bubble-title');
-const bText = document.getElementById('bubble-text');
+//TEAM TOOLTIP FUNCTION
+export function initTeamTooltip() {
+  const cards = document.querySelectorAll('.group[data-title]');
+  const bubble = document.getElementById('dynamic-desc-box');
+  const bTitle = document.getElementById('bubble-title');
+  const bText = document.getElementById('bubble-text');
+  const container = document.querySelector('.max-w-375');
 
-// FIXED: Now looking for the correct container class (.max-w-375)
-const container = document.querySelector('.max-w-375'); 
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      bTitle.textContent = card.dataset.title;
+      bText.textContent = card.dataset.desc;
 
-cards.forEach(card => {
-  card.addEventListener('mouseenter', () => {
-    bTitle.textContent = card.getAttribute('data-title');
-    bText.textContent = card.getAttribute('data-desc');
+      const cardRect = card.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect();
+      const bubbleWidth = bubble.offsetWidth;
 
-    const cardRect = card.getBoundingClientRect();
-    const containerRect = container.getBoundingClientRect();
-    const bubbleWidth = bubble.offsetWidth;
+      const isSmallScreen = window.innerWidth <= 768;
 
-    const isSmallScreen = window.innerWidth <= 768;
-
-    let leftPos;
-    if (isSmallScreen) {
-      leftPos = (containerRect.width - bubbleWidth) / 2;
-    } else {
-      leftPos = cardRect.left - containerRect.left;
-      if (leftPos + bubbleWidth > containerRect.width) {
-        leftPos = containerRect.width - bubbleWidth;
+      let leftPos;
+      if (isSmallScreen) {
+        leftPos = (containerRect.width - bubbleWidth) / 2;
+      } else {
+        leftPos = cardRect.left - containerRect.left;
+        if (leftPos + bubbleWidth > containerRect.width) {
+          leftPos = containerRect.width - bubbleWidth;
+        }
       }
-    }
 
-    if (leftPos < 0) leftPos = 0;
+      if (leftPos < 0) leftPos = 0;
 
-    const topPos = (cardRect.top - containerRect.top) + cardRect.height + 20;
-    const cardCenterInContainer = (cardRect.left - containerRect.left) + (cardRect.width / 2);
-    const arrowLeftRel = cardCenterInContainer - leftPos - 20; 
+      const topPos = (cardRect.top - containerRect.top) + cardRect.height + 20;
+      const cardCenter = (cardRect.left - containerRect.left) + (cardRect.width / 2);
+      const arrowLeft = cardCenter - leftPos - 20;
 
-    bubble.style.left = `${leftPos}px`;
-    bubble.style.top = `${topPos}px`;
-    bubble.style.setProperty('--arrow-left', `${arrowLeftRel}px`);
-    
-    bubble.classList.add('show');
+      bubble.style.left = `${leftPos}px`;
+      bubble.style.top = `${topPos}px`;
+      bubble.style.setProperty('--arrow-left', `${arrowLeft}px`);
+
+      bubble.classList.add('show');
+    });
+
+    card.addEventListener('mouseleave', () => {
+      bubble.classList.remove('show');
+    });
   });
-
-  card.addEventListener('mouseleave', () => {
-    bubble.classList.remove('show');
-  });
-});
+}
 
 //burger nav function
 export function initNavInteractions() {
@@ -111,9 +111,6 @@ function seeMore() {
   hiddenCards.forEach(card => card.classList.remove('hidden'));
   document.getElementById('see-more-btn').style.display = 'none';
 }
-
-//filter
-
 
 // portfolio filters
 document.querySelectorAll('.filter-btn').forEach(btn => {
