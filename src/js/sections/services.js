@@ -94,8 +94,10 @@ export const loadServices = async () => {
 
     const section = document.getElementById('services');
     const container = document.getElementById('services-container');
+    
+    section.className = "relative py-10 px-5 md:px-10 overflow-hidden font-poppins text-center min-h-screen";
 
-     // Ilapat ang background mula sa JSON
+     //background galing sa JSON
     section.style.backgroundImage = `url('${bgImage}')`;
     section.style.backgroundSize = 'cover';
     section.style.backgroundPosition = 'center';

@@ -10,13 +10,13 @@
     { "id": "webapp", "label": "Web App", "isActive": false, "padding": "pr-4 pl-2" }
   ],
   "projects": [
-    { "category": "mobile", "img": "src/images/picture/pic1.png", "title": "BC Bagsakan Pickup", "desc": "Description here...", "isHidden": false },
-    { "category": "mobile", "img": "src/images/picture/pic2.png", "title": "Bio-MOBAPP", "desc": "Description here...", "isHidden": false },
-    { "category": "mobile", "img": "src/images/picture/pic3.png", "title": "BC Bagsakan Delivery", "desc": "Description here...", "isHidden": false },
+    { "category": "mobile", "img": "src/images/picture/pic1.png", "title": "BC Bagsakan Pickup", "desc": "Description here...", "isHidden": true },
+    { "category": "mobile", "img": "src/images/picture/pic2.png", "title": "Bio-MOBAPP", "desc": "Description here...", "isHidden": true },
+    { "category": "mobile", "img": "src/images/picture/pic3.png", "title": "BC Bagsakan Delivery", "desc": "Description here...", "isHidden": true },
     { "category": "socmed", "img": "src/images/picture/pic5.png", "title": "Biorganism", "desc": "Katulong sa pagsasaka", "isHidden": true },
     { "category": "brand", "img": "src/images/picture/pic6.png", "title": "EM & A Architectural", "desc": "Description here...", "isHidden": true },
-    { "category": "brand", "img": "src/images/picture/pic7.png", "title": "Greenhouse Paradise", "desc": "Description here...", "isHidden": true },
-    { "category": "brand", "img": "src/images/picture/pic8.png", "title": "MHR", "desc": "Description here...", "isHidden": true },
+    { "category": "brand", "img": "src/images/picture/pic7.png", "title": "Greenhouse Paradise", "desc": "Description here...", "isHidden": true},
+    { "category": "brand", "img": "src/images/picture/pic8.png", "title": "MHR", "desc": "Description here...", "isHidden": true},
     { "category": "brand", "img": "src/images/picture/pic9.png", "title": "Migs", "desc": "Description here...", "isHidden": true },
     { "category": "brand", "img": "src/images/picture/pic4.png", "title": "Filipino Land", "desc": "Description here...", "isHidden": true }
   ]

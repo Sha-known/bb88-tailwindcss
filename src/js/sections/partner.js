@@ -107,6 +107,8 @@ export const loadPartners = async () => {
     
     const section = document.getElementById('partners');
 
+    section.className = "relative py-16 px-5 font-poppins text-center bg-[#C8E6E0] border-y-[6px] border-green-dark";
+
     const html = `
       <div class="relative z-10 max-w-275 mx-auto">
         <div id="carousel-wrapper" style="position:relative; width:100%; height:160px; overflow:hidden;">
