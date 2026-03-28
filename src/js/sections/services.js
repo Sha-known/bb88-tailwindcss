@@ -1,4 +1,4 @@
-const DATA_SERVICES = '/src/data/services.json';
+const DATA_SERVICES = './src/data/services.json';
 
 const renderServiceCards = (cards) => {
   return cards.map(({ id, title, image, description }) => `
