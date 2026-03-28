@@ -1,0 +1,27 @@
+{
+  "title": "Follow us on",
+  "socials": [
+    {
+      "label": "Facebook",
+      "icon": "fa-facebook-f",
+      "link": "https://www.facebook.com/bb88advertising"
+    },
+    {
+      "label": "Instagram",
+      "icon": "fa-instagram",
+      "link": "https://www.facebook.com/bb88advertising"
+    },
+    {
+      "label": "X (Twitter)",
+      "icon": "fa-x-twitter",
+      "link": "https://www.facebook.com/bb88advertising"
+    },
+    {
+      "label": "LinkedIn",
+      "icon": "fa-linkedin-in",
+      "link": "https://www.facebook.com/bb88advertising"
+    }
+  ],
+  "copyright": "©2025 BB 88 Advertising & Digital Solutions Inc., All Rights Reserved.",
+  "credits": "Designed & Developed by BB 88 Advertising and Digital Solutions Inc."
+}
