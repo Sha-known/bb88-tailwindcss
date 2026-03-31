@@ -7,208 +7,217 @@ requireLogin();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Edit Navbar — MetaGames CMS</title>
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <title>Edit Navbar</title>
+    <link href="../../../src/css/output.css" rel="stylesheet">
+<style>
+/* 1. CONTAINER & HEADER */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
-        body {
-            font-family: system-ui, sans-serif;
-            background: #0d1117;
-            color: #e6edf3;
-        }
+.card-header h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e6edf3;
+}
 
-        /* ── Layout ── */
-        header {
-            background: #161b22;
-            border-bottom: 1px solid #30363d;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header h1 { font-size: 1rem; }
-        .nav-links a {
-            color: #8b949e;
-            text-decoration: none;
-            font-size: 0.85rem;
-            margin-left: 1.2rem;
-        }
-        .nav-links a:hover { color: #e6edf3; }
-        .nav-links a.danger { color: #f85149; }
+/* 2. BADGE SYSTEM */
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
 
-        main {
-            max-width: 860px;
-            margin: 2rem auto;
-            padding: 0 1.5rem 4rem;
-        }
+.badge-update {
+  background: rgba(30, 136, 229, 0.1);
+  color: #58a6ff;
+  border: 1px solid rgba(30, 136, 229, 0.4);
+}
 
-        .page-title { font-size: 1.5rem; }
-        .page-meta  { font-size: 0.8rem; color: #8b949e; margin-top: 0.25rem; }
+.badge-crud, .badge-success {
+  background: rgba(63, 185, 80, 0.1);
+  color: #3fb950;
+  border: 1px solid rgba(63, 185, 80, 0.4);
+}
 
-        /* ── Toast notification ── */
-        #toast {
-            position: fixed;
-            bottom: 1.5rem;
-            right: 1.5rem;
-            padding: 0.7rem 1.2rem;
-            border-radius: 8px;
-            font-size: 0.88rem;
-            font-weight: 500;
-            opacity: 0;
-            transform: translateY(8px);
-            transition: opacity 0.25s, transform 0.25s;
-            pointer-events: none;
-            z-index: 9999;
-        }
-        #toast.show   { opacity: 1; transform: translateY(0); }
-        #toast.success { background: #1f3d29; color: #3fb950; border: 1px solid #3fb950; }
-        #toast.error   { background: rgba(248,81,73,.15); color: #f85149; border: 1px solid #f85149; }
+/* 3. FORM FIELDS */
+.field {
+  margin-bottom: 16px;
+}
 
-        /* ── Section divider ── */
-        .section-title {
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #8b949e;
-            margin: 2rem 0 0.75rem;
-        }
+.field label {
+  display: block;
+  font-size: 12px;
+  color: #8b949e;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
 
-        /* ── Cards ── */
-        .card {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 10px;
-            padding: 1.4rem 1.6rem;
-            margin-bottom: 1rem;
-        }
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.1rem;
-        }
-        .card-header h2 { font-size: 1rem; }
+.field input, .link-item input {
+  width: 100%;
+  padding: 8px 12px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #e6edf3;
+  outline: none;
+  transition: border-color 0.2s;
+}
 
-        .badge {
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            padding: 2px 9px;
-            border-radius: 20px;
-        }
-        .badge-update { background: #1f2d3d; color: #58a6ff; border: 1px solid #1e88e5; }
-        .badge-crud   { background: #1f3d29; color: #3fb950; border: 1px solid #3fb950; }
+.field input:focus, .link-item input:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 1px #1e88e5;
+}
 
-        /* ── Fields ── */
-        .field { margin-bottom: 0.85rem; }
-        .field:last-child { margin-bottom: 0; }
-        label { display: block; font-size: 0.78rem; color: #8b949e; margin-bottom: 3px; }
-        input[type="text"] {
-            width: 100%;
-            padding: 0.5rem 0.7rem;
-            background: #0d1117;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-            color: #e6edf3;
-            font-size: 0.88rem;
-        }
-        input[type="text"]:focus { outline: none; border-color: #1e88e5; }
+/* 4. ARRAY EDITOR / LINK ITEMS - FIXED ALIGNMENT */
+.link-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 80px 80px; /* Fixed width for buttons to align */
+  gap: 10px;
+  margin-bottom: 12px;
+  align-items: center;
+}
 
-        /* ── Buttons ── */
-        .btn {
-            padding: 0.45rem 1rem;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.82rem;
-            font-weight: 500;
-            transition: background 0.15s, opacity 0.15s;
-        }
-        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
-        .btn-blue  { background: #1e88e5; color: #fff; }
-        .btn-blue:hover:not(:disabled) { background: #1a6aab; }
-        .btn-green { background: #238636; color: #fff; }
-        .btn-green:hover:not(:disabled) { background: #1a6929; }
-        .btn-ghost-red {
-            background: transparent;
-            color: #f85149;
-            border: 1px solid #f85149;
-        }
-        .btn-ghost-red:hover:not(:disabled) { background: rgba(248,81,73,.12); }
+/* 5. BUTTONS */
+.btn {
+  height: 36px; /* Consistent height for alignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
 
-        /* ── Links list ── */
-        .links-list { display: flex; flex-direction: column; gap: 0.5rem; }
+.btn-blue, .btn-save {
+  background: #1f6feb;
+  color: white;
+}
+.btn-blue:hover { background: #388bfd; }
 
-        .link-item {
-            display: grid;
-            grid-template-columns: 1fr 1fr auto auto;
-            gap: 0.5rem;
-            align-items: center;
-            padding: 0.6rem 0;
-            border-bottom: 1px solid #21262d;
-        }
-        .link-item:last-child { border-bottom: none; }
+.btn-green, .btn-add {
+  background: #238636;
+  color: white;
+  padding: 0 15px;
+}
+.btn-green:hover { background: #2ea043; }
 
-        .add-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr auto;
-            gap: 0.5rem;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px dashed #30363d;
-            align-items: end;
-        }
-        .add-row .field { margin-bottom: 0; }
+.btn-ghost-red, .btn-delete {
+  background: transparent;
+  border: 1px solid #f85149;
+  color: #f85149;
+}
+.btn-ghost-red:hover { background: rgba(248, 81, 73, 0.1); }
 
-        /* ── Skeleton loader ── */
-        .skeleton {
-            background: linear-gradient(90deg, #21262d 25%, #30363d 50%, #21262d 75%);
-            background-size: 200% 100%;
-            animation: shimmer 1.4s infinite;
-            border-radius: 6px;
-            height: 36px;
-        }
-        @keyframes shimmer { to { background-position: -200% 0; } }
-    </style>
+/* 6. TOAST SYSTEM FIX (Targeting the .show class from your JS) */
+#toast.show {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 9999;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  border: 1px solid #30363d;
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+#toast.success {
+  background: #161b22;
+  color: #3fb950;
+  border-color: rgba(63, 185, 80, 0.4);
+}
+
+#toast.error {
+  background: #381a1a;
+  color: #ff7b72;
+  border-color: #f85149;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Add Row Section */
+.add-row {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed #30363d;
+}
+</style>
 </head>
-<body>
+<body class="bg-[#0d1117] text-[#e6edf3]">
 
-<header>
-    <h1>🎮 MetaGames CMS</h1>
-    <nav class="nav-links">
-        <a href="/src/admin/index.php">← Dashboard</a>
-        <a href="/src/admin/logout.php" class="danger">Log out</a>
+<header class="bg-[#161b22] border-b border-[#30363d] px-8 py-4 flex justify-between items-center">
+    <h1 class="text-sm">🎮 MetaGames CMS</h1>
+
+    <nav class="space-x-5 text-xs">
+        <a href="/src/admin/index.php" class="text-[#8b949e] hover:text-[#e6edf3]">← Dashboard</a>
+        <a href="/src/admin/logout.php" class="text-[#f85149] hover:opacity-80">Log out</a>
     </nav>
 </header>
 
-<main>
-    <h1 class="page-title">Edit: Navbar</h1>
+<main class="max-w-[860px] mx-auto px-6 py-8">
 
-    <!-- ── LOGO (object → update only) ─────────────────────── -->
-    <p class="section-title">Logo</p>
-    <div class="card" id="card-logo">
-        <div class="card-header">
-            <h2>Logo</h2>
-            <span class="badge badge-update">Read / Update</span>
+    <h1 class="text-2xl">Edit: Navbar</h1>
+
+    <!-- LOGO -->
+    <p class="text-[11px] uppercase tracking-widest text-[#8b949e] mt-8 mb-3 font-bold">
+        Logo
+    </p>
+
+    <div id="card-logo"
+         class="bg-[#161b22] border border-[#30363d] rounded-[10px] p-6 mb-4">
+
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-base">Logo</h2>
+
+            <span class="text-[11px] px-2 py-[2px] rounded-full bg-[#1f2d3d] text-[#58a6ff] border border-[#1e88e5]">
+                Read / Update
+            </span>
         </div>
-        <!-- Populated by JS -->
-        <div class="skeleton"></div>
+
+        <!-- JS injects fields HERE -->
+        <div class="animate-pulse h-9 bg-[#21262d] rounded"></div>
     </div>
 
-    <!-- ── LINKS (array → full CRUD) ────────────────────────── -->
-    <p class="section-title">Navigation Links</p>
-    <div class="card" id="card-links">
-        <div class="card-header">
-            <h2>Navigation Links</h2>
-            <span class="badge badge-crud">Full CRUD</span>
+    <!-- LINKS -->
+    <p class="text-[11px] uppercase tracking-widest text-[#8b949e] mt-8 mb-3 font-bold">
+        Navigation Links
+    </p>
+
+    <div id="card-links"
+         class="bg-[#161b22] border border-[#30363d] rounded-[10px] p-6">
+
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-base">Navigation Links</h2>
+
+            <span class="text-[11px] px-2 py-[2px] rounded-full bg-[#1f3d29] text-[#3fb950] border border-[#3fb950]">
+                Full CRUD
+            </span>
         </div>
-        <div class="skeleton"></div>
+
+        <!-- JS injects array editor HERE -->
+        <div class="animate-pulse h-9 bg-[#21262d] rounded"></div>
     </div>
+
 </main>
 
 <!-- Toast -->
-<div id="toast"></div>
+<div id="toast"
+     class="fixed bottom-6 right-6 px-5 py-3 rounded-lg text-sm font-medium opacity-0 translate-y-4 pointer-events-none transition-all duration-300 z-[9999]">
+</div>
 
 <script type="module" src="../../js/pages/nav.js"></script>
 </body>
