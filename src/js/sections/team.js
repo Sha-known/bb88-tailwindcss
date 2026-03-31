@@ -1,6 +1,6 @@
 import { initTeamTooltip } from '../script.js';
 
-const DATA_TEAM = './src/data/team.json';
+const DATA_TEAM = './api/public/get-section.php?section=team';
 
 export const loadTeam = async () => {
   try {

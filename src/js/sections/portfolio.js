@@ -1,6 +1,6 @@
 import { initPortfolioInteractions } from '../script.js';
 
-const DATA_PORTFOLIO = './src/data/portfolio.json';
+const DATA_PORTFOLIO = './api/public/get-section.php?section=portfolio';
 
 export const loadPortfolio = async () => {
   try {

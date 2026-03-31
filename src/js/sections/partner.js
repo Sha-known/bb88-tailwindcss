@@ -1,4 +1,4 @@
-const DATA_PARTNERS = './src/data/partner.json';
+const DATA_PARTNERS = './api/public/get-section.php?section=partner';
 
 const initCarousel = (logos) => {
   const track = document.getElementById('carousel-track');

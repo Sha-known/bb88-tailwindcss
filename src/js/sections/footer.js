@@ -1,4 +1,4 @@
-const DATA_FOOTER = './src/data/footer.json';
+const DATA_FOOTER = './api/public/get-section.php?section=footer';
 
 export async function loadFooter() {
   try {

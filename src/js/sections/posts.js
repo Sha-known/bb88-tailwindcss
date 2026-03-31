@@ -1,4 +1,4 @@
-const DATA_POSTS = './src/data/posts.json';
+const DATA_POSTS = './api/public/get-section.php?section=posts';
 
 export async function loadPosts() {
   try {

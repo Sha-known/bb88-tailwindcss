@@ -1,4 +1,4 @@
-const DATA_CONTACT = './src/data/contact.json';
+const DATA_CONTACT = './api/public/get-section.php?section=contact';
 
 export async function loadContact() {
   try {
