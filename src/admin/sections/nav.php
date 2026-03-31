@@ -13,7 +13,7 @@ requireLogin();
 <body class="bg-[#0d1117] text-[#e6edf3] font-sans antialiased">
 
 <header class="bg-[#161b22] border-b border-[#30363d] px-8 py-4 flex justify-between items-center sticky top-0 z-50">
-    <h1 class="text-sm font-medium">BB88</h1>
+    <h1 class="text-sm font-medium">BB88 CMS</h1>
     <nav class="flex space-x-5 text-xs">
         <a href="/src/admin/index.php" class="text-[#8b949e] hover:text-[#e6edf3] transition-colors">← Dashboard</a>
         <a href="/src/admin/logout.php" class="text-[#f85149] hover:opacity-80 transition-opacity">Log out</a>
