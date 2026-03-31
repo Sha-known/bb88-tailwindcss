@@ -96,12 +96,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <button
             type="submit"
-            class="w-full py-2 bg-[#1e88e5] text-white rounded-md hover:bg-[#1a6aab]"
+            class="w-full py-2 bg-green-700 text-white rounded-md hover:bg-green-600 transition-colors"
         >
             Create Account
         </button>
 
     </form>
+    <p class="text-center mt-4 text-sm text-green-400">
+    <a href="/src/admin/login.php" class="hover:underline">
+        Already have an account? Log in →
+    </a>
+    </p>
     <?php endif; ?>
 
 </div>
