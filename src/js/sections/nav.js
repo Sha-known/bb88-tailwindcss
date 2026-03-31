@@ -1,6 +1,6 @@
 import { initNavInteractions } from "../script.js";
 
-const DATA_NAV = './src/data/nav.json';
+const DATA_NAV = '/api/public/get-section.php?section=nav';
 
 export const loadNav = async () => {
   try {
