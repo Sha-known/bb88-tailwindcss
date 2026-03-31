@@ -61,8 +61,6 @@ export function initNavInteractions() {
 
 
 
-
-
 // --- PORTFOLIO SECTION SCRIPTS ---
 
 export function initPortfolioInteractions() {

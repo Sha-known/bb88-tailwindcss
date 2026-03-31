@@ -2,6 +2,7 @@
 @source "../../index.html";
 @source "../**/*.html";
 
+@tailwind utilities;
 
 @theme {
   /* Brand Colors */

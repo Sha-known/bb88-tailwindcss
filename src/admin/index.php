@@ -62,7 +62,7 @@ $sections = $stmt->fetchAll();
     <h1>🎮 MetaGames CMS</h1>
     <span style="font-size:.85rem; color:#8b949e;">
         Logged in as <strong><?= htmlspecialchars($admin) ?></strong> &nbsp;|&nbsp;
-        <a class="logout" href="/admin/logout.php">Log out</a>
+        <a class="logout" href="/src/admin/logout.php">Log out</a>
     </span>
 </header>
 
