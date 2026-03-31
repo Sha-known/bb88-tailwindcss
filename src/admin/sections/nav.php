@@ -20,7 +20,7 @@ requireLogin();
     </nav>
 </header>
 
-<main class="max-w-[860px] mx-auto px-6 py-12">
+<main class="max-w-215 mx-auto px-6 py-12">
 
     <header class="mb-10">
         <h1 class="text-2xl font-semibold tracking-tight">Edit: Navbar</h1>
@@ -65,7 +65,7 @@ requireLogin();
 
 </main>
 
-<div id="toast" class="fixed bottom-6 right-6 px-5 py-3 rounded-lg text-sm font-medium border border-[#30363d] opacity-0 translate-y-4 pointer-events-none transition-all duration-300 z-[9999]">
+<div id="toast" class="fixed bottom-6 right-6 px-5 py-3 rounded-lg text-sm font-medium border border-[#30363d] opacity-0 translate-y-4 pointer-events-none transition-all duration-300 z-9999">
 </div>
 
 <script type="module" src="../../js/pages/nav.js"></script>

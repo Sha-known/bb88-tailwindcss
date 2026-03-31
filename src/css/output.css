@@ -282,6 +282,9 @@
   .z-999 {
     z-index: 999;
   }
+  .z-9999 {
+    z-index: 9999;
+  }
   .z-\[9999\] {
     z-index: 9999;
   }
@@ -581,6 +584,9 @@
   }
   .max-w-200 {
     max-width: calc(var(--spacing) * 200);
+  }
+  .max-w-215 {
+    max-width: calc(var(--spacing) * 215);
   }
   .max-w-250 {
     max-width: calc(var(--spacing) * 250);
@@ -2387,7 +2393,7 @@
   }
   .btn-green.btn-add {
     display: flex;
-    height: 38px;
+    height: calc(var(--spacing) * 9.5);
     align-items: center;
     justify-content: center;
   }
@@ -2398,7 +2404,7 @@
 @layer components {
   .btn-blue.btn-save, .btn-green.btn-add {
     display: flex;
-    height: 38px;
+    height: calc(var(--spacing) * 9.5);
     width: 100%;
     align-items: center;
     justify-content: center;

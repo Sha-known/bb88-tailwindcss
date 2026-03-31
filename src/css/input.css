@@ -242,7 +242,7 @@ html { scroll-behavior: smooth; }
 
 @layer components {
   #toast {
-    @apply fixed bottom-6 right-6 px-5 py-3 rounded-lg text-sm font-medium border border-[#30363d] opacity-0 translate-y-4 pointer-events-none transition-all duration-300 z-[9999] shadow-2xl;
+    @apply fixed bottom-6 right-6 px-5 py-3 rounded-lg text-sm font-medium border border-[#30363d] opacity-0 translate-y-4 pointer-events-none transition-all duration-300 z-9999 shadow-2xl;
   }
 
   /* Triggered by JS adding the .show class */
@@ -278,7 +278,7 @@ html { scroll-behavior: smooth; }
 
   /* Ensure the button height matches your input height (usually 34px - 38px) */
   .btn-green.btn-add {
-    @apply h-[38px] flex items-center justify-center;
+    @apply h-9.5 flex items-center justify-center;
   }
 
   /* Make sure the field wrapper doesn't add extra bottom spacing */
@@ -291,7 +291,7 @@ html { scroll-behavior: smooth; }
   /* Target the Save button specifically to match the Add button's size */
   .btn-blue.btn-save, 
   .btn-green.btn-add {
-    @apply h-[38px] w-full flex items-center justify-center;
+    @apply h-9.5 w-full flex items-center justify-center;
   }
 
   /* Ensure the grid doesn't have alignment issues for 2-column object layouts */
