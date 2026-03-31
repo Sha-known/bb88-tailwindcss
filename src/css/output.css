@@ -285,9 +285,6 @@
   .z-9999 {
     z-index: 9999;
   }
-  .z-\[9999\] {
-    z-index: 9999;
-  }
   .col-span-full {
     grid-column: 1 / -1;
   }
@@ -602,9 +599,6 @@
   }
   .max-w-400 {
     max-width: calc(var(--spacing) * 400);
-  }
-  .max-w-\[860px\] {
-    max-width: 860px;
   }
   .max-w-\[calc\(100vw-40px\)\] {
     max-width: calc(100vw - 40px);
