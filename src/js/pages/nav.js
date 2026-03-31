@@ -12,10 +12,12 @@ console.dir(data);
 ObjectEditor.mount({
   container: "#card-logo",
   label: "Logo",
-  data: data.logo,
+  // WRAP the string into an object so the 'key' below can find it
+  data: { src: data.logo }, 
   fields: [
-    { key: "src", label: "Image src" },
-    { key: "alt", label: "Alt text" },
+    { key: "src", label: "Image Path", placeholder: "images/logo.png" },
+    // You can add an 'alt' key here, but it will be empty unless it's in your DB
+    { key: "alt", label: "Alt Text", placeholder: "Logo description" },
   ],
   onSave: (value) => apiPatch(API, "logo", value),
 });
