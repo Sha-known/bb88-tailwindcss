@@ -111,15 +111,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <div class="overlay-container absolute top-0 left-1/2 w-1/2 h-full overflow-hidden transition-transform duration-700 ease-in-out z-100">
         <div class="overlay bg-gradient-to-r from-[#1e88e5] to-[#48887B] text-white relative -left-full h-full w-[200%] transition-transform duration-700 ease-in-out">
-            <div class="overlay-panel overlay-left absolute flex flex-col items-center justify-center p-10 text-center top-0 h-full w-1/2 translate-x-[-20%] transition-transform duration-700">
-                <h1 class="text-2xl font-bold mb-2">Welcome Back!</h1>
-                <p class="text-sm mb-8">Already have an admin account? Sign in here.</p>
-                <button class="border border-white px-10 py-2 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-[#0d1117] transition-all" id="signIn">Sign In</button>
+            <div class="overlay-panel overlay-left absolute flex flex-col items-center justify-center p-10 text-center top-0 h-full w-1/2 transition-transform duration-700 left-0 translate-x-0">
+                <h1 class="text-2xl font-bold mb-4">Welcome Back!</h1>
+                <p class="text-sm mb-6 px-4">Already have an admin account? Sign in here.</p>
+                <button class="px-10 py-2 rounded-full border border-white bg-transparent text-white font-bold uppercase text-xs tracking-wider hover:bg-white hover:text-[#161b22] transition-all" id="signIn">Sign In</button>
             </div>
-            <div class="overlay-panel overlay-right absolute flex flex-col items-center justify-center p-10 text-center top-0 h-full w-1/2 right-0 transition-transform duration-700">
-                <h1 class="text-2xl font-bold mb-2">Hello, Admin!</h1>
-                <p class="text-sm mb-8">Register a new account to access the dashboard.</p>
-                <button class="border border-white px-10 py-2 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-[#0d1117] transition-all" id="signUp">Sign Up</button>
+
+            <div class="overlay-panel overlay-right absolute flex flex-col items-center justify-center p-10 text-center top-0 h-full w-1/2 right-0 translate-x-0 transition-transform duration-700">
+                <h1 class="text-2xl font-bold mb-4">Hello, Friend!</h1>
+                <p class="text-sm mb-6 px-4">Enter your details and start your journey with us</p>
+                <button class="px-10 py-2 rounded-full border border-white bg-transparent text-white font-bold uppercase text-xs tracking-wider hover:bg-white hover:text-[#161b22] transition-all" id="signUp">Sign Up</button>
             </div>
         </div>
     </div>
