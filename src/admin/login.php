@@ -105,12 +105,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="hidden" name="action" value="login">
             <input type="text" name="username" placeholder="Username" required class="w-full mb-3 px-4 py-2 bg-[#0d1117] border border-[#30363d] rounded-md focus:border-[#1e88e5] outline-none transition-colors" />
             <input type="password" name="password" placeholder="Password" required class="w-full mb-5 px-4 py-2 bg-[#0d1117] border border-[#30363d] rounded-md focus:border-[#1e88e5] outline-none transition-colors" />
-            <button class="bg-[#1e88e5] hover:bg-[#1a6aab] text-white px-10 py-2 rounded-full font-bold uppercase text-xs tracking-widest transition-all">Log In</button>
+            <button class="bg-green-700 hover:bg-green-600 text-white px-10 py-2 rounded-full font-bold uppercase text-xs tracking-widest transition-all">Log In</button>
         </form>
     </div>
 
     <div class="overlay-container absolute top-0 left-1/2 w-1/2 h-full overflow-hidden transition-transform duration-700 ease-in-out z-100">
-        <div class="overlay bg-linear-to-r from-[#1e88e5] to-[#48887B] text-white relative -left-full h-full w-[200%] transition-transform duration-700 ease-in-out">
+        <div class="overlay bg-linear-to-r from-[#A8CF45] to-[#48887B] text-white relative -left-full h-full w-[200%] transition-transform duration-700 ease-in-out">
             <div class="overlay-panel overlay-left absolute flex flex-col items-center justify-center p-10 text-center top-0 h-full w-1/2 transition-transform duration-700 left-0 translate-x-0">
                 <h1 class="text-2xl font-bold mb-4">Welcome Back!</h1>
                 <p class="text-sm mb-6 px-4">Already have an admin account? Sign in here.</p>
