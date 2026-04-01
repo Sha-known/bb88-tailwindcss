@@ -118,8 +118,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
             <div class="overlay-panel overlay-right absolute flex flex-col items-center justify-center p-10 text-center top-0 h-full w-1/2 right-0 translate-x-0 transition-transform duration-700">
-                <h1 class="text-2xl font-bold mb-4">Hello, Friend!</h1>
-                <p class="text-sm mb-6 px-4">Enter your details and start your journey with us</p>
+                <h1 class="text-2xl font-bold mb-4">Hello, Admin!</h1>
+                <p class="text-sm mb-6 px-4">Enter your details and start another admin account!</p>
                 <button class="px-10 py-2 rounded-full border border-white bg-transparent text-white font-bold uppercase text-xs tracking-wider hover:bg-white hover:text-[#161b22] transition-all" id="signUp">Sign Up</button>
             </div>
         </div>
