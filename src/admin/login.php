@@ -110,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <div class="overlay-container absolute top-0 left-1/2 w-1/2 h-full overflow-hidden transition-transform duration-700 ease-in-out z-100">
-        <div class="overlay bg-linear-to-r from-[#A8CF45] to-[#48887B] text-white relative -left-full h-full w-[200%] transition-transform duration-700 ease-in-out">
+        <div class="overlay bg-linear-to-r from-green-light to-[#48887B] text-white relative -left-full h-full w-[200%] transition-transform duration-700 ease-in-out">
             <div class="overlay-panel overlay-left absolute flex flex-col items-center justify-center p-10 text-center top-0 h-full w-1/2 transition-transform duration-700 left-0 translate-x-0">
                 <h1 class="text-2xl font-bold mb-4">Welcome Back!</h1>
                 <p class="text-sm mb-6 px-4">Already have an admin account? Sign in here.</p>
