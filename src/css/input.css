@@ -202,10 +202,11 @@ html { scroll-behavior: smooth; }
   }
   
   /* Generic Input Styling used in both editors */
-  input[type="text"], .add-input {
+  .add-input {
     @apply w-full px-3 py-1.5 bg-[#0d1117] border border-[#30363d] rounded text-[#e6edf3] text-sm transition-all outline-none;
     @apply focus:border-[#1e88e5] focus:ring-1 focus:ring-[#1e88e5];
   }
+  
 
   /* Button Base */
   .btn {
@@ -299,3 +300,4 @@ html { scroll-behavior: smooth; }
     @apply items-end; /* This aligns button bottom to input bottom */
   }
 }
+
