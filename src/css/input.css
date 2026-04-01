@@ -303,7 +303,7 @@ html { scroll-behavior: smooth; }
 
 @layer components {
   #backToTop {
-    @apply fixed bottom-8 right-8 z-[998] w-12 h-12 rounded-full border-none cursor-pointer;
+    @apply fixed bottom-8 right-8 z-998 w-12 h-12 rounded-full border-none cursor-pointer;
     @apply flex items-center justify-center text-lg text-white shadow-lg;
     @apply bg-green-dark transition-all duration-300;
     
