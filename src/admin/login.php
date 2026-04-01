@@ -5,23 +5,22 @@ require_once dirname(__DIR__) . '/../includes/function.php';
 
 session_start();
 
-if (isLoggedIn()) {
+// If already logged in, redirect immediately
+if (isLoggedIn() && !isset($_GET['api'])) {
     header('Location: /src/admin/index.php');
     exit;
 }
 
-$error = '';
-$success = '';
-$mode = $_GET['mode'] ?? 'login'; // Determine which side to show on load
-
+// --- API HANDLER ---
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $action = $_POST['action'] ?? '';
+    header('Content-Type: application/json');
     $pdo = getPDO();
+    $data = json_decode(file_get_contents('php://input'), true);
+    $action = $data['action'] ?? '';
 
-    // --- LOGIN LOGIC ---
     if ($action === 'login') {
-        $username = sanitize($_POST['username'] ?? '');
-        $password = $_POST['password'] ?? '';
+        $username = sanitize($data['username'] ?? '');
+        $password = $data['password'] ?? '';
 
         $stmt = $pdo->prepare('SELECT id, username, password_hash FROM admins WHERE username = ?');
         $stmt->execute([$username]);
@@ -30,37 +29,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($admin && password_verify($password, $admin['password_hash'])) {
             $_SESSION['admin_id'] = $admin['id'];
             $_SESSION['admin_username'] = $admin['username'];
-            header('Location: /src/admin/index.php');
+            echo json_encode(['success' => true, 'redirect' => '/src/admin/index.php']);
             exit;
         }
-        $error = 'Invalid username or password.';
-        $mode = 'login';
-    } 
-    
-    // --- REGISTER LOGIC ---
-    elseif ($action === 'register') {
-        $username = sanitize($_POST['username'] ?? '');
-        $password = $_POST['password'] ?? '';
-        $confirm  = $_POST['confirm'] ?? '';
+        echo json_encode(['success' => false, 'message' => 'Invalid username or password.']);
+        exit;
+    }
+
+    if ($action === 'register') {
+        $username = sanitize($data['username'] ?? '');
+        $password = $data['password'] ?? '';
+        $confirm  = $data['confirm'] ?? '';
 
         if (strlen($password) < 8) {
-            $error = 'Password must be at least 8 characters.';
+            echo json_encode(['success' => false, 'message' => 'Password must be at least 8 characters.']);
         } elseif ($password !== $confirm) {
-            $error = 'Passwords do not match.';
+            echo json_encode(['success' => false, 'message' => 'Passwords do not match.']);
         } else {
             $stmt = $pdo->prepare('SELECT id FROM admins WHERE username = ?');
             $stmt->execute([$username]);
             if ($stmt->fetch()) {
-                $error = 'Username already taken.';
+                echo json_encode(['success' => false, 'message' => 'Username already taken.']);
             } else {
                 $hash = password_hash($password, PASSWORD_DEFAULT);
                 $stmt = $pdo->prepare('INSERT INTO admins (username, password_hash) VALUES (?, ?)');
                 $stmt->execute([$username, $hash]);
-                $success = 'Account created! You can now sign in.';
-                $mode = 'login'; // Slide back to login on success
+                echo json_encode(['success' => true, 'message' => 'Account created! Logging you in...']);
             }
         }
-        if ($error) $mode = 'register';
+        exit;
     }
 }
 ?>
@@ -86,26 +83,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <div class="container relative overflow-hidden w-3xl max-w-full min-h-130 bg-[#161b22] rounded-2xl shadow-2xl border border-[#30363d] <?= $mode === 'register' ? 'right-panel-active' : '' ?>" id="container">
     
     <div class="form-container sign-up-container absolute top-0 left-0 h-full w-1/2 transition-all duration-700 ease-in-out opacity-0 z-1">
-        <form method="POST" class="bg-[#161b22] flex flex-col items-center justify-center p-12 h-full text-center">
-            <h1 class="text-2xl font-bold mb-4">Create Account</h1>
-            <?php if ($error && $mode === 'register'): ?> <div class="text-red-400 text-xs mb-2"><?= $error ?></div> <?php endif; ?>
-            <input type="hidden" name="action" value="register">
-            <input type="text" name="username" placeholder="Username" required class="w-full mb-3 px-4 py-2 bg-[#0d1117] border border-[#30363d] rounded-md focus:border-green-500 outline-none transition-colors" />
-            <input type="password" name="password" placeholder="Password" required class="w-full mb-3 px-4 py-2 bg-[#0d1117] border border-[#30363d] rounded-md focus:border-green-500 outline-none transition-colors" />
-            <input type="password" name="confirm" placeholder="Confirm Password" required class="w-full mb-5 px-4 py-2 bg-[#0d1117] border border-[#30363d] rounded-md focus:border-green-500 outline-none transition-colors" />
-            <button class="bg-green-700 hover:bg-green-600 text-white px-10 py-2 rounded-full font-bold uppercase text-xs tracking-widest transition-all">Sign Up</button>
+        <form id="registerForm" class="bg-[#161b22] flex flex-col items-center justify-center p-12 h-full text-center">
+            <h1 class="text-2xl font-bold mb-4 text-white">Create Account</h1>
+            <div id="registerError" class="text-red-400 text-xs mb-2 hidden"></div>
+            <input type="text" id="regUsername" placeholder="Username" required class="w-full mb-5 px-4 py-2 bg-[#0d1117] border border-[#30363d] rounded-md focus:border-green-500 outline-none transition-colors" />
+            <input type="password" id="regPassword" placeholder="Password" required class="w-full mb-5 px-4 py-2 bg-[#0d1117] border border-[#30363d] rounded-md focus:border-green-500 outline-none transition-colors" />
+            <input type="password" id="regConfirm" placeholder="Confirm Password" required class="w-full mb-5 px-4 py-2 bg-[#0d1117] border border-[#30363d] rounded-md focus:border-green-500 outline-none transition-colors" />
+            <button type="submit"  class="bg-green-700 hover:bg-green-600 text-white px-10 py-2 rounded-full font-bold uppercase text-xs tracking-widest transition-all">Sign Up</button>
         </form>
     </div>
 
     <div class="form-container sign-in-container absolute top-0 left-0 h-full w-1/2 transition-all duration-700 ease-in-out z-2">
-        <form method="POST" class="bg-[#161b22] flex flex-col items-center justify-center p-12 h-full text-center">
-            <h1 class="text-2xl font-bold mb-4">Sign In</h1>
-            <?php if ($error && $mode === 'login'): ?> <div class="text-red-400 text-xs mb-2"><?= $error ?></div> <?php endif; ?>
-            <?php if ($success): ?> <div class="text-green-400 text-xs mb-2"><?= $success ?></div> <?php endif; ?>
-            <input type="hidden" name="action" value="login">
-            <input type="text" name="username" placeholder="Username" required class="w-full mb-3 px-4 py-2 bg-[#0d1117] border border-[#30363d] rounded-md focus:border-[#1e88e5] outline-none transition-colors" />
-            <input type="password" name="password" placeholder="Password" required class="w-full mb-5 px-4 py-2 bg-[#0d1117] border border-[#30363d] rounded-md focus:border-[#1e88e5] outline-none transition-colors" />
-            <button class="bg-green-700 hover:bg-green-600 text-white px-10 py-2 rounded-full font-bold uppercase text-xs tracking-widest transition-all">Log In</button>
+        <form id="loginForm" class="bg-[#161b22] flex flex-col items-center justify-center p-12 h-full text-center">
+            <h1 class="text-2xl font-bold mb-4 text-white">Sign In</h1>
+            <div id="loginError" class="text-red-400 text-xs mb-2 hidden"></div>
+            <div id="loginSuccess" class="text-green-400 text-xs mb-2 hidden"></div>
+            <input type="text" id="loginUsername" placeholder="Username" required class="w-full mb-5 px-4 py-2 bg-[#0d1117] border border-[#30363d] rounded-md focus:border-green-500 outline-none transition-colors" />
+            <input type="password" id="loginPassword" placeholder="Password" required class="w-full mb-5 px-4 py-2 bg-[#0d1117] border border-[#30363d] rounded-md focus:border-green-500 outline-none transition-colors" />
+            <button type="submit" class="bg-green-700 hover:bg-green-600 text-white px-10 py-2 rounded-full font-bold uppercase text-xs tracking-widest transition-all">Log In</button>
         </form>
     </div>
 
@@ -127,12 +122,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 
 <script>
+    const container = document.getElementById('container');
     const signUpButton = document.getElementById('signUp');
     const signInButton = document.getElementById('signIn');
-    const container = document.getElementById('container');
 
+    // Panel Switching
     signUpButton.addEventListener('click', () => container.classList.add("right-panel-active"));
     signInButton.addEventListener('click', () => container.classList.remove("right-panel-active"));
+
+    async function handleAuth(e, action) {
+        e.preventDefault();
+        const errorDiv = document.getElementById(`${action}Error`);
+        const successDiv = document.getElementById('loginSuccess');
+        
+        // Gather data
+        const body = { action };
+        if (action === 'login') {
+            body.username = document.getElementById('loginUsername').value;
+            body.password = document.getElementById('loginPassword').value;
+        } else {
+            body.username = document.getElementById('regUsername').value;
+            body.password = document.getElementById('regPassword').value;
+            body.confirm = document.getElementById('regConfirm').value;
+        }
+
+        try {
+            const res = await fetch(window.location.href, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body)
+            });
+            const json = await res.json();
+
+            if (json.success) {
+                if (action === 'register') {
+                    // Show success and slide to login
+                    successDiv.innerText = json.message;
+                    successDiv.classList.remove('hidden');
+                    container.classList.remove("right-panel-active");
+                } else {
+                    // Redirect on login success
+                    window.location.href = json.redirect;
+                }
+            } else {
+                errorDiv.innerText = json.message;
+                errorDiv.classList.remove('hidden');
+            }
+        } catch (err) {
+            console.error("Auth Error:", err);
+        }
+    }
+
+    document.getElementById('loginForm').addEventListener('submit', (e) => handleAuth(e, 'login'));
+    document.getElementById('registerForm').addEventListener('submit', (e) => handleAuth(e, 'register'));
 </script>
 </body>
 </html>
