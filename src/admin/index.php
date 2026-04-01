@@ -17,7 +17,7 @@ $sections = $stmt->fetchAll();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard — MetaGames CMS</title>
+    <title>Dashboard — BB88 CMS</title>
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: system-ui, sans-serif; background: #0d1117; color: #e6edf3; }
