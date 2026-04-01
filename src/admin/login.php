@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body class="bg-[#0d1117] text-[#e6edf3] flex items-center justify-center min-h-screen font-sans">
 
-<div class="container relative overflow-hidden w-[768px] max-w-full min-h-[520px] bg-[#161b22] rounded-2xl shadow-2xl border border-[#30363d] <?= $mode === 'register' ? 'right-panel-active' : '' ?>" id="container">
+<div class="container relative overflow-hidden w-3xl max-w-full min-h-130 bg-[#161b22] rounded-2xl shadow-2xl border border-[#30363d] <?= $mode === 'register' ? 'right-panel-active' : '' ?>" id="container">
     
     <div class="form-container sign-up-container absolute top-0 left-0 h-full w-1/2 transition-all duration-700 ease-in-out opacity-0 z-1">
         <form method="POST" class="bg-[#161b22] flex flex-col items-center justify-center p-12 h-full text-center">
@@ -110,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <div class="overlay-container absolute top-0 left-1/2 w-1/2 h-full overflow-hidden transition-transform duration-700 ease-in-out z-100">
-        <div class="overlay bg-gradient-to-r from-[#1e88e5] to-[#48887B] text-white relative -left-full h-full w-[200%] transition-transform duration-700 ease-in-out">
+        <div class="overlay bg-linear-to-r from-[#1e88e5] to-[#48887B] text-white relative -left-full h-full w-[200%] transition-transform duration-700 ease-in-out">
             <div class="overlay-panel overlay-left absolute flex flex-col items-center justify-center p-10 text-center top-0 h-full w-1/2 transition-transform duration-700 left-0 translate-x-0">
                 <h1 class="text-2xl font-bold mb-4">Welcome Back!</h1>
                 <p class="text-sm mb-6 px-4">Already have an admin account? Sign in here.</p>
