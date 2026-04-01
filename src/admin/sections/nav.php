@@ -1,7 +1,17 @@
 <?php
-require_once dirname(__DIR__) . '/../../includes/auth.php';
+// Go up two levels from /src/admin/sections/ to reach the root
+require_once __DIR__ . '/../../../includes/function.php';
+require_once __DIR__ . '/../../../config/database.php';
+require_once __DIR__ . '/../../../includes/auth.php';
+
 session_start();
 requireLogin();
+
+// Fix the Admin variable from the previous error
+$admin = $_SESSION['admin_username'] ?? 'Admin'; 
+
+// Now getPDO() will be recognized because database.php is correctly loaded
+$pdo = getPDO();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,14 +20,18 @@ requireLogin();
     <title>Edit Navbar</title>
     <link href="../../../src/css/output.css" rel="stylesheet">
 </head>
-<body class="bg-[#0d1117] text-[#e6edf3] font-sans antialiased">
-
+<body class="bg-[#0d1117] text-[#e6edf3] font-sans antialiased min-h-screen">
 <header class="bg-[#161b22] border-b border-[#30363d] px-8 py-4 flex justify-between items-center sticky top-0 z-50">
-    <h1 class="text-sm font-medium">BB88 CMS</h1>
-    <nav class="flex space-x-5 text-xs">
-        <a href="/src/admin/index.php" class="text-[#8b949e] hover:text-[#e6edf3] transition-colors">← Dashboard</a>
-        <a href="/src/admin/logout.php" class="text-[#f85149] hover:opacity-80 transition-opacity">Log out</a>
-    </nav>
+    <h1 class="text-[1.1rem] font-bold text-white tracking-tight uppercase">BB 88 CMS</h1>
+    <div class="text-[0.85rem] text-[#8b949e] flex items-center">
+    <a href="/src/admin/index.php" class="hover:text-white transition-all flex items-center">
+        <span class="mr-1.5 text-xs">←</span> Dashboard
+    </a>
+    <span class="mx-3 opacity-50">|</span>
+    <span class="mr-3 text-[#8b949e]">Admin: <strong class="text-white font-semibold"><?= htmlspecialchars($admin) ?></strong></span>
+    <span class="mx-3 opacity-50">|</span>
+    <a href="/src/admin/logout.php" class="text-[#f85149] hover:underline transition-all font-medium">Log out</a>
+</div>
 </header>
 
 <main class="max-w-215 mx-auto px-6 py-12">
