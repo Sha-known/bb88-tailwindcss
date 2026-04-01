@@ -18,10 +18,9 @@ if (!data || !data.cards) {
         if (container) {
             ObjectEditor.mount({
                 container: containerId,
-                label: `Recent Post Card ${index + 1}`,
-                data: card,
+                label: `Services Card ${index + 1}`,
+                data: cards,
                 fields: [
-                    { key: "id", label: "ID" },
                     { key: "title", label: "Card Title" },
                     { key: "image", label: "Image Path" },
                     { key: "description", label: "Card Description" },
