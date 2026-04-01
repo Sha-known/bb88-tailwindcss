@@ -27,41 +27,33 @@ requireLogin();
         <p class="text-xs text-[#8b949e] mt-1">Configure your site's main navigation and identity.</p>
     </header>
 
-    <section class="mb-10">
-        <p class="text-[10px] uppercase tracking-[0.2em] text-[#8b949e] mb-3 font-bold">Logo</p>
-        
-        <div id="card-logo" class="bg-[#161b22] border border-[#30363d] rounded-xl p-6 transition-all hover:border-[#444c56]">
-            <div class="flex justify-between items-center mb-6">  
-                <h2 class="text-sm font-semibold">Logo</h2>
-                <span class="text-[10px] px-2.5 py-0.5 rounded-full bg-blue-500/10 text-[#58a6ff] border border-blue-500/40 font-medium uppercase">
-                    Read / Update
-                </span>
-            </div>
-
-            <div class="animate-pulse space-y-3">
-                <div class="h-9 bg-[#21262d] rounded-md w-full"></div>
-                <div class="h-9 bg-[#21262d] rounded-md w-3/4"></div>
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
+        <div id="card-logo" class="md:col-span-2 bg-[#161b22] border border-[#30363d] rounded-xl p-6 transition-all hover:border-[#444c56]">
+            <div class="animate-pulse h-10 bg-[#21262d] rounded-md"></div>
         </div>
-    </section>
+    </div>
 
-    <section>
-        <p class="text-[10px] uppercase tracking-[0.2em] text-[#8b949e] mb-3 font-bold">Navigation Links</p>
+    <div class="mb-10">
+    <p class="text-[11px] uppercase tracking-[0.15em] text-[#8b949e] mb-4 font-bold">
+        Navigation Links
+    </p>
 
-        <div id="card-links" class="bg-[#161b22] border border-[#30363d] rounded-xl p-6 transition-all hover:border-[#444c56]">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-sm font-semibold">Navigation Links</h2>
-                <span class="text-[10px] px-2.5 py-0.5 rounded-full bg-green-500/10 text-[#3fb950] border border-green-500/40 font-medium uppercase">
-                    Full CRUD
-                </span>
-            </div>
-
-            <div class="animate-pulse space-y-3">
-                <div class="h-12 bg-[#21262d] rounded-md w-full"></div>
-                <div class="h-12 bg-[#21262d] rounded-md w-full"></div>
-            </div>
+    <div id="card-links" class="bg-[#161b22] border border-[#30363d] rounded-xl p-6 transition-all hover:border-[#444c56]">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-sm font-semibold tracking-tight">Manage Links</h2>
+            
+            <span class="badge badge-crud">
+                Full CRUD
+            </span>
         </div>
-    </section>
+
+        <div class="animate-pulse space-y-4">
+            <div class="h-10 bg-[#21262d] rounded-md w-full"></div>
+            <div class="h-10 bg-[#21262d] rounded-md w-full"></div>
+            <div class="h-10 bg-[#21262d] rounded-md w-3/4"></div>
+        </div>
+    </div>
+</div>
 
 </main>
 
