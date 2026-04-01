@@ -17,12 +17,12 @@ $sections = $stmt->fetchAll();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard — MetaGames CMS</title>
+    <title>Dashboard — BB 88 CMS</title>
     <link href="../../src/css/output.css" rel="stylesheet">
 </head>
 <body class="bg-[#0d1117] text-[#e6edf3] font-sans antialiased min-h-screen">
 <header class="bg-[#161b22] border-b border-[#30363d] px-8 py-4 flex justify-between items-center sticky top-0 z-50">
-    <h1 class="text-[1.1rem] font-bold text-white tracking-tight">BB88 CMS</h1>
+    <h1 class="text-[1.1rem] font-bold text-white tracking-tight">BB 88 CMS</h1>
     <div class="text-[0.85rem] text-[#8b949e]">
         <span>Logged in as <strong class="text-white font-semibold"><?= htmlspecialchars($admin) ?></strong></span>
         <span class="mx-3 opacity-50">|</span>
