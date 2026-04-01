@@ -24,21 +24,22 @@ requireLogin();
 
     <header class="mb-10">
         <h1 class="text-2xl font-semibold tracking-tight">Edit: Our Services</h1>
-        <p class="text-xs text-[#8b949e] mt-1">Update the content, descriptions, and images of each service card.</p>
+        <p class="text-xs text-[#8b949e] mt-1">Update titles, descriptions, and images of each service card.</p>
     </header>
 
-    <p class="text-[11px] uppercase tracking-[0.15em] text-[#8b949e] mb-4 font-bold">Service Cards Content</p>
+    <!-- SERVICE CARDS -->
+    <p class="text-[11px] uppercase tracking-[0.15em] text-[#8b949e] mb-4 font-bold">Service Cards (Read / Update)</p>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-        <div id="card-services-0" class="bg-[#161b22] border border-[#30363d] rounded-xl p-6 hover:border-[#444c56] transition-all">
+        <div id="cards-services-0" class="bg-[#161b22] border border-[#30363d] rounded-xl p-6 hover:border-[#444c56] transition-all">
             <div class="animate-pulse h-10 bg-[#21262d] rounded-md"></div>
         </div>
 
-        <div id="card-services-1" class="bg-[#161b22] border border-[#30363d] rounded-xl p-6 hover:border-[#444c56] transition-all">
+        <div id="cards-services-1" class="bg-[#161b22] border border-[#30363d] rounded-xl p-6 hover:border-[#444c56] transition-all">
             <div class="animate-pulse h-10 bg-[#21262d] rounded-md"></div>
         </div>
 
-        <div id="card-services-2" class="md:col-span-2 bg-[#161b22] border border-[#30363d] rounded-xl p-6 hover:border-[#444c56] transition-all">
+        <div id="cards-services-2" class="md:col-span-2 bg-[#161b22] border border-[#30363d] rounded-xl p-6 hover:border-[#444c56] transition-all">
             <div class="animate-pulse h-10 bg-[#21262d] rounded-md"></div>
         </div>
 
