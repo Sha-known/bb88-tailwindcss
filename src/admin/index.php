@@ -18,44 +18,8 @@ $sections = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8">
     <title>Dashboard — BB88 CMS</title>
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: system-ui, sans-serif; background: #0d1117; color: #e6edf3; }
-        header {
-            background: #161b22;
-            border-bottom: 1px solid #30363d;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header h1 { font-size: 1.1rem; }
-        .logout { color: #f85149; text-decoration: none; font-size: 0.85rem; }
-        main { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
-        h2 { font-size: 1.3rem; margin-bottom: 1.2rem; color: #8b949e; font-weight: 500; }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 1rem;
-        }
-        .section-card {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 10px;
-            padding: 1.2rem 1.4rem;
-            text-decoration: none;
-            color: inherit;
-            transition: border-color 0.2s, transform 0.15s;
-        }
-        .section-card:hover { border-color: #1e88e5; transform: translateY(-2px); }
-        .section-card .name {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.35rem;
-            text-transform: capitalize;
-        }
-        .section-card .meta { font-size: 0.78rem; color: #8b949e; }
-    </style>
+    <link href="../css/output.css" rel="stylesheet">
+
 </head>
 <body class="bg-[#0d1117] text-[#e6edf3] font-sans antialiased min-h-screen">
 <header class="bg-[#161b22] border-b border-[#30363d] px-8 py-4 flex justify-between items-center sticky top-0 z-50">
@@ -81,7 +45,7 @@ $sections = $stmt->fetchAll();
         ['name' => 'Home', 'time' => '2026-03-31 10:12:04', 'icon' => 'https://img.icons8.com/?size=100&id=73&format=png&color=FFFFFF', 'color' => 'from-amber-400 to-orange-500'],
         ['name' => 'Nav', 'time' => '2026-04-01 11:55:19', 'icon' => 'https://img.icons8.com/?size=100&id=8113&format=png&color=FFFFFF', 'color' => 'from-sky-400 to-blue-600'],
         ['name' => 'Portfolio', 'time' => '2026-04-31 10:19:03', 'icon' => 'https://img.icons8.com/?size=100&id=111593&format=png&color=FFFFFF', 'color' => 'from-fuchsia-500 to-purple-600'],
-        ['name' => 'Services', 'time' => '2026-03-31 10:19:03', 'icon' => 'https://img.icons8.com/?size=100&id=59992&format=png&color=FFFFFF', 'color' => 'from-emerald-400 to-teal-500'],
+        ['name' => 'Services', 'time' => '2026-03-31 10:19:03', 'icon' => 'https://img.icons8.com/?size=100&id=59992&format=png&color=FFFFFF', 'color' => 'from-emerald-400 to-teal-500',],
         ['name' => 'Posts', 'time' => '2026-04-01 11:03:07', 'icon' => 'https://img.icons8.com/?size=100&id=40571&format=png&color=FFFFFF', 'color' => 'from-rose-500 to-red-600'],
         ['name' => 'Contact', 'time' => '2026-03-31 10:12:56', 'icon' => 'https://img.icons8.com/?size=100&id=9659&format=png&color=FFFFFF', 'color' => 'from-indigo-500 to-violet-600'],
         ['name' => 'Team', 'time' => '2026-04-01 09:48:16', 'icon' => 'https://img.icons8.com/?size=100&id=40390&format=png&color=FFFFFF', 'color' => 'from-cyan-400 to-blue-500'],

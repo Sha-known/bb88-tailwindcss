@@ -1,4 +1,4 @@
-const DATA_SERVICES = './api/public/get-section.php?section=ourservices';
+const DATA_SERVICES = './api/public/get-section.php?section=services';
 
 const renderServiceCards = (cards) => {
   return cards.map(({ id, title, image, description }) => `

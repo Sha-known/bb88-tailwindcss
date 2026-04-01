@@ -9,7 +9,7 @@ requireLogin();
 header('Content-Type: application/json');
 
 $pdo     = getPDO();
-$SECTION = 'ourservices';
+$SECTION = 'services';
 $method  = $_SERVER['REQUEST_METHOD'];
 
 switch ($method) {
