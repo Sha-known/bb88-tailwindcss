@@ -35,7 +35,7 @@ const init = async () => {
 };
 
 init();
-const API = "/api/admin/services.php";
+
 const data = await apiGet(API);
 
 // 1. Safety Check: If data is null or empty, stop.
