@@ -63,7 +63,7 @@ $sections = $stmt->fetchAll();
     <div class="text-[0.85rem] text-[#8b949e]">
         <span>Logged in as <strong class="text-white font-semibold"><?= htmlspecialchars($admin) ?></strong></span>
         <span class="mx-3 opacity-50">|</span>
-        <a href="/src/admin/logout.php" class="text-[#f85149] hover:underline transition-all">Log out</a>
+        <a href="/src/admin/logout.php" class="text-[#f85149] hover:underline transition-all font-medium">Log out</a>
     </div>
 </header>
 
