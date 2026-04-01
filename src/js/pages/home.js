@@ -40,7 +40,7 @@ data.about.cards.forEach((card, index) => {
   
   ObjectEditor.mount({
     container: containerId,
-    label: `Service Card ${index + 1}`,
+    label: `About Us Card ${index + 1}`,
     data: card,
     fields: [
       { key: "title", label: "Card Title" },
@@ -51,3 +51,39 @@ data.about.cards.forEach((card, index) => {
     onSave: (value) => apiPatch(API, "about.cards", value, index),
   });
 });
+
+// ── ABOUT US BOX (FLATTENED ARRAY FIX) ─────────────────────
+
+// 1. Prepare a "Flattened" version of the box data (para mafetch ng ObjectEditor ung paragraph dun sa json data sa database)
+const flattenedBoxData = {
+    title: data.about.box.title,
+    subtitle: data.about.box.subtitle,
+    p0: data.about.box.paragraphs[0],
+    p1: data.about.box.paragraphs[1],
+    p2: data.about.box.paragraphs[2]
+};
+
+ObjectEditor.mount({
+    container: "#card-about-box",
+    label: "About Us Content",
+    data: flattenedBoxData, // Use the flat data here (if hindi finlat ung data, d sya mashowshow, d mafefetch)
+    fields: [
+        { key: "title", label: "Main Title" },
+        { key: "subtitle", label: "Sub-headline" },
+        { key: "p0", label: "Paragraph 1", type: "textarea" },
+        { key: "p1", label: "Paragraph 2", type: "textarea" },
+        { key: "p2", label: "Paragraph 3", type: "textarea" },
+    ],
+    onSave: (updated) => {
+        // 2. Reconstruct the array format before sending to API
+        const payload = {
+            title: updated.title,
+            subtitle: updated.subtitle,
+            paragraphs: [updated.p0, updated.p1, updated.p2]
+        };
+        
+        // 3. Send the clean array back to the database
+        return apiPatch(API, "about.box", payload);
+    }
+});
+

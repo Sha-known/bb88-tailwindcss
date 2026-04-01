@@ -53,7 +53,7 @@ $pdo = getPDO();
         </div>
     </div>
 
-    <p class="text-[11px] uppercase tracking-[0.15em] text-[#8b949e] mb-4 font-bold">Service Cards (Read/Update)</p>
+    <p class="text-[11px] uppercase tracking-[0.15em] text-[#8b949e] mb-4 font-bold">About Us Cards (Read/Update)</p>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div id="card-service-0" class="bg-[#161b22] border border-[#30363d] rounded-xl p-6 hover:border-[#444c56] transition-all">
             <div class="animate-pulse h-10 bg-[#21262d] rounded-md"></div>
@@ -68,6 +68,15 @@ $pdo = getPDO();
             <div class="animate-pulse h-10 bg-[#21262d] rounded-md"></div>
         </div>
     </div>
+
+    <p class="text-[11px] uppercase tracking-[0.15em] text-[#8b949e] mb-4 mt-10 font-bold">About Us Content</p>
+        <div id="card-about-box" class="bg-[#161b22] border border-[#30363d] rounded-xl p-6 hover:border-[#444c56] transition-all">
+            <div class="animate-pulse space-y-4">
+                <div class="h-4 bg-[#21262d] rounded w-1/4"></div>
+                <div class="h-12 bg-[#21262d] rounded w-full"></div>
+                <div class="h-12 bg-[#21262d] rounded w-full"></div>
+            </div>
+        </div>
 
 </main>
 
