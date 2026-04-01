@@ -24,7 +24,7 @@ requireLogin();
 
     <header class="mb-10">
         <h1 class="text-2xl font-semibold tracking-tight">Edit: Our Team Page</h1>
-        <p class="text-xs text-[#8b949e] mt-1">Update description and images for each team cards.</p>
+        <p class="text-xs text-[#8b949e] mt-1">Update image sources, and team cards.</p>
     </header>
 
     <p class="text-[11px] uppercase tracking-[0.15em] text-[#8b949e] mb-4 font-bold">Team Cards (Read/Update)</p>
@@ -47,7 +47,7 @@ requireLogin();
         <div id="card-team-5" class="bg-[#161b22] border border-[#30363d] rounded-xl p-6 hover:border-[#444c56] transition-all">
             <div class="animate-pulse h-10 bg-[#21262d] rounded-md"></div>
         </div>
-        <div id="card-team-6" class="bg-[#161b22] border border-[#30363d] rounded-xl p-6 hover:border-[#444c56] transition-all">
+        <div id="card-team-6" class="md:col-span-2 bg-[#161b22] border border-[#30363d] rounded-xl p-6 hover:border-[#444c56] transition-all">
             <div class="animate-pulse h-10 bg-[#21262d] rounded-md"></div>
         </div>
     </div>

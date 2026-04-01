@@ -22,7 +22,7 @@ allCards.forEach((card, index) => {
 
   ObjectEditor.mount({
     container: containerId,
-    label: `Team Card: ${card.title}`,
+    label: `Team Card ${index + 1}`,
     data: card,
     fields: [
       { key: "title", label: "Card Title" },
