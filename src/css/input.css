@@ -301,3 +301,23 @@ html { scroll-behavior: smooth; }
   }
 }
 
+@layer components {
+  #backToTop {
+    @apply fixed bottom-8 right-8 z-[998] w-12 h-12 rounded-full border-none cursor-pointer;
+    @apply flex items-center justify-center text-lg text-white shadow-lg;
+    @apply bg-green-dark transition-all duration-300;
+    
+    /* Initial Hidden State */
+    @apply opacity-0 pointer-events-none translate-y-3;
+  }
+
+  /* Visible State */
+  #backToTop.visible {
+    @apply opacity-100 pointer-events-auto translate-y-0;
+  }
+
+  /* Hover State */
+  #backToTop:hover {
+    @apply bg-green-mid -translate-y-1 shadow-xl;
+  }
+}
