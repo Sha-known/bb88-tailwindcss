@@ -40,7 +40,7 @@ $pdo = getPDO();
 <main class="max-w-215 mx-auto px-6 py-12">
 
     <header class="mb-10">
-        <h1 class="text-2xl font-semibold tracking-tight">Edit: Our Team Page</h1>
+        <h1 class="text-2xl font-semibold tracking-tight">Edit: Our Team</h1>
         <p class="text-xs text-[#8b949e] mt-1">Update image sources, and team cards.</p>
     </header>
 
