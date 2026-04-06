@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MetaGames Admin — Auth</title>
+    <title>BB88 — Login</title>
     <link href="../../src/css/output.css" rel="stylesheet">
     <style>
         .container.right-panel-active .sign-in-container { transform: translateX(100%); }
