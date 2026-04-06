@@ -4,13 +4,13 @@ import { apiGet, apiPatch, apiPost, apiDelete } from '../services.js';
 
 const API = '/api/admin/portfolio.php';
 
-// ── INIT ──────────────────────────────────────────────────────────────────────
+
 const init = async () => {
   try {
     const data = await apiGet(API);
     const { projects } = data;
 
-    // ── Portfolio Projects — Full CRUD via ArrayEditor ───────────────────────
+   
     ArrayEditor.mount({
       container: '#card-projects',
       label:     'Portfolio Projects',
@@ -22,7 +22,7 @@ const init = async () => {
         { key: 'desc',     label: 'Description', placeholder: 'Short description...'          },
       ],
       onSave: async (index, value) => {
-        // Preserve isHidden field when saving
+       
         const existing = projects[index];
         await apiPatch(API, 'projects', { ...existing, ...value }, index);
       },
@@ -30,7 +30,7 @@ const init = async () => {
         return await apiDelete(API, 'projects', index);
       },
       onAdd: async (item) => {
-        // New projects are hidden by default (See More behavior)
+        
         return await apiPost(API, 'projects', { ...item, isHidden: true });
       },
     });
