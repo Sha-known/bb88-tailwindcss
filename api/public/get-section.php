@@ -4,8 +4,8 @@ header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
 try {
-    require_once dirname(__DIR__) . '/../config/database.php';
-    require_once dirname(__DIR__) . '/../includes/function.php';
+    require_once dirname(__DIR__, 2) . '/config/database.php';
+    require_once dirname(__DIR__, 2) . '/includes/function.php';
 
     if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
         http_response_code(405);
